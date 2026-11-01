@@ -620,53 +620,6 @@
         #achievements-modal .achievement-reward { color: #d0d0d0; }
         #achievements-modal .achievement-reward b { color: #fff; }
 
-        .chaos-dungeon-modal-content { box-sizing:border-box; width:min(94vw,740px); max-width:740px; max-height:min(92vh,880px); overflow-y:auto; border:1px solid #285276; border-radius:20px; background:radial-gradient(ellipse at 12% 0%,#172c4a 0%,#111827 40%,#0c1220 100%); box-shadow:0 28px 90px #020617cc; }
-        .chaos-dungeon-heading { padding-right:34px; margin-bottom:14px; }
-        .chaos-dungeon-eyebrow { color:#67e8f9; font-size:.65rem; font-weight:800; letter-spacing:.19em; margin-bottom:6px; }
-        .chaos-dungeon-heading p { margin:7px 0 0; color:#a9b8d0; font-size:.8rem; line-height:1.55; }
-        .chaos-dungeon-date { color:#7dd3fc; font-size:.7rem; margin-top:7px; }
-        .chaos-dungeon-rule { position:relative; overflow:hidden; margin:12px 0; padding:15px 17px; border:1px solid #355780; border-radius:14px; background:linear-gradient(130deg,#183250,#142139 62%,#171b36); }
-        .chaos-dungeon-rule::after { content:'✦'; position:absolute; right:14px; top:5px; color:#67e8f922; font-size:4.4rem; line-height:1; pointer-events:none; }
-        .chaos-dungeon-rule-label { position:relative; z-index:1; color:#7dd3fc; font-size:.63rem; letter-spacing:.14em; }
-        .chaos-dungeon-rule h3 { position:relative; z-index:1; margin:5px 0 7px; color:#ecfeff; font-size:1.08rem; }
-        .chaos-dungeon-rule p { position:relative; z-index:1; max-width:90%; margin:0; color:#bdd4ee; font-size:.8rem; line-height:1.55; }
-        .chaos-dungeon-level-card { display:flex; align-items:center; gap:12px; margin:10px 0; padding:15px; border:1px solid #344867; border-radius:14px; background:linear-gradient(125deg,#17273c,#161b31 58%,#241d3c); }
-        .chaos-dungeon-level-icon { display:grid; place-items:center; flex:none; width:48px; height:48px; border:1px solid #5eead477; border-radius:14px; background:#22d3ee18; color:#67e8f9; font-size:1.35rem; box-shadow:0 0 24px #22d3ee16; }
-        .chaos-dungeon-level-card > div { display:flex; min-width:0; flex:1; flex-direction:column; gap:2px; }
-        .chaos-dungeon-level-caption { color:#9aaec8; font-size:.62rem; letter-spacing:.08em; }
-        .chaos-dungeon-level-card strong { color:#f8fafc; font-size:1.5rem; font-variant-numeric:tabular-nums; }
-        .chaos-dungeon-level-card small { color:#94a3b8; font-size:.68rem; }
-        .chaos-dungeon-state { flex:none; padding:5px 9px; border:1px solid #475569; border-radius:999px; color:#a5b4fc; background:#818cf812; font-size:.66rem; }
-        .chaos-dungeon-state.active { border-color:#22d3ee88; color:#67e8f9; background:#22d3ee12; }
-        .chaos-dungeon-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; margin:9px 0; }
-        .chaos-dungeon-stats > div { padding:9px 6px; border:1px solid #293c56; border-radius:10px; background:#0c1423b8; text-align:center; }
-        .chaos-dungeon-stats span { display:block; color:#8ca0bb; font-size:.63rem; }
-        .chaos-dungeon-stats strong { display:block; margin-top:3px; color:#e0f2fe; font-size:.88rem; font-variant-numeric:tabular-nums; }
-        .chaos-dungeon-progress-card,.chaos-dungeon-milestones { margin-top:10px; padding:12px; border:1px solid #293c56; border-radius:12px; background:#0c1423b8; }
-        .chaos-dungeon-progress-head,.chaos-dungeon-progress-foot { display:flex; justify-content:space-between; align-items:center; gap:8px; color:#a9b8d0; font-size:.69rem; }
-        .chaos-dungeon-progress-head strong { color:#67e8f9; font-variant-numeric:tabular-nums; }
-        .chaos-dungeon-progress-track { height:9px; margin:9px 0 6px; overflow:hidden; border-radius:999px; background:#1e293b; }
-        .chaos-dungeon-progress-track span { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,#38bdf8,#818cf8,#c084fc); box-shadow:0 0 14px #38bdf855; transition:width .25s ease; }
-        .chaos-dungeon-progress-foot { color:#71839c; font-size:.62rem; }
-        .chaos-dungeon-section-title { display:flex; justify-content:space-between; gap:8px; align-items:baseline; margin-bottom:8px; }
-        .chaos-dungeon-section-title strong { color:#e0e7ff; font-size:.82rem; }
-        .chaos-dungeon-section-title span { color:#8294ae; font-size:.62rem; }
-        .chaos-dungeon-milestone-list { display:grid; gap:5px; max-height:230px; overflow-y:auto; scrollbar-width:thin; scrollbar-color:#45617e transparent; }
-        .chaos-dungeon-milestone { display:flex; align-items:center; gap:9px; padding:8px; border:1px solid #28384f; border-radius:9px; background:linear-gradient(100deg,#111d30,#121827); }
-        .chaos-dungeon-milestone.reached { border-color:#0e7490; background:linear-gradient(100deg,#0e3544,#17243a); }
-        .chaos-dungeon-milestone.claimed { border-color:#166534; background:linear-gradient(100deg,#102d28,#15233a); }
-        .chaos-dungeon-milestone-level { flex:none; min-width:46px; color:#7dd3fc; font-size:.69rem; font-weight:700; }
-        .chaos-dungeon-milestone > div { display:flex; min-width:0; flex:1; flex-direction:column; gap:2px; }
-        .chaos-dungeon-milestone strong { color:#e5edf9; font-size:.69rem; }
-        .chaos-dungeon-milestone small { color:#94a3b8; font-size:.6rem; line-height:1.4; }
-        .chaos-dungeon-milestone-status { flex:none; color:#74839b; font-size:.59rem; }
-        .chaos-dungeon-milestone.reached .chaos-dungeon-milestone-status { color:#67e8f9; }
-        .chaos-dungeon-milestone.claimed .chaos-dungeon-milestone-status { color:#86efac; }
-        .chaos-dungeon-last { min-height:20px; margin:9px 0 12px; color:#bfdbfe; font-size:.72rem; line-height:1.5; }
-        .chaos-dungeon-actions { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
-        .chaos-dungeon-actions button { width:100%; min-height:42px; padding:10px; font-size:.8rem; }
-        #chaos-dungeon-enhance { grid-column:1 / -1; min-height:48px; font-size:.9rem; }
-
         /* Cool, clear color system for the full game interface. */
         :root { --primary:#60a5fa; --success:#34d399; --fail:#fbbf24; --destroy:#fb7185; --bg-base:#080d18; --panel-bg:#111a2b; --border-color:#28364d; --text-main:#e7eefb; --text-sub:#91a1ba; --accent-cyan:#67e8f9; --accent-violet:#a78bfa; --accent-gold:#fbbf24; }
         body,html { color:var(--text-main); background-color:var(--bg-base); }
@@ -721,7 +674,6 @@
         .challenge-hp { border-radius:999px; background:#172135; }
         .challenge-hp-fill { background:linear-gradient(90deg,#34d399,#a3e635); }
         .challenge-hp-fill.enemy { background:linear-gradient(90deg,#fb7185,#ef4444); }
-        @media(max-width:600px) { .chaos-dungeon-modal-content { width:96vw; max-height:92dvh; padding:18px 13px; } .chaos-dungeon-level-card { padding:11px; gap:9px; } .chaos-dungeon-stats { gap:5px; } .chaos-dungeon-stats > div { padding:8px 3px; } .chaos-dungeon-section-title { align-items:flex-start; flex-direction:column; gap:2px; } }
 
         /* Forged obsidian theme: layered metal surfaces, warm alloy edges and restrained glow. */
         :root {
@@ -824,6 +776,54 @@
         .level-text { text-shadow:0 8px 26px rgba(0,0,0,.42); }
         .prefix-badge { border-color:rgba(228,189,118,.34); border-radius:999px; background:linear-gradient(120deg,rgba(48,40,28,.92),rgba(18,20,23,.92)); box-shadow:inset 0 1px rgba(255,255,255,.06),0 5px 18px #0005; }
         .stats-panel { gap:1px; overflow:hidden; border:1px solid #3a3c3d; border-radius:13px; background:#383a3a; box-shadow:0 8px 22px #0003; }
+        .prefix-codex-grid,.prefix-codex-card { min-width:0; box-sizing:border-box; }
+        .prefix-codex-card { width:100%; max-width:100%; }
+        .prefix-codex-card-effect,.prefix-codex-card-state { display:block; width:100%; box-sizing:border-box; overflow-wrap:anywhere; word-break:break-all; }
+        #prefix-collection-modal .profile-header,#prefix-collection-modal .profile-header p { min-width:0; max-width:100%; overflow-wrap:anywhere; word-break:break-word; }
+        #prefix-collection-modal { box-sizing:border-box; padding:16px; overflow-x:hidden; }
+        .pc-layout,.panel-left,.panel-right,.panel-quest { min-width:0; box-sizing:border-box; }
+        .probability-panel,.probability-panel .stats-panel,.probability-panel .stat-item { min-width:0; box-sizing:border-box; }
+        .probability-panel .stats-panel { grid-template-columns:repeat(3,minmax(0,1fr)); }
+        .prefix-codex-card-title { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; }
+        @media(max-width:900px) {
+            html,body { max-width:100%; overflow-x:hidden; }
+            .game-screen-layout { width:100%; max-width:100%; min-width:0; box-sizing:border-box; }
+            .pc-layout,.panel-left,.panel-right,.panel-quest { width:100%; min-width:0; }
+        }
+        @media(max-width:760px) {
+            #prefix-collection-modal { width:100vw; height:100dvh; padding:10px; }
+            .prefix-codex-card-title { grid-template-columns:minmax(0,1fr); }
+            .prefix-codex-card-title > .prefix-badge { justify-self:start; }
+            .prefix-codex-grid { grid-template-columns:minmax(0,1fr); }
+        }
+        #prefix-collection-modal > .modal-content { min-width:0 !important; overflow-x:hidden; }
+        @media(max-width:760px) {
+            #prefix-collection-modal { padding:10px; }
+            #prefix-collection-modal > .modal-content { width:100% !important; max-width:100% !important; min-width:0 !important; padding:18px 13px; }
+            .prefix-codex-toolbar,.prefix-codex-grid { width:100%; min-width:0; }
+            .prefix-codex-grid { grid-template-columns:minmax(0,1fr); overflow-x:hidden; }
+            .prefix-codex-card { width:100%; overflow:hidden; }
+            .prefix-codex-card-title { align-items:flex-start; }
+            .prefix-codex-card-title > strong { flex:1 1 150px; }
+        }
+        .prefix-codex-card-title { min-width:0; flex-wrap:wrap; }
+        .prefix-codex-card-title > strong { min-width:0; overflow-wrap:anywhere; word-break:break-word; }
+        .prefix-codex-card-title > .prefix-badge { flex:0 1 auto; min-width:0; max-width:100%; white-space:normal; justify-content:center; text-align:center; overflow-wrap:anywhere; }
+        .prefix-codex-card-effect,.prefix-codex-card-state,.artifact-event-effects { min-width:0; max-width:100%; white-space:normal; overflow-wrap:anywhere; word-break:break-word; }
+        .artifact-event-content { box-sizing:border-box; min-width:0; }
+        .prefix-effect-label { min-width:0; overflow-wrap:anywhere; word-break:break-word; }
+        .probability-panel { display:grid; gap:7px; padding:10px; border:1px solid #41433f; border-radius:14px; background:radial-gradient(ellipse at 0 0,rgba(228,189,118,.09),transparent 48%),linear-gradient(145deg,#191c20,#101317); box-shadow:inset 0 1px #ffffff0b,0 8px 22px #0003; }
+        .probability-panel-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; color:#eee9dd; font-size:.8rem; }
+        .probability-panel-heading strong { font-weight:600; letter-spacing:.02em; }
+        .probability-panel-heading span { color:#8f918f; font-size:.66rem; }
+        .probability-panel .stats-panel { border-color:#484944; border-radius:10px; box-shadow:none; }
+        .probability-panel .stat-item { min-height:54px; padding:9px 4px; gap:3px; background:linear-gradient(155deg,#212429,#14171b); font-size:.72rem; }
+        .probability-panel .stat-item::before { background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent); }
+        .probability-panel .stat-item b { font-size:1.08rem; font-variant-numeric:tabular-nums; }
+        .probability-panel .prob-s { color:#9ee2c5; }
+        .probability-panel .prob-f { color:#e3c27d; }
+        .probability-panel .prob-d { color:#f08b87; }
+        .probability-panel .account-chance-hint { padding:6px 8px; border-color:#34383a; border-radius:8px; background:#0d1013b8; color:#92969a; font-size:.65rem; }
         .stat-item { position:relative; min-height:58px; padding:13px 5px; background:linear-gradient(155deg,#1b1e23,#111419); }
         .stat-item::before { content:''; position:absolute; top:0; left:22%; right:22%; height:1px; background:linear-gradient(90deg,transparent,rgba(228,189,118,.38),transparent); }
         .stat-item b { color:#f1dfb8; font-weight:600; }
@@ -924,11 +924,6 @@
             .attendance-item { min-height:106px; padding:8px 6px; }
             .attendance-summary-card { padding:7px 6px; font-size:.64rem; }
         }
-        .chaos-dungeon-modal-content { border-color:#54645c; background:radial-gradient(ellipse at 10% 0%,rgba(101,148,124,.22),transparent 40%),linear-gradient(150deg,#1a2424,#111820 56%,#1b1915); box-shadow:0 28px 90px #000d,inset 0 1px #ffffff10; }
-        .chaos-dungeon-rule,.chaos-dungeon-level-card,.chaos-dungeon-progress-card,.chaos-dungeon-milestones { border-color:#495b57; background:linear-gradient(135deg,#253431,#172128 64%,#242018); }
-        .chaos-dungeon-rule { box-shadow:inset 0 1px #ffffff10,0 8px 22px #0003; }
-        .chaos-dungeon-level-icon { border-color:#74b8a277; background:#72d6b218; color:#9ee2c5; }
-        .chaos-dungeon-progress-track span { background:linear-gradient(90deg,#72b79b,#a4cbb1,#e4bd76); box-shadow:0 0 14px #72b79b55; }
         input[type="text"],input[type="password"],input[type="number"],select { border-color:#454943; border-radius:8px; background:linear-gradient(145deg,#0d1116,#151719); color:#f1eee7; box-shadow:inset 0 1px 3px #0008; }
         input:focus,select:focus { border-color:#c9a860; box-shadow:0 0 0 3px rgba(228,189,118,.13),inset 0 1px 3px #0008; }
         ::-webkit-scrollbar-thumb { border-radius:99px; background:linear-gradient(180deg,#756442,#3d4342); }
@@ -1012,13 +1007,6 @@
                     <div id="xp-info-text" style="margin-top:8px; font-size:0.75rem; color:var(--text-sub); text-align:left;">경험치 0 / 0</div>
                 </div>
 
-                <div class="stats-panel">
-                    <div class="stat-item">성공 <b id="prob-success" class="prob-s">0%</b></div>
-                    <div class="stat-item">하락 <b id="prob-fail" class="prob-f">0%</b></div>
-                    <div class="stat-item">파괴 <b id="prob-destroy" class="prob-d">0%</b></div>
-                </div>
-                <div id="account-chance-hint" class="account-chance-hint"></div>
-                
                 <div id="buff-display" class="buff-status" style="display:none;"></div>
 
                 <div class="user-info-bar">
@@ -1057,12 +1045,22 @@
                     <div id="prefix-label" class="prefix-label"></div>
                     <div id="prefix-effect-label" class="prefix-effect-label"></div>
                 </div>
+
+                <section class="probability-panel" aria-label="현재 강화 확률">
+                    <div class="probability-panel-heading"><strong>현재 강화 확률</strong><span>장비 레벨 기준</span></div>
+                    <div class="stats-panel">
+                        <div class="stat-item">성공 <b id="prob-success" class="prob-s">0%</b></div>
+                        <div class="stat-item">하락 <b id="prob-fail" class="prob-f">0%</b></div>
+                        <div class="stat-item">파괴 <b id="prob-destroy" class="prob-d">0%</b></div>
+                    </div>
+                    <div id="account-chance-hint" class="account-chance-hint"></div>
+                </section>
                 
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                     <button id="btn-enhance" class="btn-main" onclick="window.enhance(event)" style="padding: 16px; font-size: 1.1rem;">
                         강화 (Space)
                     </button>
-                    <button id="btn-enhancement-trial-toggle" onclick="window.toggleEnhancementTrial()" style="padding: 10px;">강화 시련 켜기</button>
+                    <button id="btn-enhancement-trial-toggle" onclick="window.toggleEnhancementTrial()" style="padding: 10px;">강화 시련 시작</button>
                     <button id="btn-submit" onclick="window.submitRanking()" style="padding: 12px;">보관하기</button>
                 </div>
 
@@ -1132,10 +1130,6 @@
             <div>
                 <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">✦ 아티팩트</h3>
                 <p style="margin: 0; color: #aaa;">아티팩트는 T5부터 T9까지 5개이며 앞 티어를 얻어야 다음 티어를 발견할 수 있습니다. 기본 확률은 T5 0.005%, T6 0.004%, T7 0.003%, T8 0.002%, T9 0.001%입니다. 각 구간보다 높은 레벨에서 강화할수록 확률이 레벨 25마다 20%씩 올라갑니다. 도감에는 해당 티어까지의 누적 효과가 표시됩니다.</p>
-            </div>
-            <div>
-                <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">✧ 카오스 던전</h3>
-                <p style="margin: 0; color: #aaa;">던전 장비는 일반 장비와 별도로 저장되고 입장·강화 횟수 제한이 없습니다. 오늘의 규칙은 매일 바뀌며, 최고 레벨을 갱신하면 다이아·멀티코인·강화석·행운의 비약·공명 상자·경험치 구간 보상을 자동으로 받습니다. 파괴되면 던전 레벨만 0으로 돌아가고 최고 기록과 수령한 보상은 유지됩니다. 1,000레벨 이후에는 250레벨마다 추가 보상이 있습니다.</p>
             </div>
             <div>
                 <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">공명 상자 보상</h3>
@@ -1297,29 +1291,6 @@
     </div>
 </div>
 
-<div id="chaos-dungeon-modal" class="modal-overlay" onclick="if(event.target===this)window.closeChaosDungeon()">
-    <div class="modal-content chaos-dungeon-modal-content">
-        <span class="close-btn" onclick="window.closeChaosDungeon()">×</span>
-        <div class="chaos-dungeon-heading">
-            <div class="chaos-dungeon-eyebrow">INFINITE CHAOS · DAILY MUTATOR</div>
-            <h2 class="profile-title">카오스 던전</h2>
-            <p>던전 전용 장비를 강화해 더 깊은 층에 도전하세요. 입장과 강화 횟수는 제한이 없습니다.</p>
-            <div id="chaos-dungeon-date" class="chaos-dungeon-date"></div>
-        </div>
-        <div id="chaos-dungeon-rule"></div>
-        <div id="chaos-dungeon-level"></div>
-        <div id="chaos-dungeon-stats"></div>
-        <div id="chaos-dungeon-progress"></div>
-        <div id="chaos-dungeon-milestones"></div>
-        <div id="chaos-dungeon-last" class="chaos-dungeon-last"></div>
-        <div class="chaos-dungeon-actions">
-            <button id="chaos-dungeon-start" class="btn-sub" onclick="window.startChaosDungeon()">도전 시작</button>
-            <button id="chaos-dungeon-end" class="btn-danger" onclick="window.endChaosDungeon()" disabled>도전 종료</button>
-            <button id="chaos-dungeon-enhance" class="btn-main" onclick="window.enhanceChaosDungeon()" disabled>던전 강화 · Space</button>
-        </div>
-    </div>
-</div>
-
 <div id="multi-modal" class="modal-overlay">
     <div class="modal-content multi-modal-content">
         <span class="close-btn" onclick="window.closeMultiModal()">×</span>
@@ -1382,7 +1353,6 @@
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openPrefixCollection()"><span class="game-menu-card-icon" aria-hidden="true">✦</span><span class="game-menu-card-title">아티팩트</span><span class="game-menu-card-desc">강화 중 발견하는 누적 효과를 확인합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openMultiModal()"><span class="game-menu-card-icon" aria-hidden="true">⟳</span><span class="game-menu-card-title">자동 강화</span><span class="game-menu-card-desc">멀티 슬롯을 설정하고 진행합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openChallengeModal()"><span class="game-menu-card-icon" aria-hidden="true">⚔</span><span class="game-menu-card-title">도전의 탑</span><span class="game-menu-card-desc">매번 달라지는 전투 기믹에 도전합니다.</span></button>
-            <button class="game-menu-card" onclick="window.closeGameMenu();window.openChaosDungeon()"><span class="game-menu-card-icon" aria-hidden="true">✧</span><span class="game-menu-card-title">카오스 던전</span><span class="game-menu-card-desc">무제한으로 던전 장비를 강화하고 구간 보상을 받습니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openEnhancementTrial()"><span class="game-menu-card-icon" aria-hidden="true">♜</span><span class="game-menu-card-title">강화 시련</span><span class="game-menu-card-desc">모드를 켠 뒤 강화 화면에서 직접 시도합니다. 버튼을 다시 누르면 종료됩니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openAttendanceModal()"><span class="game-menu-card-icon" aria-hidden="true">▦</span><span class="game-menu-card-title">출석 보상</span><span class="game-menu-card-desc">연속 출석과 오늘의 보상을 확인합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.showRankingModal()"><span class="game-menu-card-icon" aria-hidden="true">↗</span><span class="game-menu-card-title">랭킹</span><span class="game-menu-card-desc">최고 레벨과 보유 평균을 비교합니다.</span></button>
@@ -1502,39 +1472,75 @@
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script type="text/javascript">
     const firebaseConfig = {
         apiKey: "AIzaSyDKRhJ1SUvE639nKMdiN3RMvzltD0TFKYM",
         authDomain: "infinite-upgrade-game.firebaseapp.com",
+        databaseURL: "https://infinite-upgrade-game-default-rtdb.asia-southeast1.firebasedatabase.app",
         projectId: "infinite-upgrade-game",
         storageBucket: "infinite-upgrade-game.firebasestorage.app",
         messagingSenderId: "30591772006",
         appId: "1:30591772006:web:fc3af6c6fc1204118e94a7"
     };
     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
-    var db = firebase.firestore();
+    var db = firebase.database();
+    const RTDB_VALUE_TAG = '__infinite_upgrade_rtdb_value__';
+
+    function encodeRtdbValue(value) {
+        if (value === null) return { [RTDB_VALUE_TAG]: 'null' };
+        if (Array.isArray(value)) {
+            if (!value.length) return { [RTDB_VALUE_TAG]: 'array' };
+            return value.map(encodeRtdbValue);
+        }
+        if (value && typeof value === 'object') {
+            const keys = Object.keys(value);
+            if (!keys.length) return { [RTDB_VALUE_TAG]: 'object' };
+            const encoded = {};
+            keys.forEach(key => { encoded[key] = encodeRtdbValue(value[key]); });
+            if (Object.prototype.hasOwnProperty.call(value, RTDB_VALUE_TAG)) {
+                return { [RTDB_VALUE_TAG]: 'escaped-object', value: encoded };
+            }
+            return encoded;
+        }
+        return value;
+    }
+
+    function decodeRtdbValue(value) {
+        if (Array.isArray(value)) return value.map(decodeRtdbValue);
+        if (!value || typeof value !== 'object') return value;
+        const keys = Object.keys(value);
+        if (keys.length === 1 && Object.prototype.hasOwnProperty.call(value, RTDB_VALUE_TAG)) {
+            if (value[RTDB_VALUE_TAG] === 'null') return null;
+            if (value[RTDB_VALUE_TAG] === 'array') return [];
+            if (value[RTDB_VALUE_TAG] === 'object') return {};
+        }
+        if (keys.length === 2 && value[RTDB_VALUE_TAG] === 'escaped-object' && Object.prototype.hasOwnProperty.call(value, 'value')) {
+            const escaped = value.value || {};
+            const decoded = {};
+            Object.keys(escaped).forEach(key => { decoded[key] = decodeRtdbValue(escaped[key]); });
+            return decoded;
+        }
+        const decoded = {};
+        keys.forEach(key => { decoded[key] = decodeRtdbValue(value[key]); });
+        return decoded;
+    }
+
+    function listenToFirebaseValue(ref, callback, onError) {
+        ref.on('value', callback, onError);
+        return () => ref.off('value', callback);
+    }
 
     function getFirebaseUserRef(name) {
-        return db.collection('users').doc(String(name || ''));
+        return db.ref('users').child(String(name || ''));
     }
 
     function cleanFirebaseUserData(data) {
-        const clean = JSON.parse(JSON.stringify(data || {}));
-        delete clean.max_inventory;
-        delete clean.upgrade_exp;
-        delete clean.resonance_chests;
-        delete clean.inventory_resonance;
-        delete clean.diamond_mine;
-        delete clean.legend_points;
-        delete clean.museum_codex;
-        if (clean.upgrades) delete clean.upgrades.success_bonus;
-        if (Array.isArray(clean.multi_slots)) clean.multi_slots.forEach(slot => { delete slot.last_cooldown_display; });
-        return clean;
+        return JSON.parse(JSON.stringify(data || {}));
     }
 
     async function updateFirebasePresence(id, lastActive) {
-        await getFirebaseUserRef(id).set({ online: true, last_active: lastActive }, { merge: true });
+        await getFirebaseUserRef(id).update(encodeRtdbValue({ online: true, last_active: lastActive }));
     }
 
     var currentUser = null; var currentUserData = null; var unsubscribeUser = null; var unsubscribeAllUsers = null;
@@ -1568,32 +1574,6 @@
 
     const TIER_NAMES = ['아이언', '브론즈', '실버', '골드', '에픽', '홀로그램', '다크매터', '그랜드마스터', '챌린저', '오메가'];
     const TIER_COLORS = ['#94a3b8', '#d97706', '#c0c0c0', '#eab308', '#a855f7', '#00ffff', '#ff0000', '#f5c451', '#00ffcc', '#f0abfc'];
-    const CHAOS_DUNGEON_MILESTONES = [
-        { level: 10, title: '던전 입문', tokens: 250, multi: 500 },
-        { level: 25, title: '첫 번째 봉인 해제', tokens: 700, multi: 1200, stoneLevel: 20, stones: 2 },
-        { level: 50, title: '푸른 회랑', tokens: 1400, multi: 2500, potions: 1 },
-        { level: 75, title: '심연의 문턱', tokens: 2200, multi: 4000, stoneLevel: 60, stones: 3 },
-        { level: 100, title: '혼돈의 심장', tokens: 3500, multi: 6500, chests: 1, exp: 20 },
-        { level: 125, title: '깊은 균열', tokens: 5000, multi: 9000, stoneLevel: 110, stones: 3, potions: 1 },
-        { level: 150, title: '검은 성역', tokens: 7500, multi: 14000, stoneLevel: 140, stones: 4, chests: 2 },
-        { level: 175, title: '붕괴 직전', tokens: 11000, multi: 22000, potions: 2, exp: 35 },
-        { level: 200, title: '혼돈의 군주', tokens: 16000, multi: 32000, stoneLevel: 190, stones: 5, chests: 3 },
-        { level: 250, title: '차원 너머', tokens: 24000, multi: 50000, potions: 3, chests: 4, exp: 60 },
-        { level: 300, title: '무한 회랑', tokens: 36000, multi: 75000, stoneLevel: 290, stones: 6, chests: 5 },
-        { level: 400, title: '카오스 정복자', tokens: 55000, multi: 120000, potions: 5, chests: 7, exp: 100 },
-        { level: 500, title: '심연의 지배자', tokens: 85000, multi: 190000, stoneLevel: 490, stones: 8, chests: 10, exp: 150 },
-        { level: 750, title: '차원 파괴자', tokens: 140000, multi: 320000, potions: 10, chests: 15, exp: 250 },
-        { level: 1000, title: '무한의 정점', tokens: 250000, multi: 600000, stoneLevel: 990, stones: 12, chests: 25, exp: 500 }
-    ];
-    const CHAOS_DUNGEON_RULES = [
-        { id: 'overload', title: '과부하 용광로', description: '파괴 확률 2배 · 성공 시 강화 상승 +2레벨', successGainBonus: 2, destroyMultiplier: 2 },
-        { id: 'stabilized', title: '안정화 기류', description: '실패해도 레벨 하락 없음 · 강화 대기시간 3배', failNoLevelLoss: true, cooldownMultiplier: 3 },
-        { id: 'precision', title: '정밀 제어', description: '성공 확률 +5%p · 파괴 확률 절반 · 성공 시 +1레벨', successRateBonus: 5, destroyMultiplier: 0.5, successGainBonus: 1 },
-        { id: 'fracture', title: '균열 증폭', description: '성공 확률 1.5배 · 파괴 확률 1.5배 · 실패 하락 2배', successRateMultiplier: 1.5, destroyMultiplier: 1.5, failLevelLossMultiplier: 2 },
-        { id: 'slow_burn', title: '정지된 불꽃', description: '실패해도 레벨 하락 없음 · 성공 시 +3레벨 · 대기시간 2배', failNoLevelLoss: true, successGainBonus: 3, cooldownMultiplier: 2 },
-        { id: 'overclock', title: '과속 연소', description: '성공 확률 +2%p · 대기시간 절반 · 파괴 확률 1.5배', successRateBonus: 2, cooldownMultiplier: 0.5, destroyMultiplier: 1.5 },
-        { id: 'volatile', title: '불안정한 균열', description: '성공 확률 1.25배 · 파괴 확률 2배 · 실패 하락 1.5배', successRateMultiplier: 1.25, destroyMultiplier: 2, failLevelLossMultiplier: 1.5 }
-    ];
     const STORAGE_LIMIT = 5;
     const CHALLENGE_MAX_ITEMS = 3;
     const BASE_SUCCESS_RATE_MULTIPLIER = 1.1;
@@ -1839,10 +1819,10 @@
     const ACH_STAGE_REWARDS = [50, 100, 150, 200, 300];
     const ACH_TYPE_CONFIG = [
         { id: 'lv', type: 'max_level', title: '최고 레벨', targets: [90, 110, 130, 150, 170], desc: target => '레벨 ' + target + ' 도달' },
-        { id: 'try', type: 'total_try', title: '강화 시도', targets: [10000, 25000, 50000, 100000, 200000], desc: target => target.toLocaleString() + '회' },
-        { id: 'suc', type: 'success', title: '강화 성공', targets: [5000, 12500, 25000, 50000, 100000], desc: target => target.toLocaleString() + '회' },
-        { id: 'fail', type: 'fail', title: '강화 실패', targets: [5000, 12500, 25000, 50000, 100000], desc: target => target.toLocaleString() + '회' },
-        { id: 'des', type: 'destroy', title: '장비 파괴', targets: [50, 125, 250, 500, 1000], desc: target => target.toLocaleString() + '회' },
+        { id: 'try', type: 'total_try', title: '강화 시도', targets: [10000, 25000, 50000, 100000, 200000], desc: target => formatGameNumber(target) + '회' },
+        { id: 'suc', type: 'success', title: '강화 성공', targets: [5000, 12500, 25000, 50000, 100000], desc: target => formatGameNumber(target) + '회' },
+        { id: 'fail', type: 'fail', title: '강화 실패', targets: [5000, 12500, 25000, 50000, 100000], desc: target => formatGameNumber(target) + '회' },
+        { id: 'des', type: 'destroy', title: '장비 파괴', targets: [50, 125, 250, 500, 1000], desc: target => formatGameNumber(target) + '회' },
         { id: 'acc', type: 'acc_level', title: '계정 레벨', targets: [20, 25, 30, 40, 50], desc: target => '레벨 ' + target + ' 도달' }
     ];
     const ACH_DATA = [
@@ -1863,6 +1843,31 @@
         { id: 't9_omega', tier: 9, name: '오메가', level: 200, diamonds: 20000, multi: 12000, stoneLevel: 200, stoneCount: 8, chests: 5 }
     ];
 
+    function formatGameNumber(value) {
+        const numeric = Number(value);
+        if (!Number.isFinite(numeric)) return '0';
+        const sign = numeric < 0 ? '-' : '';
+        const absolute = Math.abs(numeric);
+        if (absolute < 1000) return sign + absolute.toLocaleString('en-US', { maximumFractionDigits: 2 });
+        const units = [{ size: 1e9, suffix: 'b' }, { size: 1e6, suffix: 'm' }, { size: 1e3, suffix: 'k' }];
+        let unitIndex = units.findIndex(unit => absolute >= unit.size);
+        if (unitIndex < 0) return sign + absolute.toLocaleString('en-US', { maximumFractionDigits: 2 });
+        let scaled = absolute / units[unitIndex].size;
+        let digits = scaled >= 100 ? 0 : scaled >= 10 ? 1 : 2;
+        let rounded = Number(scaled.toFixed(digits));
+        if (rounded >= 1000 && unitIndex > 0) {
+            unitIndex--;
+            scaled = absolute / units[unitIndex].size;
+            digits = scaled >= 100 ? 0 : scaled >= 10 ? 1 : 2;
+            rounded = Number(scaled.toFixed(digits));
+        }
+        return sign + rounded.toLocaleString('en-US', { maximumFractionDigits: digits }) + units[unitIndex].suffix;
+    }
+
+    function formatExactGameNumber(value) {
+        const numeric = Number(value);
+        return Number.isFinite(numeric) ? Math.floor(numeric).toLocaleString('en-US') : '0';
+    }
     const CURRENCY_META = {
         diamonds: { icon: '다이아', label: '다이아' },
         multi: { icon: '멀티코인', label: '멀티코인' },
@@ -1875,8 +1880,9 @@
     function currencyAmountHtml(type, amount, unit = '') {
         const meta = CURRENCY_META[type] || { icon: '재화', label: '재화' };
         const numeric = Number(amount);
-        const value = Number.isFinite(numeric) ? numeric.toLocaleString('ko-KR', { maximumFractionDigits: 2 }) : '0';
-        return '<span class="currency-amount" title="' + meta.label + '" aria-label="' + meta.label + ' ' + value + unit + '"><span class="currency-icon" aria-hidden="true">' + meta.icon + '</span> ' + value + unit + '</span>';
+        const exactValue = Number.isFinite(numeric) ? numeric.toLocaleString('ko-KR', { maximumFractionDigits: 2 }) : '0';
+        const value = formatGameNumber(numeric);
+        return '<span class="currency-amount" title="' + meta.label + ' ' + exactValue + unit + '" aria-label="' + meta.label + ' ' + exactValue + unit + '"><span class="currency-icon" aria-hidden="true">' + meta.icon + '</span> ' + value + unit + '</span>';
     }
 
     function showToast(msg, color="#fff") {
@@ -2172,7 +2178,7 @@
         const hint = document.getElementById('account-chance-hint');
         if (!hint || !user) return;
         const accBonus = Math.min(ACCOUNT_SUCCESS_BONUS_CAP, Math.max(0, accLevel - 1) * (ACCOUNT_SUCCESS_BONUS_CAP / 49));
-        const currentChance = getProbabilities(user.level, accLevel).successRate;
+        const currentChance = enhancementTrialSession?.active ? getEnhancementTrialRates(user.level).successRate : getProbabilities(user.level, accLevel).successRate;
         const threshold = getHighestLevelAtSuccessRate(accLevel, 50);
         hint.innerHTML =
             '<span>계정 Lv.' + accLevel + ' (+' + accBonus.toFixed(1) + '%p) · 보유 강화 레벨 합계 ' + getTotalEnhancementLevels(user).toLocaleString() + '</span>' +
@@ -2430,7 +2436,6 @@
         data.challenge_clears = Math.max(0, toSafeNumber(data.challenge_clears, 0));
         data.achievements = data.achievements && typeof data.achievements === 'object' && !Array.isArray(data.achievements) ? data.achievements : {};
         delete data.museum_codex;
-        data.chaos_dungeon = normalizeChaosDungeonState(data.chaos_dungeon);
         delete data.daily_chaos;
         const previousPrefixCodex = data.prefix_codex && typeof data.prefix_codex === 'object' && !Array.isArray(data.prefix_codex) ? data.prefix_codex : {};
         data.prefix_codex = {};
@@ -2497,15 +2502,13 @@
         currentUserData.online = false;
         currentUserData.last_active = Date.now();
         const data = buildRegularUserSaveData(currentUserData);
-        try { getFirebaseUserRef(currentUser).set(data, { merge: true }).catch(() => {}); } catch (error) {}
+        try { getFirebaseUserRef(currentUser).set(encodeRtdbValue(data)).catch(() => {}); } catch (error) {}
     }
     window.addEventListener('pagehide', saveFirebaseOnPageExit);
 
     function buildRegularUserSaveData(data) {
         const saveData = { ...data };
-        const cleaned = cleanFirebaseUserData(saveData);
-        cleaned.legend_points = firebase.firestore.FieldValue.delete();
-        return cleaned;
+        return cleanFirebaseUserData(saveData);
     }
 
     function setCloudSaveStatus() {}
@@ -2629,7 +2632,7 @@
         currentUserData.last_active = now;
         const dataForWrite = cloneFirebaseValue(currentUserData);
         const saveData = buildRegularUserSaveData(dataForWrite);
-        const operation = getFirebaseUserRef(currentUser).set(saveData, { merge: true });
+        const operation = getFirebaseUserRef(currentUser).set(encodeRtdbValue(saveData));
         firebaseSaveInFlight = operation;
         let succeeded = false;
         try {
@@ -2673,28 +2676,6 @@
 
     function getKoreaDateKey(date = new Date()) {
         return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
-    }
-
-    function normalizeChaosDungeonState(raw) {
-        const source = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
-        const savedRewards = source.rewardsClaimed && typeof source.rewardsClaimed === 'object' && !Array.isArray(source.rewardsClaimed) ? source.rewardsClaimed : {};
-        const rewardsClaimed = {};
-        Object.entries(savedRewards).forEach(([key, claimed]) => { if (/^\d+$/.test(key)) rewardsClaimed[key] = !!claimed; });
-        CHAOS_DUNGEON_MILESTONES.forEach(milestone => { if (!(String(milestone.level) in rewardsClaimed)) rewardsClaimed[String(milestone.level)] = false; });
-        const lastResult = source.lastResult && typeof source.lastResult === 'object' && !Array.isArray(source.lastResult)
-            ? String(source.lastResult).slice(0, 180)
-            : String(source.lastResult || '').slice(0, 180);
-        return {
-            level: Math.max(0, Math.floor(toSafeNumber(source.level, 0))),
-            bestLevel: Math.max(0, Math.floor(toSafeNumber(source.bestLevel, source.level || 0))),
-            active: !!source.active,
-            attempts: Math.max(0, Math.floor(toSafeNumber(source.attempts, 0))),
-            successes: Math.max(0, Math.floor(toSafeNumber(source.successes, 0))),
-            failures: Math.max(0, Math.floor(toSafeNumber(source.failures, 0))),
-            destructions: Math.max(0, Math.floor(toSafeNumber(source.destructions, 0))),
-            rewardsClaimed,
-            lastResult
-        };
     }
 
     function getLocalWeekKey(date = new Date()) {
@@ -2802,7 +2783,7 @@
             const progress = Math.min(100, quest.target > 0 ? quest.current / quest.target * 100 : 0);
             const btnHtml = quest.claimed ? '<button disabled>완료</button>' : (quest.current >= quest.target ? '<button class="btn-main" onclick="window.' + claimFunction + '(' + index + ')">받기</button>' : '<button disabled>진행 중</button>');
             const reward = currencyAmountHtml('xp', quest.rewardXP) + ' · ' + currencyAmountHtml('diamonds', quest.rewardDiamonds || 0) + (includeMulti && quest.rewardMulti ? ' · ' + currencyAmountHtml('multi', quest.rewardMulti) : '');
-            html += '<div class="quest-item"><div class="quest-title-row"><span class="quest-title">' + escapeHtml(quest.title) + '</span>' + btnHtml + '</div><div class="quest-progress-bar"><div class="quest-progress-fill" style="width:' + progress + '%"></div></div><div class="quest-meta"><span>' + Math.floor(quest.current).toLocaleString() + ' / ' + quest.target.toLocaleString() + '</span><span>' + reward + '</span></div></div>';
+            html += '<div class="quest-item"><div class="quest-title-row"><span class="quest-title">' + escapeHtml(quest.title) + '</span>' + btnHtml + '</div><div class="quest-progress-bar"><div class="quest-progress-fill" style="width:' + progress + '%"></div></div><div class="quest-meta"><span>' + formatGameNumber(Math.floor(quest.current)) + ' / ' + formatGameNumber(quest.target) + '</span><span>' + reward + '</span></div></div>';
         });
         container.innerHTML = html;
     }
@@ -2857,7 +2838,7 @@
             cards += '<div class="daily-enhance-milestone ' + (isClaimed ? 'claimed' : '') + '">' + item.count + '회<b>상자 +' + item.chests + '</b><span>' + status + '</span></div>';
         });
         const percent = Math.min(100, count / 750 * 100);
-        container.innerHTML = '<div class="daily-enhance-head"><b>일일 강화 보상</b><span>' + count.toLocaleString() + ' / 750회</span></div><div class="daily-enhance-progress"><div class="daily-enhance-progress-fill" style="width:' + percent + '%"></div></div><div class="daily-enhance-milestones">' + cards + '</div>';
+        container.innerHTML = '<div class="daily-enhance-head"><b>일일 강화 보상</b><span>' + formatGameNumber(count) + ' / 750회</span></div><div class="daily-enhance-progress"><div class="daily-enhance-progress-fill" style="width:' + percent + '%"></div></div><div class="daily-enhance-milestones">' + cards + '</div>';
     }
 
     function trackDailyEnhancement() {
@@ -3360,212 +3341,6 @@
     let enhancementTrialSessionSerial = 0;
     const ENHANCEMENT_TRIAL_DESTROY_RATE = 20;
 
-    function getChaosDungeonRule(dateKey = getKoreaDateKey()) {
-        const parts = String(dateKey).split('-').map(Number);
-        const seed = parts.length === 3 && parts.every(Number.isFinite)
-            ? Math.floor(Date.UTC(parts[0], parts[1] - 1, parts[2]) / 86400000)
-            : 0;
-        return CHAOS_DUNGEON_RULES[seed % CHAOS_DUNGEON_RULES.length];
-    }
-
-    function getChaosDungeonState() {
-        if (!currentUserData) return null;
-        currentUserData.chaos_dungeon = normalizeChaosDungeonState(currentUserData.chaos_dungeon);
-        return currentUserData.chaos_dungeon;
-    }
-
-    function getChaosDungeonProbabilities(level) {
-        const rule = getChaosDungeonRule();
-        const base = getProbabilities(level, calculateAccountLevel(currentUserData).level, 0, 0);
-        const successRate = Math.max(0.0001, Math.min(100, base.successRate * toSafeNumber(rule.successRateMultiplier, 1) + toSafeNumber(rule.successRateBonus, 0)));
-        const destroyRate = Math.min(Math.max(0, base.destroyRate * toSafeNumber(rule.destroyMultiplier, 1)), Math.max(0, 100 - successRate));
-        return { ...base, successRate, destroyRate, failRate: Math.max(0, 100 - successRate - destroyRate) };
-    }
-
-    function createEndlessChaosDungeonMilestone(level) {
-        const cycle = Math.max(1, Math.floor((level - 1000) / 250));
-        return { level, title: '무한 심층 ' + cycle, tokens: 250000 + cycle * 25000, multi: 600000 + cycle * 75000, stoneLevel: 990 + cycle * 10, stones: 12 + Math.floor(cycle / 3), potions: 2 + Math.floor(cycle / 4), chests: 25 + Math.floor(cycle / 2), exp: 500 + cycle * 100 };
-    }
-
-    function getNextChaosDungeonMilestone(level) {
-        const fixed = CHAOS_DUNGEON_MILESTONES.find(milestone => milestone.level > level);
-        if (fixed) return fixed;
-        const nextEndlessLevel = 1000 + (Math.floor(Math.max(0, level - 1000) / 250) + 1) * 250;
-        return createEndlessChaosDungeonMilestone(nextEndlessLevel);
-    }
-
-    function getChaosDungeonMilestonesThrough(level) {
-        const reached = CHAOS_DUNGEON_MILESTONES.filter(milestone => milestone.level <= level);
-        for (let milestoneLevel = 1250; milestoneLevel <= level; milestoneLevel += 250) {
-            reached.push(createEndlessChaosDungeonMilestone(milestoneLevel));
-        }
-        return reached;
-    }
-
-    function formatChaosDungeonReward(milestone) {
-        const parts = [];
-        if (milestone.tokens) parts.push('💎 ' + milestone.tokens.toLocaleString());
-        if (milestone.multi) parts.push('🪙 ' + milestone.multi.toLocaleString());
-        if (milestone.stones) parts.push('Lv.' + milestone.stoneLevel + ' 강화석 ' + milestone.stones + '개');
-        if (milestone.potions) parts.push('행운의 비약 ' + milestone.potions + '개');
-        if (milestone.chests) parts.push('공명 상자 ' + milestone.chests + '개');
-        if (milestone.exp) parts.push('경험치 ' + milestone.exp);
-        return parts.join(' · ');
-    }
-
-    function claimChaosDungeonMilestones(showReward = true) {
-        if (!currentUserData) return false;
-        const state = getChaosDungeonState();
-        let changed = false;
-        const rewards = [];
-        getChaosDungeonMilestonesThrough(state.bestLevel).forEach(milestone => {
-            const key = String(milestone.level);
-            if (state.bestLevel < milestone.level || state.rewardsClaimed[key]) return;
-            state.rewardsClaimed[key] = true;
-            currentUserData.tokens = Math.max(0, toSafeNumber(currentUserData.tokens, 0)) + toSafeNumber(milestone.tokens, 0);
-            currentUserData.multi_tokens = Math.max(0, toSafeNumber(currentUserData.multi_tokens, 0)) + toSafeNumber(milestone.multi, 0);
-            if (milestone.stones) {
-                currentUserData.materials = currentUserData.materials && typeof currentUserData.materials === 'object' ? currentUserData.materials : {};
-                currentUserData.materials[milestone.stoneLevel] = Math.max(0, Math.floor(toSafeNumber(currentUserData.materials[milestone.stoneLevel], 0))) + milestone.stones;
-            }
-            if (milestone.potions) {
-                currentUserData.inventory = currentUserData.inventory && typeof currentUserData.inventory === 'object' ? currentUserData.inventory : {};
-                currentUserData.inventory.luck_potion = Math.max(0, Math.floor(toSafeNumber(currentUserData.inventory.luck_potion, 0))) + milestone.potions;
-            }
-            currentUserData.resonance_chest_count = Math.max(0, Math.floor(toSafeNumber(currentUserData.resonance_chest_count, 0))) + toSafeNumber(milestone.chests, 0);
-            currentUserData.bonus_exp = Math.max(0, toSafeNumber(currentUserData.bonus_exp, 0)) + toSafeNumber(milestone.exp, 0);
-            rewards.push('Lv.' + milestone.level + ' ' + formatChaosDungeonReward(milestone));
-            changed = true;
-        });
-        if (changed && showReward) showToast('던전 최고 레벨 보상 획득 · ' + rewards.join(' / '), '#a5f3fc');
-        return changed;
-    }
-
-    window.renderChaosDungeon = function() {
-        if (!currentUserData) return;
-        const state = getChaosDungeonState();
-        const rule = getChaosDungeonRule();
-        const dateKey = getKoreaDateKey();
-        const currentLevel = state.level;
-        const bestLevel = state.bestLevel;
-        const next = getNextChaosDungeonMilestone(bestLevel);
-        const reached = getChaosDungeonMilestonesThrough(bestLevel);
-        const previous = reached.length ? reached[reached.length - 1].level : 0;
-        const progressPercent = next ? Math.max(0, Math.min(100, (bestLevel - previous) / Math.max(1, next.level - previous) * 100)) : 100;
-        const ruleRoot = document.getElementById('chaos-dungeon-rule');
-        const levelRoot = document.getElementById('chaos-dungeon-level');
-        const statsRoot = document.getElementById('chaos-dungeon-stats');
-        const progressRoot = document.getElementById('chaos-dungeon-progress');
-        const milestonesRoot = document.getElementById('chaos-dungeon-milestones');
-        const last = document.getElementById('chaos-dungeon-last');
-        const start = document.getElementById('chaos-dungeon-start');
-        const end = document.getElementById('chaos-dungeon-end');
-        const enhance = document.getElementById('chaos-dungeon-enhance');
-        if (!ruleRoot || !levelRoot || !statsRoot || !progressRoot || !milestonesRoot || !start || !end || !enhance) return;
-        document.getElementById('chaos-dungeon-date').textContent = '오늘의 규칙 · ' + dateKey + ' · 매일 한국 시간 기준 변경';
-        ruleRoot.innerHTML = '<div class="chaos-dungeon-rule"><div class="chaos-dungeon-rule-label">TODAY\'S MODIFIER</div><h3>' + escapeHtml(rule.title) + '</h3><p>' + escapeHtml(rule.description) + '</p></div>';
-        const tier = getItemTierObj(currentLevel).t;
-        levelRoot.innerHTML = '<div class="chaos-dungeon-level-card"><span class="chaos-dungeon-level-icon">✦</span><div><span class="chaos-dungeon-level-caption">DUNGEON GEAR · T' + tier + ' ' + escapeHtml(TIER_NAMES[tier]) + '</span><strong>Lv.' + currentLevel.toLocaleString() + '</strong><small>최고 기록 Lv.' + bestLevel.toLocaleString() + '</small></div><span class="chaos-dungeon-state ' + (state.active ? 'active' : '') + '">' + (state.active ? '도전 중' : '대기 중') + '</span></div>';
-        const odds = getChaosDungeonProbabilities(currentLevel);
-        statsRoot.innerHTML = '<div class="chaos-dungeon-stats"><div><span>누적 강화</span><strong>' + state.attempts.toLocaleString() + '</strong></div><div><span>성공</span><strong>' + state.successes.toLocaleString() + '</strong></div><div><span>파괴</span><strong>' + state.destructions.toLocaleString() + '</strong></div><div><span>현재 확률</span><strong>' + odds.successRate.toFixed(1) + '%</strong></div></div>';
-        progressRoot.innerHTML = '<div class="chaos-dungeon-progress-card"><div class="chaos-dungeon-progress-head"><span>다음 보상 · ' + (next ? 'Lv.' + next.level + ' ' + escapeHtml(next.title) : '모든 구간 보상 완료') + '</span><strong>' + (next ? bestLevel.toLocaleString() + ' / ' + next.level.toLocaleString() : '최고 기록 보상') + '</strong></div><div class="chaos-dungeon-progress-track"><span style="width:' + progressPercent.toFixed(1) + '%"></span></div><div class="chaos-dungeon-progress-foot"><span>최고 레벨 기준</span><span>' + (next ? (next.level - bestLevel).toLocaleString() + '레벨 남음' : '계속 도전 가능') + '</span></div></div>';
-        const upcomingMilestones = CHAOS_DUNGEON_MILESTONES.filter(milestone => milestone.level > bestLevel).slice(0, 5);
-        while (upcomingMilestones.length < 5) {
-            const afterLevel = upcomingMilestones.length ? upcomingMilestones[upcomingMilestones.length - 1].level : Math.max(1000, bestLevel);
-            upcomingMilestones.push(getNextChaosDungeonMilestone(afterLevel));
-        }
-        const visibleMilestones = [...reached.slice(-2), ...upcomingMilestones].filter((milestone, index, list) => list.findIndex(other => other.level === milestone.level) === index);
-        milestonesRoot.innerHTML = '<div class="chaos-dungeon-milestones"><div class="chaos-dungeon-section-title"><strong>레벨 보상</strong><span>최고 레벨 달성 시 자동 지급</span></div><div class="chaos-dungeon-milestone-list">' + visibleMilestones.map(milestone => {
-            const claimed = !!state.rewardsClaimed[String(milestone.level)];
-            const reached = bestLevel >= milestone.level;
-            return '<article class="chaos-dungeon-milestone ' + (claimed ? 'claimed' : reached ? 'reached' : '') + '"><span class="chaos-dungeon-milestone-level">Lv.' + milestone.level + '</span><div><strong>' + escapeHtml(milestone.title) + '</strong><small>' + escapeHtml(formatChaosDungeonReward(milestone)) + '</small></div><span class="chaos-dungeon-milestone-status">' + (claimed ? '수령' : reached ? '보상 대기' : '잠김') + '</span></article>';
-        }).join('') + '</div></div>';
-        if (last) last.textContent = state.lastResult || '던전 장비는 본 장비와 별도로 성장하며, 파괴되어도 최고 기록과 이미 받은 보상은 유지됩니다.';
-        start.textContent = state.active ? '도전 계속 중' : '무제한 도전 시작';
-        start.disabled = !!state.active || !!enhancementTrialSession?.active;
-        end.disabled = !state.active;
-        enhance.disabled = !state.active || isEnhanceCooldown || isAnimating;
-        enhance.innerText = isEnhanceCooldown ? '대기 중...' : '던전 강화 · Space';
-    };
-
-    window.openChaosDungeon = function() {
-        if (!currentUserData) return;
-        if (claimChaosDungeonMilestones(false)) syncToFirebase();
-        window.renderChaosDungeon();
-        document.getElementById('chaos-dungeon-modal').style.display = 'flex';
-    };
-    window.closeChaosDungeon = function() { document.getElementById('chaos-dungeon-modal').style.display = 'none'; };
-
-    window.startChaosDungeon = async function() {
-        if (!currentUserData) return;
-        if (enhancementTrialSession?.active) { showToast('강화 시련을 먼저 종료해주세요.', '#fda4af'); return; }
-        const state = getChaosDungeonState();
-        state.active = true;
-        window.renderChaosDungeon();
-        showToast('카오스 던전 도전 시작 · 횟수 제한 없음', '#67e8f9');
-        await syncToFirebase();
-    };
-
-    window.endChaosDungeon = async function() {
-        const state = getChaosDungeonState();
-        if (!state?.active) return;
-        state.active = false;
-        window.renderChaosDungeon();
-        showToast('카오스 던전 도전을 종료했습니다. 레벨과 최고 기록은 보존됩니다.', '#c4b5fd');
-        await syncToFirebase();
-    };
-
-    window.enhanceChaosDungeon = async function() {
-        const state = getChaosDungeonState();
-        if (!currentUserData || !state?.active || isEnhanceCooldown || isAnimating) return;
-        const rule = getChaosDungeonRule();
-        const attemptLevel = state.level;
-        const rates = getChaosDungeonProbabilities(attemptLevel);
-        const roll = Math.random() * 100;
-        lastManualEnhancementAt = Date.now();
-        state.attempts++;
-        currentUserData.stats = currentUserData.stats || { total: 0, success: 0, fail: 0, destroy: 0 };
-        currentUserData.stats.total = toSafeNumber(currentUserData.stats.total, 0) + 1;
-        trackDailyEnhancement();
-        updateQuestProgress('try', 1);
-        if (roll < rates.successRate) {
-            const gain = Math.floor(Math.random() * 10) + 1 + Math.max(0, Math.floor(toSafeNumber(rule.successGainBonus, 0)));
-            state.level = attemptLevel + gain;
-            state.successes++;
-            currentUserData.stats.success = toSafeNumber(currentUserData.stats.success, 0) + 1;
-            state.lastResult = '성공 · 던전 Lv.' + attemptLevel + ' → Lv.' + state.level + ' (+' + gain + ')';
-            updateQuestProgress('success', 1);
-            recordLowChanceSuccess(currentUserData, rates.successRate);
-        } else if (roll < rates.successRate + rates.destroyRate) {
-            state.level = 0;
-            state.destructions++;
-            currentUserData.stats.destroy = toSafeNumber(currentUserData.stats.destroy, 0) + 1;
-            state.lastResult = '던전 장비 파괴 · 던전 레벨이 0으로 초기화됐습니다. 최고 기록과 보상은 유지됩니다.';
-            updateQuestProgress('destroy', 1);
-        } else {
-            const basePenalty = Math.floor(Math.pow(Math.random(), 3) * Math.max(1, Math.floor(attemptLevel / 3))) + 1;
-            const penalty = rule.failNoLevelLoss ? 0 : Math.max(1, Math.floor(basePenalty * Math.max(0.1, toSafeNumber(rule.failLevelLossMultiplier, 1))));
-            state.level = Math.max(0, attemptLevel - penalty);
-            state.failures++;
-            currentUserData.stats.fail = toSafeNumber(currentUserData.stats.fail, 0) + 1;
-            state.lastResult = penalty ? '실패 · 던전 레벨 -' + penalty + ' (Lv.' + state.level + ')' : '실패 · 오늘의 규칙으로 레벨을 유지했습니다.';
-            updateQuestProgress('fail', 1);
-        }
-        state.bestLevel = Math.max(state.bestLevel, state.level);
-        const ruleCooldown = Math.max(0, toSafeNumber(rule.cooldownMultiplier, 1));
-        const cooldown = Math.max(0, Math.floor(getManualEnhancementCooldownMs() * ruleCooldown));
-        if (cooldown > 0) {
-            isEnhanceCooldown = true;
-            window.renderChaosDungeon();
-            setTimeout(() => { isEnhanceCooldown = false; updateUI(); window.renderChaosDungeon(); }, cooldown);
-        }
-        claimChaosDungeonMilestones(true);
-        checkAndClaimAchievements();
-        updateUI();
-        if (document.getElementById('chaos-dungeon-modal')?.style.display === 'flex') window.renderChaosDungeon();
-        await syncToFirebase();
-    };
-
     function getEnhancementTrialRates(level) {
         const levelBonus = Math.max(0, toSafeNumber(level, 160) - 160);
         const successRate = Math.min(50, 20 + levelBonus * 0.1);
@@ -3599,7 +3374,7 @@
         if (rewardRoll < 0) {
             const amount = 1500 + Math.floor(step * 500) + Math.floor(Math.random() * 751);
             currentUserData.tokens = toSafeNumber(currentUserData.tokens, 0) + amount;
-            return { changed: true, text: '다이아 ' + amount.toLocaleString() + '개 획득' };
+            return { changed: true, text: '다이아 ' + formatGameNumber(amount) + '개 획득' };
         }
         const stoneLevel = Math.max(150, Math.floor(toSafeNumber(level, 160) / 10) * 10);
         const stoneCount = 2 + Math.floor(step / 2);
@@ -3622,7 +3397,10 @@
         stopSpaceEnhancementHold();
         enhancementTrialSession = { id: ++enhancementTrialSessionSerial, active: true, busy: false, startLevel: startingLevel, trialLevel: startingLevel, bestLevel: startingLevel, attempts: 0, successes: 0, failures: 0, destructions: 0, logs: [] };
         updateUI();
-        showToast('강화 시련 모드가 켜졌습니다.', '#ddd');
+        const trialRates = getEnhancementTrialRates(startingLevel);
+        const trialSummary = '성공 ' + trialRates.successRate.toFixed(1) + '% · 변화 없음 ' + trialRates.failRate.toFixed(1) + '% · 파괴 20%';
+        updateLog('강화 시련 시작 · ' + trialSummary + ' · 파괴되면 장비가 Lv.0이 되고 자동 종료됩니다.', '#e4bd76');
+        showToast('강화 시련 시작<br>' + trialSummary + '<br>성공 보상 추첨 · 파괴 시 장비 Lv.0 및 자동 종료', '#e4bd76');
         return true;
     };
 
@@ -3635,7 +3413,10 @@
         if (!enhancementTrialSession?.active) return;
         enhancementTrialSession.active = false;
         updateUI();
-        showToast('강화 시련 모드가 꺼졌습니다.', '#ddd');
+        const session = enhancementTrialSession;
+        const sessionSummary = '시도 ' + session.attempts + '회 · 성공 ' + session.successes + '회 · 변화 없음 ' + session.failures + '회 · 파괴 ' + session.destructions + '회';
+        updateLog('강화 시련 종료 · ' + sessionSummary, '#c8c8c8');
+        showToast('강화 시련 종료<br>' + sessionSummary, '#c8c8c8');
         await syncToFirebase();
     };
 
@@ -3643,6 +3424,7 @@
         const session = enhancementTrialSession;
         if (!session?.active || session.busy) return;
         let destroyedThisAttempt = false;
+        let destroyedLevel = 0;
         session.busy = true;
         try {
             if (!currentUser || !currentUserData) return;
@@ -3668,7 +3450,7 @@
                 updateQuestProgress('success', 1);
             } else if (roll < rates.successRate + ENHANCEMENT_TRIAL_DESTROY_RATE) {
                 session.destructions++;
-                const destroyedLevel = Math.max(0, Math.floor(toSafeNumber(currentUserData.level, 0)));
+                destroyedLevel = Math.max(0, Math.floor(toSafeNumber(currentUserData.level, 0)));
                 currentUserData.level = 0;
                 applyCurrentPrefixState(currentUserData, false);
                 currentUserData.stats.destroy = toSafeNumber(currentUserData.stats.destroy, 0) + 1;
@@ -3691,7 +3473,7 @@
             checkAndClaimAchievements();
             if (session.logs.length > 40) session.logs.splice(0, session.logs.length - 40);
             updateUI();
-            if (destroyedThisAttempt) showToast('장비 파괴로 강화 시련이 자동 종료됐습니다.', '#ef4444');
+            if (destroyedThisAttempt) showToast('강화 시련 파괴<br>장비 Lv.' + destroyedLevel.toLocaleString() + ' → Lv.0 · 시련 자동 종료', '#ef4444');
             if (roll < rates.successRate) updateInventorySummary();
             await syncToFirebase();
         } catch (error) {
@@ -3786,7 +3568,7 @@
         const todayDateString = baseDate.getFullYear() + '-' + (baseDate.getMonth() + 1).toString().padStart(2, '0') + '-' + baseDate.getDate().toString().padStart(2, '0');
         const rewardClaimedToday = currentUserData.last_login_date === todayDateString;
         document.getElementById('attendance-summary').innerHTML =
-            '<div class="attendance-summary-card"><span>연속 출석</span><strong>' + streak.toLocaleString() + '일째</strong></div>' +
+            '<div class="attendance-summary-card"><span>연속 출석</span><strong>' + formatGameNumber(streak) + '일째</strong></div>' +
             '<div class="attendance-summary-card"><span>오늘 상태</span><strong>' + (rewardClaimedToday ? '보상 지급 완료' : '접속 시 지급') + '</strong></div>';
 
         const startDay = Math.max(1, streak - 2);
@@ -3803,7 +3585,7 @@
             const statusClass = isPast ? 'claimed' : isToday ? 'today' : 'future';
             html += `<div class="attendance-item ${statusClass}"${isToday ? ' aria-current="date"' : ''}>
                         <div class="attendance-item-range">${rangeLabel}</div>
-                        <div class="attendance-item-day">${day.toLocaleString()}일 연속</div>
+                        <div class="attendance-item-day">${formatGameNumber(day)}일 연속</div>
                         <div class="attendance-item-reward">${currencyAmountHtml('diamonds', reward.currency)}${currencyAmountHtml('multi', reward.currency)}</div>
                         <div class="attendance-item-stone">Lv.${reward.stoneLevel} 강화석 × ${reward.stoneCount}</div>
                         <div class="attendance-item-state">${stateLabel}</div>
@@ -3848,9 +3630,9 @@
 
         try {
             const userRef = getFirebaseUserRef(nickname);
-            const docSnap = await userRef.get();
-            if (docSnap.exists) {
-                const data = docSnap.data() || {};
+            const docSnap = await userRef.once('value');
+            if (docSnap.exists()) {
+                const data = decodeRtdbValue(docSnap.val() || {});
                 if (data.password && data.password !== hashedPw) {
                     if (isAutoLogin) {
                         clearRememberedLogin();
@@ -3877,7 +3659,6 @@
             const previousMilestoneRewards = { ...(currentUserData.tier_milestone_rewards || {}) };
             currentUserData = normalizeUserData(currentUserData);
             const retroactiveMilestones = TIER_MILESTONES.filter(milestone => !previousMilestoneRewards[milestone.id] && currentUserData.tier_milestone_rewards?.[milestone.id]);
-            claimChaosDungeonMilestones(false);
             currentUserData.password = currentUserData.password || hashedPw;
             currentUserData.online = true;
             currentUserData.last_active = Date.now();
@@ -3889,7 +3670,7 @@
             checkAndClaimAchievements();
             checkAndResetDailyQuests();
             checkAndResetWeeklyQuests();
-            await userRef.set(buildRegularUserSaveData(currentUserData), { merge: true });
+            await userRef.set(encodeRtdbValue(buildRegularUserSaveData(currentUserData)));
             firebaseLastSyncedData = cloneFirebaseValue(currentUserData);
             currentUser = nickname;
             document.getElementById('user-greeting').innerText = currentUser;
@@ -3919,8 +3700,8 @@
 
             if (unsubscribeUser) unsubscribeUser();
             const userValueHandler = (snapshot) => {
-                if (!snapshot.exists || snapshot.metadata.hasPendingWrites || !currentUserData || currentUser !== nickname) return;
-                const remoteData = normalizeUserData(cloneFirebaseValue(snapshot.data() || {}));
+                if (!snapshot.exists() || !currentUserData || currentUser !== nickname) return;
+                const remoteData = normalizeUserData(cloneFirebaseValue(decodeRtdbValue(snapshot.val() || {})));
                 const previousData = currentUserData;
                 const hasLocalPending = firebaseSaveDirty || !!firebaseSaveInFlight;
                 currentUserData = normalizeUserData(hasLocalPending && firebaseLastSyncedData
@@ -3935,14 +3716,14 @@
                 }
                 if (!firebaseSaveDirty && !firebaseSaveInFlight) setCloudSaveStatus('saved', '클라우드 실시간 동기화됨');
             };
-            unsubscribeUser = userRef.onSnapshot({ includeMetadataChanges: true }, userValueHandler, error => console.error('사용자 실시간 동기화 실패:', error));
+            unsubscribeUser = listenToFirebaseValue(userRef, userValueHandler, error => console.error('사용자 실시간 동기화 실패:', error));
 
             if (unsubscribeAllUsers) unsubscribeAllUsers();
             const allUsersValueHandler = (snapshot) => {
                 applyRankingSnapshot(snapshot);
                 setRankingSyncStatus(`계정 ${allUsersData.length}개 · 실시간 동기화 중`, '#67e8a5');
             };
-            unsubscribeAllUsers = db.collection('users').onSnapshot(allUsersValueHandler, error => {
+            unsubscribeAllUsers = listenToFirebaseValue(db.ref('users'), allUsersValueHandler, error => {
                 console.error('랭킹 실시간 동기화 실패:', error);
                 setRankingSyncStatus('실시간 연결이 끊겨 서버에서 다시 불러옵니다.', '#fbbf24');
                 loadRankingUsers(true);
@@ -3973,7 +3754,7 @@
         if (heartbeatInterval) { clearInterval(heartbeatInterval); heartbeatInterval = null; }
         if (presenceInterval) { clearInterval(presenceInterval); presenceInterval = null; }
         await syncToFirebase({ immediate: true });
-        if (currentUser) await getFirebaseUserRef(currentUser).set({ online: false }, { merge: true }).catch(() => {});
+        if (currentUser) await getFirebaseUserRef(currentUser).update(encodeRtdbValue({ online: false })).catch(() => {});
         if (heartbeatInterval) { clearInterval(heartbeatInterval); heartbeatInterval = null; }
         if (unsubscribeUser) { unsubscribeUser(); unsubscribeUser = null; }
         if (unsubscribeAllUsers) { unsubscribeAllUsers(); unsubscribeAllUsers = null; }
@@ -4013,7 +3794,7 @@
 
         let currentThreshold = Math.pow(accInfo.level - 1, 2) || 0; let nextThreshold = Math.pow(accInfo.level, 2);
         document.getElementById('xp-bar-fill').style.width = Math.min(100, Math.max(0, ((accInfo.totalExp - currentThreshold) / (nextThreshold - currentThreshold)) * 100)) + "%";
-        document.getElementById('xp-info-text').innerText = `경험치 ${(Math.max(0, accInfo.totalExp - currentThreshold)).toFixed(1)} / ${(nextThreshold - currentThreshold).toFixed(1)}`;
+        document.getElementById('xp-info-text').innerText = `경험치 ${formatGameNumber(Math.max(0, accInfo.totalExp - currentThreshold))} / ${formatGameNumber(nextThreshold - currentThreshold)}`;
 
         document.getElementById('current-level').innerText = userData.level;
         const globalPrefixLevel = getHighestArtifactUnlockLevel(userData);
@@ -4027,15 +3808,13 @@
             ? (nextArtifactUnlocked ? '다음 발견 대상 · T' + nextArtifact.tier + ' ' + nextArtifact.name : '다음 발견 구간 · T' + nextArtifact.tier + ' Lv.' + nextArtifact.level + '부터')
             : '아티팩트 모두 획득';
         if (document.getElementById('prefix-collection-modal')?.style.display === 'flex' && window.renderPrefixCollection) window.renderPrefixCollection();
-        if (document.getElementById('chaos-dungeon-modal')?.style.display === 'flex' && window.renderChaosDungeon) window.renderChaosDungeon();
         const trialActive = !!enhancementTrialSession?.active;
-        const chaosActive = !!userData.chaos_dungeon?.active;
         const trialToggleButton = document.getElementById('btn-enhancement-trial-toggle');
         if (trialToggleButton) {
             const eligible = userData.level >= 160 && accInfo.level >= 35;
-            trialToggleButton.innerText = trialActive ? '강화 시련 끄기' : '강화 시련 켜기';
+            trialToggleButton.innerText = trialActive ? '시련 ON · 종료하기' : '강화 시련 시작';
             trialToggleButton.disabled = !trialActive && !eligible;
-            trialToggleButton.title = eligible || trialActive ? '' : (userData.level < 160 ? '장비 Lv.160 이상부터 도전할 수 있습니다.' : '계정 Lv.35 이상부터 도전할 수 있습니다.');
+            trialToggleButton.title = trialActive ? '성공 시 장비 레벨 상승 및 추가 보상 추첨 · 파괴 확률 20% 고정 · 파괴 시 장비 Lv.0 및 자동 종료' : (eligible ? '성공 시 보상 추첨 · 파괴 확률 20% 고정' : (userData.level < 160 ? '장비 Lv.160 이상부터 도전할 수 있습니다.' : '계정 Lv.35 이상부터 도전할 수 있습니다.'));
             trialToggleButton.classList.toggle('btn-main', trialActive);
             trialToggleButton.setAttribute('aria-pressed', trialActive ? 'true' : 'false');
         }
@@ -4058,7 +3837,7 @@
         const sellButton = document.getElementById('btn-sell-top');
         if (sellButton) {
             const saleLocked = userData.level > 160;
-            sellButton.disabled = userData.level <= 0 || trialActive || chaosActive || saleLocked;
+            sellButton.disabled = userData.level <= 0 || trialActive || saleLocked;
             sellButton.innerText = saleLocked ? '판매 불가' : '판매';
         }
 
@@ -4108,7 +3887,7 @@
                 const offlineBoost = Math.max(0, toSafeNumber(effects.offlineRewardBoost, 0));
                 const diamondsPerHour = Math.max(1, afkItem.level / 80) * tierMultiplier.diamonds * (1 + (offlineBoost + effects.diamondGain) / 100);
                 const multiPerHour = Math.max(100, afkItem.level * 8) * tierMultiplier.multi * (1 + (offlineBoost + effects.multiGain) / 100);
-                document.getElementById('afk-prob-display').innerHTML = `시간당 약 ${diamondsPerHour.toFixed(1)} 다이아 · ${Math.floor(multiPerHour).toLocaleString()} 멀티코인`;
+                document.getElementById('afk-prob-display').innerHTML = `시간당 약 ${formatGameNumber(diamondsPerHour)} 다이아 · ${formatGameNumber(Math.floor(multiPerHour))} 멀티코인`;
             } else {
                 document.getElementById('afk-prob-display').innerHTML = `초당 성공률: ${getAFKProb(userData.afk_level).toFixed(4)}%`;
             }
@@ -4161,9 +3940,12 @@
     }
 
     function setProbDisp(s, f, d, accBonus = 0, buffBonus = 0, upgBonus = 0) {
-        document.getElementById('prob-success').innerText = s === "-" ? "-" : s + "%";
-        document.getElementById('prob-fail').innerText = f === "-" ? "-" : f + "%";
-        document.getElementById('prob-destroy').innerText = d === "-" ? "-" : d + "%";
+        const successDisplay = document.getElementById('prob-success');
+        const failDisplay = document.getElementById('prob-fail');
+        const destroyDisplay = document.getElementById('prob-destroy');
+        if (successDisplay) successDisplay.textContent = s === "-" ? "-" : s + "%";
+        if (failDisplay) failDisplay.textContent = f === "-" ? "-" : f + "%";
+        if (destroyDisplay) destroyDisplay.textContent = d === "-" ? "-" : d + "%";
     }
 
     function updateLog(msg, color) { document.getElementById('message-log').innerHTML = msg; document.getElementById('message-log').style.color = color || "#ccc"; }
@@ -4301,10 +4083,6 @@
         if (document.getElementById('artifact-discovery-modal')?.style.display === 'flex') { e.preventDefault(); return; }
         if (challengeBattle && challengeBattle.activeMove) { e.preventDefault(); if (!e.repeat || challengeBattle.activeMove.mode === 'rapid') window.hitChallengeRhythm(); return; }
         if (document.getElementById('challenge-modal').style.display === 'flex') { e.preventDefault(); return; }
-        if (document.getElementById('chaos-dungeon-modal')?.style.display === 'flex') {
-            if (!e.repeat) window.enhanceChaosDungeon();
-            return;
-        }
         if (enhancementTrialSession?.active) {
             if (!e.repeat) window.attemptEnhancementTrial();
             return;
@@ -4424,7 +4202,7 @@
         }
         container.innerHTML = groups.map(([band, count]) => {
             const possible = Math.floor(count / 3);
-            return `<div class="list-item"><div><h4>Lv.${band}~${band + 9} 구간</h4><p>보유 ${count.toLocaleString()}개 · 승급 가능 ${possible.toLocaleString()}회</p></div><button class="btn-main" onclick="window.combineStoneBand(${band})" ${possible ? '' : 'disabled'}>3개 → Lv.${band + 10}</button></div>`;
+            return `<div class="list-item"><div><h4>Lv.${band}~${band + 9} 구간</h4><p>보유 ${formatGameNumber(count)}개 · 승급 가능 ${formatGameNumber(possible)}회</p></div><button class="btn-main" onclick="window.combineStoneBand(${band})" ${possible ? '' : 'disabled'}>3개 → Lv.${band + 10}</button></div>`;
         }).join('');
     }
 
@@ -4555,15 +4333,15 @@
         const randomButton = document.getElementById('btn-prefix-reroll');
         const legendaryButton = document.getElementById('btn-prefix-legendary');
         if (!container || !currentUserData) return;
-        if (randomButton) randomButton.innerText = `랜덤 재련 · 다이아 ${PREFIX_REROLL_COST.toLocaleString()}개`;
-        if (legendaryButton) legendaryButton.innerText = `특수 재련 · 다이아 ${PREFIX_LEGENDARY_COST.toLocaleString()}개 + Lv.160 이상 강화석 ${PREFIX_LEGENDARY_STONE_COUNT}개`;
+        if (randomButton) randomButton.innerText = `랜덤 재련 · 다이아 ${formatGameNumber(PREFIX_REROLL_COST)}개`;
+        if (legendaryButton) legendaryButton.innerText = `특수 재련 · 다이아 ${formatGameNumber(PREFIX_LEGENDARY_COST)}개 + Lv.160 이상 강화석 ${PREFIX_LEGENDARY_STONE_COUNT}개`;
         const targets = getPrefixForgeTargets();
         if (!targets.some(target => target.key === selectedPrefixTargetKey)) selectedPrefixTargetKey = targets[0]?.key || '';
         if (!targets.length) {
             container.innerHTML = '<div class="inventory-empty">수식어 재련에는 Lv.125 이상 장비가 필요합니다.</div>';
             if (randomButton) randomButton.disabled = true;
             if (legendaryButton) legendaryButton.disabled = true;
-            if (note) note.innerText = `다이아 ${Math.floor(toSafeNumber(currentUserData.tokens, 0)).toLocaleString()}개 · Lv.160 이상 강화석 ${countPrefixStones()}개 보유`;
+            if (note) note.innerText = `다이아 ${formatGameNumber(Math.floor(toSafeNumber(currentUserData.tokens, 0)))}개 · Lv.160 이상 강화석 ${formatGameNumber(countPrefixStones())}개 보유`;
             return;
         }
         container.innerHTML = targets.map(target => {
@@ -4573,7 +4351,7 @@
         }).join('');
         if (randomButton) randomButton.disabled = toSafeNumber(currentUserData.tokens, 0) < PREFIX_REROLL_COST;
         if (legendaryButton) legendaryButton.disabled = toSafeNumber(currentUserData.tokens, 0) < PREFIX_LEGENDARY_COST || countPrefixStones() < PREFIX_LEGENDARY_STONE_COUNT;
-        if (note) note.innerText = `보유 다이아 ${Math.floor(toSafeNumber(currentUserData.tokens, 0)).toLocaleString()}개 · Lv.160 이상 강화석 ${countPrefixStones()}개 · 수식어 희귀도 없이 네 종류를 같은 기준으로 재련합니다.`;
+        if (note) note.innerText = `보유 다이아 ${formatGameNumber(Math.floor(toSafeNumber(currentUserData.tokens, 0)))}개 · Lv.160 이상 강화석 ${formatGameNumber(countPrefixStones())}개 · 수식어 희귀도 없이 네 종류를 같은 기준으로 재련합니다.`;
     }
 
     window.openPrefixForgeModal = function() {
@@ -4824,7 +4602,7 @@
             container.innerHTML = '<div class="inventory-empty">보유 중인 공명 상자가 없습니다.</div>';
             return;
         }
-        container.innerHTML = '<div class="list-item"><div><h4>공명 상자 ' + count.toLocaleString() + '개</h4><p>상자마다 보상 한 종류를 무작위로 받습니다.</p></div><div style="display:flex; gap:5px; flex-wrap:wrap; justify-content:flex-end;"><button class="btn-main" onclick="window.openResonanceChest()">하나 열기</button>' + (count > 1 ? '<button onclick="window.openResonanceChest(true)">모두 열기</button>' : '') + '</div></div>';
+        container.innerHTML = '<div class="list-item"><div><h4>공명 상자 ' + formatGameNumber(count) + '개</h4><p>상자마다 보상 한 종류를 무작위로 받습니다.</p></div><div style="display:flex; gap:5px; flex-wrap:wrap; justify-content:flex-end;"><button class="btn-main" onclick="window.openResonanceChest()">하나 열기</button>' + (count > 1 ? '<button onclick="window.openResonanceChest(true)">모두 열기</button>' : '') + '</div></div>';
     }
 
     function renderMaterialInventory() {
@@ -4840,7 +4618,7 @@
             .sort((a, b) => (a - b) * direction);
         const totalCount = entries.reduce((sum, level) => sum + Math.max(0, Math.floor(toSafeNumber(materials[level], 0))), 0);
         const summary = document.getElementById('material-inventory-summary');
-        if (summary) summary.innerText = '총 ' + totalCount.toLocaleString() + '개 · ' + entries.length.toLocaleString() + '종';
+        if (summary) summary.innerText = '총 ' + formatGameNumber(totalCount) + '개 · ' + formatGameNumber(entries.length) + '종';
         const filtered = query ? entries.filter(level => String(level).includes(query)) : entries;
         if (!entries.length) {
             container.innerHTML = '<div class="inventory-empty">보유 중인 강화석이 없습니다.</div>';
@@ -4850,7 +4628,7 @@
             container.innerHTML = '<div class="inventory-empty">검색 결과가 없습니다.</div>';
             return;
         }
-        container.innerHTML = filtered.map(level => '<div class="list-item"><h4>Lv.' + level.toLocaleString() + ' 강화석</h4><strong>' + Math.floor(toSafeNumber(materials[level], 0)).toLocaleString() + '개</strong></div>').join('');
+        container.innerHTML = filtered.map(level => '<div class="list-item"><h4>Lv.' + level.toLocaleString() + ' 강화석</h4><strong>' + formatGameNumber(Math.floor(toSafeNumber(materials[level], 0))) + '개</strong></div>').join('');
     }
 
     function renderEnhancementTrialPrefixRewards() {
@@ -4898,12 +4676,12 @@
         const materialLevels = Object.keys(materials).map(Number).filter(level => Number.isFinite(level) && toSafeNumber(materials[level], 0) > 0);
         const stoneCount = materialLevels.reduce((sum, level) => sum + Math.max(0, Math.floor(toSafeNumber(materials[level], 0))), 0);
         const setText = (id, value) => { const element = document.getElementById(id); if (element) element.innerText = value; };
-        setText('inventory-summary-potion', potionCount.toLocaleString() + '개');
-        setText('inventory-summary-chests', chestCount.toLocaleString() + '개');
-        setText('inventory-summary-stones', stoneCount.toLocaleString() + '개 · ' + materialLevels.length.toLocaleString() + '종');
-        setText('inventory-tab-count-consumables', potionCount.toLocaleString());
-        setText('inventory-tab-count-chests', chestCount.toLocaleString());
-        setText('inventory-tab-count-materials', materialLevels.length.toLocaleString());
+        setText('inventory-summary-potion', formatGameNumber(potionCount) + '개');
+        setText('inventory-summary-chests', formatGameNumber(chestCount) + '개');
+        setText('inventory-summary-stones', formatGameNumber(stoneCount) + '개 · ' + formatGameNumber(materialLevels.length) + '종');
+        setText('inventory-tab-count-consumables', formatGameNumber(potionCount));
+        setText('inventory-tab-count-chests', formatGameNumber(chestCount));
+        setText('inventory-tab-count-materials', formatGameNumber(materialLevels.length));
         renderResonanceChestInventory();
         renderMaterialInventory();
         renderEnhancementTrialPrefixRewards();
@@ -5097,7 +4875,7 @@
         const countDisplay = document.getElementById('inv-potion-count');
         const statusDisplay = document.getElementById('inv-potion-status');
         const useButton = document.getElementById('btn-use-luck-potion');
-        if (countDisplay) countDisplay.innerText = '보유: ' + count.toLocaleString();
+        if (countDisplay) countDisplay.innerText = '보유: ' + formatGameNumber(count);
         if (statusDisplay) statusDisplay.innerText = active
             ? '효과 적용 중 · ' + formatPotionTime(remaining) + ' 남음'
             : count > 0 ? '사용 가능 · 비약 1개로 5분간 효과가 적용됩니다.' : '보유한 비약이 없습니다.';
@@ -5113,7 +4891,7 @@
             } else if (count > 0) {
                 buffDisplay.className = 'buff-status ready';
                 buffDisplay.style.display = 'block';
-                buffDisplay.innerText = '🍀 행운의 비약 ' + count.toLocaleString() + '개 보유 · 인벤토리에서 사용할 수 있습니다.';
+                buffDisplay.innerText = '🍀 행운의 비약 ' + formatGameNumber(count) + '개 보유 · 인벤토리에서 사용할 수 있습니다.';
             } else {
                 buffDisplay.style.display = 'none';
                 buffDisplay.innerHTML = '';
@@ -5211,6 +4989,12 @@
         return CHALLENGE_MOVES.map(move => ({ ...move, uses: getChallengeMoveUses(move, stats) }));
     }
 
+    function getChallengeBossHealth(floor, partyAttack) {
+        const safeFloor = Math.max(1, Math.floor(toSafeNumber(floor, 1)));
+        const safeAttack = Math.max(0, toSafeNumber(partyAttack, 0));
+        return Math.max(100, Math.floor(safeAttack * (3.4 + Math.pow(safeFloor, 0.72) * 0.9)));
+    }
+
     function getChallengeBoss(floor) {
         const safeFloor = Math.max(1, toSafeNumber(floor, 1));
         const requiredLevel = Math.floor(25 + safeFloor * 3 + Math.pow(safeFloor, 1.1));
@@ -5220,7 +5004,7 @@
             name: safeFloor % 10 === 0 ? `균열 군주 ${safeFloor}` : safeFloor % 5 === 0 ? `고대 파수꾼 ${safeFloor}` : `탑의 파수꾼 ${safeFloor}`,
             requiredLevel,
             timeLimit: 60,
-            hp: Math.max(100, Math.floor(sampleAttack * 5 * (1 + safeFloor * 0.03 + Math.pow(safeFloor, 1.05) * 0.005)))
+            hp: getChallengeBossHealth(safeFloor, sampleAttack)
         };
     }
 
@@ -5270,6 +5054,7 @@
         const selectedParty = getSelectedChallengeCandidates(candidates);
         const selectedKeys = new Set(selectedParty.map(c => c.key));
         const selectedAttack = selectedParty.reduce((sum, c) => sum + getRaidAttack(c.item), 0);
+        boss.hp = getChallengeBossHealth(boss.floor, selectedAttack || getRaidAttack({ level: boss.requiredLevel }, false, false));
         const moves = buildChallengeMoves(selectedParty);
         const moveText = moves.filter(m => m.uses > 0).map(m => m.name + ' ' + m.uses + '회').join(' · ') || '-';
         const selectedTitle = selectedParty.length === 0 ? '미선택' : selectedParty.length === 1 ? formatItemName(selectedParty[0].item) : `${selectedParty.length}개 장비 조합`;
@@ -5279,7 +5064,7 @@
             return `<div class="challenge-item ${selectedKeys.has(c.key) ? 'selected' : ''}" onclick="window.selectChallengeItem('${c.key}')">
                         <div style="display:flex; justify-content:space-between; gap:10px;">
                             <strong style="font-size:0.95rem; margin:0;">${c.label}</strong>
-                            <span style="color:#aaa;">${selectedKeys.has(c.key) ? '선택됨 · ' : ''}공격력 ${atk.toLocaleString()}</span>
+                            <span style="color:#aaa;">${selectedKeys.has(c.key) ? '선택됨 · ' : ''}공격력 ${formatGameNumber(atk)}</span>
                         </div>
                         <div style="font-size:0.85rem; color:#fff; margin-top:4px;">${formatItemName(c.item)}</div>
                         <div style="font-size:0.75rem; color:#777; margin-top:2px;">${formatItemSubText(c.item)}</div>
@@ -5293,13 +5078,13 @@
                 <div class="challenge-card">
                     <div style="color:#888; font-size:0.8rem;">현재 층</div>
                     <strong>${boss.floor}층 · ${boss.name}</strong>
-                    <div style="margin-top:8px; color:#aaa; font-size:0.85rem;">체력 ${boss.hp.toLocaleString()} · 권장 Lv.${boss.requiredLevel} · 제한 ${boss.timeLimit}초</div>
+                    <div style="margin-top:8px; color:#aaa; font-size:0.85rem;" title="정확한 보스 체력 ${formatExactGameNumber(boss.hp)}">선택 조합 보스 체력 ${formatGameNumber(boss.hp)} · 권장 Lv.${boss.requiredLevel} · 제한 ${boss.timeLimit}초</div>
                     <div style="margin-top:4px;color:#777;font-size:.72rem;">진행 층은 매일 1층으로 초기화 · 최고 기록은 유지</div>
                 </div>
                 <div class="challenge-card">
                     <div style="color:#888; font-size:0.8rem;">선택 장비 (${selectedParty.length}/${CHALLENGE_MAX_ITEMS})</div>
                     <strong>${selectedTitle}</strong>
-                    <div style="margin-top:8px; color:#aaa; font-size:0.85rem;">총 공격력 ${selectedAttack.toLocaleString()}</div>
+                    <div style="margin-top:8px; color:#aaa; font-size:0.85rem;">총 공격력 ${formatGameNumber(selectedAttack)}</div>
                     <div style="margin-top:4px; color:#777; font-size:0.75rem;">${selectedDetail}</div>
                     ${warning}
                 </div>
@@ -5366,7 +5151,7 @@
         const boss = getChallengeBoss(currentUserData.challenge_floor || 1);
         const affix = getChallengeAffix(boss.floor);
         const stats = getChallengePartyStats(selectedParty);
-        boss.hp = Math.max(100, Math.floor(stats.attack * (3.4 + Math.pow(boss.floor, 0.72) * 0.9)));
+        boss.hp = getChallengeBossHealth(boss.floor, stats.attack);
         const moves = buildChallengeMoves(selectedParty);
         const playerMaxHp = Math.max(1800, Math.floor(stats.attack * 3.5 + stats.maxLevel * 100));
         challengeBattle = {
@@ -5473,25 +5258,25 @@
         document.getElementById('challenge-content').innerHTML = `
             <div class="challenge-battle">
                 <div style="display:flex; flex-direction:column; gap:10px;">
-                    <div class="challenge-card" style="text-align:center; color:#fbbf24;">남은 전투 시간 <strong id="challenge-time-left">${Math.max(0, (b.deadline - Date.now()) / 1000).toFixed(1)}</strong>초</div>
+                    <div class="challenge-card" style="text-align:center; color:#fbbf24;">남은 전투 시간 <strong id="challenge-time-left">${formatGameNumber(Math.max(0, (b.deadline - Date.now()) / 1000))}</strong>초</div>
                     <div class="challenge-grid">
                         <div class="challenge-card">
                             <div style="color:#888; font-size:0.8rem;">우리팀</div>
-                            <strong>HP ${Math.max(0, Math.ceil(b.playerHp)).toLocaleString()} / ${b.playerMaxHp.toLocaleString()}</strong>
+                            <strong title="정확한 체력 ${formatExactGameNumber(Math.max(0, Math.ceil(b.playerHp)))} / ${formatExactGameNumber(b.playerMaxHp)}">HP ${formatGameNumber(Math.max(0, Math.ceil(b.playerHp)))} / ${formatGameNumber(b.playerMaxHp)}</strong>
                             <div class="challenge-hp"><div class="challenge-hp-fill" style="width:${hpPercent(b.playerHp, b.playerMaxHp)}%;"></div></div>
                         </div>
                         <div class="challenge-card">
                             <div style="color:#888; font-size:0.8rem;">${b.boss.name}</div>
-                            <strong>HP ${Math.max(0, Math.ceil(b.enemyHp)).toLocaleString()} / ${b.boss.hp.toLocaleString()}</strong>
+                            <strong title="정확한 보스 체력 ${formatExactGameNumber(Math.max(0, Math.ceil(b.enemyHp)))} / ${formatExactGameNumber(b.boss.hp)}">HP ${formatGameNumber(Math.max(0, Math.ceil(b.enemyHp)))} / ${formatGameNumber(b.boss.hp)}</strong>
                             <div class="challenge-hp"><div class="challenge-hp-fill enemy" style="width:${hpPercent(b.enemyHp, b.boss.hp)}%;"></div></div>
-                            <div style="margin-top:6px; color:#fbbf24; font-size:0.75rem;">보호막 ${Math.max(0, b.enemyShield).toLocaleString()} · 기믹 ${b.affix.name}</div>
+                            <div style="margin-top:6px; color:#fbbf24; font-size:0.75rem;">보호막 ${formatGameNumber(Math.max(0, b.enemyShield))} · 기믹 ${b.affix.name}</div>
                             <div style="margin-top:3px; color:#888; font-size:0.7rem;">${b.affix.description}</div>
                         </div>
                     </div>
                     <div class="challenge-card">
                         <div style="display:flex; justify-content:space-between; color:#aaa; font-size:0.85rem;">
                             <span>${b.turn === 'player' ? '우리팀 턴' : '적 턴'}</span>
-                            <span>기본 공격력 ${b.attack.toLocaleString()}</span>
+                            <span>기본 공격력 ${formatGameNumber(b.attack)}</span>
                         </div>
                         <div class="challenge-move-grid">${moveButtons}</div>
                     </div>
@@ -5719,10 +5504,10 @@
         const hpDamage = Math.min(battle.enemyHp, damage - shieldDamage);
         battle.enemyHp -= hpDamage;
         const effectsText = [
-            shieldDamage > 0 ? `보스 보호막 -${shieldDamage.toLocaleString()}` : '',
+            shieldDamage > 0 ? `보스 보호막 -${formatGameNumber(shieldDamage)}` : '',
             exposedCore ? '노출 핵 추가 피해' : ''
         ].filter(Boolean).join(' · ');
-        const dmgText = damage > 0 ? `피해 ${damage.toLocaleString()}` : `피해 없음`;
+        const dmgText = damage > 0 ? `피해 ${formatGameNumber(damage)}` : `피해 없음`;
         battle.logs.push(`${active.name} 공격 · 평균 정확도 ${Math.round(avgAcc)}% (${judge}) · ${dmgText}${effectsText ? ` · ${effectsText}` : ''}`);
         battle.lastJudge = `전체 정확도 ${Math.round(avgAcc)}% (${judge})`;
         battle.activeMove = null;
@@ -5731,7 +5516,7 @@
         if (battle.affix.id === 'mirror' && hpDamage > 0) {
                 const reflectedDamage = Math.max(1, Math.floor(hpDamage * 0.06));
             const reflected = applyChallengePlayerDamage(reflectedDamage);
-            battle.logs.push(`반사의 갑주 · 되돌아온 피해 ${reflectedDamage.toLocaleString()}`);
+            battle.logs.push(`반사의 갑주 · 되돌아온 피해 ${formatGameNumber(reflectedDamage)}`);
             if (reflected.defeated) { window.endChallengeBattle(false, '반사 피해로 쓰러졌습니다.'); return; }
         }
         battle.turn = 'enemy';
@@ -5756,14 +5541,14 @@
                 attackName = '낙뢰 강타';
             }
             const received = applyChallengePlayerDamage(incomingDamage);
-            currentBattle.logs.push(`${currentBattle.boss.name} ${attackName} · 피해 ${incomingDamage.toLocaleString()}`);
+            currentBattle.logs.push(`${currentBattle.boss.name} ${attackName} · 피해 ${formatGameNumber(incomingDamage)}`);
             if (received.defeated) { window.endChallengeBattle(false); return; }
 
             if (currentBattle.affix.id === 'regeneration') {
                 const healing = Math.min(currentBattle.boss.hp - currentBattle.enemyHp, Math.floor(currentBattle.boss.hp * 0.03));
                 if (healing > 0) {
                     currentBattle.enemyHp += healing;
-                    currentBattle.logs.push(`재생의 핵 · 보스 체력 +${healing.toLocaleString()}`);
+                    currentBattle.logs.push(`재생의 핵 · 보스 체력 +${formatGameNumber(healing)}`);
                 }
             }
             const hasMove = currentBattle.moves.some(m => m.uses > 0);
@@ -5809,7 +5594,7 @@
     function formatAchievementProgress(type, value) {
         const amount = Math.max(0, Math.floor(Number(value) || 0));
         if (type === 'max_level' || type === 'acc_level') return 'Lv.' + amount.toLocaleString();
-        return amount.toLocaleString() + '회';
+        return formatGameNumber(amount) + '회';
     }
 
     function renderFiveSegmentBar(percent, label, value = percent, max = 100) {
@@ -5835,7 +5620,7 @@
         overview.innerHTML =
             '<div class="achievement-overview">' +
                 '<div class="achievement-overview-head">' +
-                    '<div><span class="achievement-overview-label">전체 달성</span><br><span class="achievement-overview-count">' + completedCount.toLocaleString() + ' / ' + totalCount.toLocaleString() + '개 완료</span></div>' +
+                    '<div><span class="achievement-overview-label">전체 달성</span><br><span class="achievement-overview-count">' + formatGameNumber(completedCount) + ' / ' + formatGameNumber(totalCount) + '개 완료</span></div>' +
                     '<span class="achievement-overview-percent">' + Math.floor(overallPercent) + '%</span>' +
                 '</div>' +
                 renderFiveSegmentBar(overallPercent, '전체 업적 달성률', completedCount, totalCount) +
@@ -5848,7 +5633,7 @@
                     const percent = Math.min(100, highest / milestone.level * 100);
                     const stateText = claimedMilestone ? '보상 수령 완료' : '최고 Lv.' + milestone.level + ' 달성 시 자동 지급';
                     return '<div class="achievement-milestone"><div class="achievement-milestone-head"><strong>T' + milestone.tier + ' ' + milestone.name + '<br>Lv.' + milestone.level + '</strong><span>' + stateText + '</span></div>' +
-                        '<div class="achievement-milestone-reward"><span>' + Math.min(highest, milestone.level).toLocaleString() + ' / ' + milestone.level + '</span><span>다이아 ' + milestone.diamonds.toLocaleString() + ' · 멀티 ' + milestone.multi.toLocaleString() + '<br>Lv.' + milestone.stoneLevel + ' 강화석 ' + milestone.stoneCount + ' · 상자 ' + milestone.chests + '</span></div>' +
+                        '<div class="achievement-milestone-reward"><span>' + Math.min(highest, milestone.level).toLocaleString() + ' / ' + milestone.level + '</span><span>다이아 ' + formatGameNumber(milestone.diamonds) + ' · 멀티 ' + formatGameNumber(milestone.multi) + '<br>Lv.' + milestone.stoneLevel + ' 강화석 ' + formatGameNumber(milestone.stoneCount) + ' · 상자 ' + formatGameNumber(milestone.chests) + '</span></div>' +
                         renderFiveSegmentBar(percent, 'T' + milestone.tier + ' 도달 진행도', Math.min(highest, milestone.level), milestone.level) + '</div>';
                 }).join('') + '</div>' +
             '</div>';
@@ -5895,7 +5680,7 @@
             }).join('');
             const progressText = formatAchievementProgress(config.type, Math.min(progress, next.target));
             const goalText = formatAchievementProgress(config.type, next.target);
-            const rewardText = isMaster ? '모든 단계 보상 수령 완료' : '다음 보상 <span class="achievement-reward"><b>+' + next.reward.toLocaleString() + '</b> 다이아</span>';
+            const rewardText = isMaster ? '모든 단계 보상 수령 완료' : '다음 보상 <span class="achievement-reward"><b>+' + formatGameNumber(next.reward) + '</b> 다이아</span>';
             const statusText = isMaster ? 'MASTER' : ACH_STAGE_LABELS[nextIndex] + ' 단계';
             html +=
                 '<article class="achievement-card' + (isMaster ? ' is-master' : '') + '" style="--achievement-accent:' + accents[config.type] + '">' +
@@ -5926,7 +5711,7 @@
                     '<p class="achievement-feature-copy">' + special.desc + '</p>' +
                     '<div class="achievement-progress-meta"><span>' + (complete ? '달성 완료' : '도전 진행도') + '</span><span><strong>' + Math.floor(progress) + '</strong> <span class="achievement-goal">/ ' + special.target + '회</span></span></div>' +
                     renderFiveSegmentBar(percent, special.title + ' 진행도', Math.floor(progress), special.target) +
-                    '<div class="achievement-card-foot"><span>' + (complete ? '보상 수령 완료' : '보상 <span class="achievement-reward"><b>+' + special.reward.toLocaleString() + '</b> 다이아</span>') + '</span><span>' + Math.floor(percent) + '%</span></div>' +
+                    '<div class="achievement-card-foot"><span>' + (complete ? '보상 수령 완료' : '보상 <span class="achievement-reward"><b>+' + formatGameNumber(special.reward) + '</b> 다이아</span>') + '</span><span>' + Math.floor(percent) + '%</span></div>' +
                 '</article>';
         }
         container.innerHTML = html;
@@ -6053,10 +5838,10 @@
             <div class="spectator-item-row"><strong style="color:#eee;">${escapeHtml(lastEventText)}</strong><span>${lastEventTime ? escapeHtml(formatLastSeen(lastEventTime)) : ''}</span></div>
             <div class="spectator-section-title">강화 기록</div>
             <div class="spectator-stat-grid">
-                <div class="spectator-stat"><strong>${Math.floor(toSafeNumber(stats.total, 0)).toLocaleString()}</strong><span>총 시도</span></div>
-                <div class="spectator-stat"><strong>${Math.floor(toSafeNumber(stats.success, 0)).toLocaleString()}</strong><span>성공</span></div>
-                <div class="spectator-stat"><strong>${Math.floor(toSafeNumber(stats.fail, 0)).toLocaleString()}</strong><span>하락</span></div>
-                <div class="spectator-stat"><strong>${Math.floor(toSafeNumber(stats.destroy, 0)).toLocaleString()}</strong><span>파괴</span></div>
+                <div class="spectator-stat"><strong>${formatGameNumber(Math.floor(toSafeNumber(stats.total, 0)))}</strong><span>총 시도</span></div>
+                <div class="spectator-stat"><strong>${formatGameNumber(Math.floor(toSafeNumber(stats.success, 0)))}</strong><span>성공</span></div>
+                <div class="spectator-stat"><strong>${formatGameNumber(Math.floor(toSafeNumber(stats.fail, 0)))}</strong><span>하락</span></div>
+                <div class="spectator-stat"><strong>${formatGameNumber(Math.floor(toSafeNumber(stats.destroy, 0)))}</strong><span>파괴</span></div>
             </div>
             <div class="spectator-section-title">현재 장비 현황</div>
             <div class="spectator-item-list">${items.map(item => `<div class="spectator-item-row"><span>${escapeHtml(item.label)}</span><strong style="color:${TIER_COLORS[getItemTierObj(item.level).t]};">Lv.${item.level} · ${escapeHtml(getProfileTierLabel(item.level))}</strong></div>`).join('')}</div>`;
@@ -6080,9 +5865,9 @@
         document.getElementById('spectator-content').innerHTML = '<div style="padding:24px 8px; text-align:center; color:#777;">실시간 데이터를 연결하고 있습니다.</div>';
         spectatorRefreshInterval = setInterval(renderSpectatorPresence, 1000);
         const spectatorRef = getFirebaseUserRef(name);
-        unsubscribeSpectator = spectatorRef.onSnapshot(snapshot => {
+        unsubscribeSpectator = listenToFirebaseValue(spectatorRef, snapshot => {
             if (spectatorTargetName !== name) return;
-            if (!snapshot.exists) {
+            if (!snapshot.exists()) {
                 spectatorSnapshotData = null;
                 document.getElementById('spectator-live-status').classList.remove('online');
                 document.getElementById('spectator-live-status').innerHTML = '<span class="spectator-live-dot"></span><span>사용자 없음</span>';
@@ -6090,7 +5875,7 @@
                 document.getElementById('spectator-content').innerHTML = '';
                 return;
             }
-            const data = normalizeUserData(cloneFirebaseValue(snapshot.data() || {}));
+            const data = normalizeUserData(cloneFirebaseValue(decodeRtdbValue(snapshot.val() || {})));
             delete data.password;
             spectatorSnapshotData = data;
             renderSpectatorData(data);
@@ -6126,7 +5911,7 @@
         document.getElementById('profile-name').innerText = user.name; document.getElementById('profile-acc-lv').innerText = `Lv.${calculateAccountLevel(user).level}`;
         const spectatorButton = document.getElementById('profile-spectator-button');
         if (spectatorButton) spectatorButton.style.display = user.name !== currentUser ? 'block' : 'none';
-        document.getElementById('profile-stats-container').innerHTML = `<div class="list-item"><span>최고 레벨</span><span>Lv.${bestLv} (${tName})</span></div><div class="list-item"><span>보관함 5칸 평균</span><span>Lv.${getOwnedItemsAverage(user).toFixed(1)}</span></div><div class="list-item"><span>총 시도</span><span>${user.stats?.total||0}회</span></div>`;
+        document.getElementById('profile-stats-container').innerHTML = `<div class="list-item"><span>최고 레벨</span><span>Lv.${bestLv} (${tName})</span></div><div class="list-item"><span>보관함 5칸 평균</span><span>Lv.${getOwnedItemsAverage(user).toFixed(1)}</span></div><div class="list-item"><span>총 시도</span><span>${formatGameNumber(user.stats?.total||0)}회</span></div>`;
         document.getElementById('profile-inventory').innerHTML = user.items?.length ? user.items.map((item, i) => {
             let itemLv = getItemLevel(item);
             let itemT = getItemTierObj(itemLv);
@@ -6220,10 +6005,11 @@
 
     function applyRankingSnapshot(snapshot) {
         allUsersData = [];
-        snapshot.forEach(doc => {
-            const publicData = { ...(doc.data() || {}) };
+        const users = decodeRtdbValue(snapshot.val() || {});
+        Object.entries(users).forEach(([name, data]) => {
+            const publicData = { ...(data || {}) };
             delete publicData.password;
-            allUsersData.push({ ...publicData, name: doc.id });
+            allUsersData.push({ ...publicData, name });
         });
         rankingLoaded = true;
         renderRanking();
@@ -6242,7 +6028,7 @@
         setRankingSyncStatus('랭킹 데이터를 확인하는 중…', '#9ca3af');
         rankingLoadPromise = (async () => {
             try {
-                const snapshot = await db.collection('users').get();
+                const snapshot = await db.ref('users').once('value');
                 applyRankingSnapshot(snapshot);
                 setRankingSyncStatus(`계정 ${allUsersData.length}개 · 서버 동기화 완료`, '#67e8a5');
             } catch (error) {
