@@ -614,6 +614,68 @@
         #achievements-modal .achievement-card-foot { border-color: #303030; }
         #achievements-modal .achievement-reward { color: #d0d0d0; }
         #achievements-modal .achievement-reward b { color: #fff; }
+
+        /* Museum / Collection Codex */
+        .museum-modal-content { width:min(94vw,920px); max-width:920px; max-height:min(88vh,860px); display:flex; flex-direction:column; gap:12px; overflow:hidden; border-color:#3b3b3b; background:radial-gradient(ellipse at 12% 0%,#252525 0%,#151515 42%,#101010 100%); }
+        .museum-heading { flex:0 0 auto; padding-right:34px; }
+        .museum-eyebrow,.daily-chaos-eyebrow { color:#aaa; font-size:.64rem; font-weight:700; letter-spacing:.17em; margin-bottom:5px; }
+        .museum-heading p,.daily-chaos-heading p { margin:6px 0 0; color:#888; font-size:.78rem; line-height:1.5; }
+        .museum-overview { flex:0 0 auto; display:grid; grid-template-columns:minmax(0,1.25fr) minmax(190px,.75fr); gap:14px; padding:14px; border:1px solid #353535; border-radius:13px; background:linear-gradient(120deg,#202020,#111 72%); }
+        .museum-overview-title { display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:8px; color:#999; font-size:.73rem; }
+        .museum-overview-title strong { color:#fff; font-size:.88rem; }
+        .museum-overview .achievement-progress-track { height:8px; background:#292929; }
+        .museum-overview .achievement-progress-fill { background:linear-gradient(90deg,#777,#fff); box-shadow:0 0 12px #fff2; }
+        .museum-buff-box { display:flex; flex-direction:column; justify-content:center; gap:5px; padding:10px 12px; border-left:1px solid #383838; color:#888; font-size:.69rem; }
+        .museum-buff-box strong { color:#f1f1f1; font-size:.84rem; font-weight:600; }
+        .museum-buff-values { color:#ccc; line-height:1.55; }
+        .museum-tabs { display:grid; grid-template-columns:1fr 1fr; flex:0 0 auto; gap:6px; }
+        .museum-tabs button { padding:8px 10px; font-size:.78rem; border-radius:8px; }
+        .museum-tabs button.active { color:#111; background:#eee; border-color:#eee; }
+        .museum-card-grid { min-height:0; flex:1 1 auto; overflow:auto; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-content:start; gap:9px; padding:1px 4px 4px 1px; scrollbar-width:thin; scrollbar-color:#555 transparent; }
+        .museum-card-grid[hidden] { display:none !important; }
+        .museum-card { --museum-accent:#d4d4d4; min-width:0; padding:12px; border:1px solid #363636; border-left:2px solid var(--museum-accent); border-radius:10px; background:linear-gradient(145deg,#1b1b1b,#101010 75%); }
+        .museum-card.locked { border-left-color:#383838; color:#777; background:linear-gradient(145deg,#151515,#101010); }
+        .museum-card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+        .museum-card-tier { color:var(--museum-accent); font-size:.64rem; letter-spacing:.06em; }
+        .museum-card h3 { margin:4px 0 0; color:#f1f1f1; font-size:.9rem; font-weight:600; }
+        .museum-card.locked h3 { color:#777; }
+        .museum-card-state { flex:none; padding:3px 7px; border:1px solid #444; border-radius:20px; color:#aaa; font-size:.61rem; }
+        .museum-card-state.owned { color:#eee; border-color:#777; background:#ffffff0b; }
+        .museum-card-detail { margin-top:10px; padding-top:8px; border-top:1px solid #2c2c2c; color:#888; font-size:.68rem; line-height:1.5; }
+        .museum-card-detail strong { color:#ddd; font-weight:500; }
+        .museum-title-mark { display:grid; place-items:center; flex:none; width:30px; height:30px; border:1px solid color-mix(in srgb,var(--museum-accent) 42%,#333); border-radius:9px; background:#ffffff08; color:var(--museum-accent); font-size:.82rem; }
+        .museum-title-copy { color:#888; font-size:.68rem; line-height:1.45; margin-top:7px; }
+        .daily-chaos-modal-content { width:min(92vw,620px); max-width:620px; max-height:min(88vh,760px); overflow:auto; border-color:#454545; background:radial-gradient(ellipse at top,#242424 0%,#141414 50%,#101010 100%); }
+        .daily-chaos-heading { padding-right:34px; margin-bottom:14px; }
+        .daily-chaos-date { color:#888; font-size:.7rem; margin-top:5px; }
+        .daily-chaos-rule { position:relative; overflow:hidden; padding:17px; border:1px solid #555; border-radius:12px; background:linear-gradient(130deg,#282828,#111 72%); }
+        .daily-chaos-rule::after { content:'✦'; position:absolute; right:13px; top:7px; color:#ffffff16; font-size:4.3rem; line-height:1; pointer-events:none; }
+        .daily-chaos-rule-label { position:relative; z-index:1; color:#999; font-size:.66rem; letter-spacing:.12em; }
+        .daily-chaos-rule h3 { position:relative; z-index:1; margin:6px 0 8px; font-size:1.12rem; }
+        .daily-chaos-rule p { position:relative; z-index:1; max-width:90%; margin:0; color:#ccc; font-size:.82rem; line-height:1.55; }
+        .daily-chaos-status { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; margin:10px 0; }
+        .daily-chaos-stat { padding:9px 7px; border:1px solid #333; border-radius:8px; background:#101010; text-align:center; }
+        .daily-chaos-stat span { display:block; color:#777; font-size:.63rem; }
+        .daily-chaos-stat strong { display:block; margin-top:3px; color:#eee; font-size:.88rem; font-variant-numeric:tabular-nums; }
+        .daily-chaos-progress { padding:11px; border:1px solid #333; border-radius:9px; background:#111; }
+        .daily-chaos-progress-head { display:flex; justify-content:space-between; gap:8px; margin-bottom:8px; color:#888; font-size:.69rem; }
+        .daily-chaos-progress-head strong { color:#ddd; }
+        .daily-chaos-steps { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:5px; }
+        .daily-chaos-step { height:8px; border:1px solid #383838; border-radius:99px; background:#1a1a1a; }
+        .daily-chaos-step.done { border-color:#aaa; background:linear-gradient(90deg,#777,#eee); box-shadow:0 0 8px #fff2; }
+        .daily-chaos-note { margin:11px 0; padding:10px 11px; border-left:2px solid #777; background:#ffffff08; color:#929292; font-size:.7rem; line-height:1.55; }
+        .daily-chaos-last { min-height:20px; margin:8px 0 12px; color:#aaa; font-size:.72rem; line-height:1.5; }
+        .daily-chaos-actions { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+        .daily-chaos-actions button { width:100%; padding:10px; font-size:.8rem; }
+        @media (max-width:600px) {
+            .museum-modal-content { width:96vw; max-height:90dvh; padding:17px 13px; gap:9px; }
+            .museum-overview { grid-template-columns:1fr; gap:9px; padding:11px; }
+            .museum-buff-box { border-left:0; border-top:1px solid #383838; padding:9px 0 0; }
+            .museum-card-grid { grid-template-columns:1fr; gap:7px; }
+            .museum-card { padding:10px; }
+            .daily-chaos-modal-content { width:96vw; padding:19px 15px; }
+            .daily-chaos-status { gap:5px; }
+        }
     </style>
     
 </head>
@@ -710,7 +772,7 @@
                 <div id="level-area" class="level-display-area tier-0">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px; z-index: 20;">
                         <button onclick="window.openSynthesisModal()">합성</button>
-                        <button id="btn-sell-top" onclick="window.sellCurrentItem()" title="Lv.175 이상 장비는 판매할 수 없습니다.">판매</button>
+                        <button id="btn-sell-top" onclick="window.sellCurrentItem()" title="Lv.160 초과 장비는 판매할 수 없습니다.">판매</button>
                     </div>
                     
                     <div class="tier-label" id="current-tier-label">T0 아이언</div>
@@ -777,7 +839,7 @@
                     - <b>강화 버튼 또는 Space키</b>를 유지하여 현재 장착 무기를 강화합니다.<br>
                     - 성공 시 무작위로 <b>1~10 레벨</b> 증가합니다. <b>Lv.85 이상</b>에서는 강화 성공마다 다이아 1개를 보장하며, 기존 무작위 재화 보상도 적용됩니다.<br>
                     - 실패 시 수치가 하락하거나 장비가 완전히 <b>파괴(0레벨 리셋 및 15초 수습 시간제한)</b>될 위험이 동반됩니다.<br>
-                    - <b>판매</b>: Lv.150 판매 시 다이아 2,000개를 받으며, 낮은 레벨은 적게 받고 Lv.150 이후에는 레벨이 오를수록 보상이 가파르게 증가합니다. Lv.185 이상은 10% 확률로 멀티코인 1,500~5,000개, 다이아 2,500~7,500개, 또는 Lv.150~190 강화석 1개를 추가로 얻습니다.
+                    - <b>판매</b>: Lv.150 판매 시 다이아 2,000개를 받으며, 낮은 레벨은 적게 받고 Lv.150 이후에는 레벨이 오를수록 보상이 증가합니다. Lv.160 초과 장비는 판매할 수 없습니다.
                 </p>
             </div>
             <div>
@@ -793,6 +855,10 @@
             <div>
                 <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">✦ 아티팩트</h3>
                 <p style="margin: 0; color: #aaa;">아티팩트는 T5부터 T9까지 5개이며 앞 티어를 얻어야 다음 티어를 발견할 수 있습니다. 기본 확률은 T5 0.005%, T6 0.004%, T7 0.003%, T8 0.002%, T9 0.001%입니다. 각 구간보다 높은 레벨에서 강화할수록 확률이 레벨 25마다 20%씩 올라갑니다. 도감에는 해당 티어까지의 누적 효과가 표시됩니다.</p>
+            </div>
+            <div>
+                <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">▣ 장비 박물관 & 일일 카오스 던전</h3>
+                <p style="margin: 0; color: #aaa;">장비 박물관은 처음 도달한 티어 장비와 칭호를 영구 기록하며, 완성도에 따라 모든 장비의 강화 행운과 도전 공격력이 증가합니다. 일일 카오스 던전은 하루 3회, 판당 최대 5회의 직접 강화로 진행합니다. 매일 바뀌는 규칙이 실제 장착 장비에 적용되며 파괴 시 해당 판이 종료됩니다.</p>
             </div>
             <div>
                 <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">공명 상자 보상</h3>
@@ -819,7 +885,7 @@
             </div>
             <div>
                 <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">♜ 강화 시련</h3>
-                <p style="margin: 0; color: #aaa;">장비 Lv.175 이상·계정 Lv.35 이상부터 켤 수 있습니다. 활성화하면 강화 화면으로 돌아와 알림만 표시됩니다. 강화 버튼이나 Space를 누를 때마다 한 번 시도하며, 파괴되면 시련 모드가 자동 종료됩니다. 파괴 확률은 항상 20%이고 장비 레벨이 높을수록 보상 확률과 수량이 증가합니다.</p>
+                <p style="margin: 0; color: #aaa;">장비 Lv.160 이상·계정 Lv.35 이상부터 켤 수 있습니다. 활성화하면 강화 화면으로 돌아와 알림만 표시됩니다. 강화 버튼이나 Space를 누를 때마다 한 번 시도하며, 파괴되면 시련 모드가 자동 종료됩니다. 파괴 확률은 항상 20%이고 장비 레벨이 높을수록 보상 확률과 수량이 증가합니다.</p>
             </div>
             <div>
                 <h3 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">📊 통합 신형 티어표</h3>
@@ -949,12 +1015,52 @@
         <div id="achievements-list"></div>
     </div>
 </div>
+
+<div id="museum-modal" class="modal-overlay" onclick="if(event.target===this)window.closeMuseum()">
+    <div class="modal-content museum-modal-content">
+        <span class="close-btn" onclick="window.closeMuseum()">×</span>
+        <div class="museum-heading">
+            <div class="museum-eyebrow">MUSEUM / COLLECTION CODEX</div>
+            <h2 class="profile-title">장비 박물관</h2>
+            <p>도달한 티어 장비와 칭호를 기록합니다. 완성도 20%마다 강화 성공 확률 +1%p, 도전 공격력 +2%가 모든 장비에 상시 적용됩니다.</p>
+        </div>
+        <div id="museum-overview"></div>
+        <div class="museum-tabs">
+            <button id="museum-tab-tiers" class="active" onclick="window.setMuseumTab('tiers')">티어 장비</button>
+            <button id="museum-tab-titles" onclick="window.setMuseumTab('titles')">칭호 명판</button>
+        </div>
+        <div id="museum-tier-grid" class="museum-card-grid"></div>
+        <div id="museum-title-grid" class="museum-card-grid" hidden></div>
+    </div>
+</div>
+
+<div id="daily-chaos-modal" class="modal-overlay" onclick="if(event.target===this)window.closeDailyChaosModal()">
+    <div class="modal-content daily-chaos-modal-content">
+        <span class="close-btn" onclick="window.closeDailyChaosModal()">×</span>
+        <div class="daily-chaos-heading">
+            <div class="daily-chaos-eyebrow">DAILY CHAOS TRIALS</div>
+            <h2 class="profile-title">일일 카오스 던전</h2>
+            <p>매일 바뀌는 강화 규칙을 읽고 오늘의 위험과 보상을 선택하세요.</p>
+            <div id="daily-chaos-date" class="daily-chaos-date"></div>
+        </div>
+        <div id="daily-chaos-rule"></div>
+        <div id="daily-chaos-status"></div>
+        <div id="daily-chaos-progress"></div>
+        <div class="daily-chaos-note">던전은 현재 장착 장비로 진행합니다. 성공·하락·파괴가 실제 장비에 적용되고, 파괴되면 그 판은 즉시 끝납니다. 하루 3회 입장할 수 있으며 한 판은 최대 5회 강화로 진행됩니다.</div>
+        <div id="daily-chaos-last" class="daily-chaos-last"></div>
+        <div class="daily-chaos-actions">
+            <button id="daily-chaos-start" class="btn-main" onclick="window.startOrResumeDailyChaos()">던전 입장</button>
+            <button id="daily-chaos-end" class="btn-danger" onclick="window.endDailyChaosRun()" disabled>현재 판 종료</button>
+        </div>
+    </div>
+</div>
+
 <div id="multi-modal" class="modal-overlay">
     <div class="modal-content multi-modal-content">
         <span class="close-btn" onclick="window.closeMultiModal()">×</span>
         <div class="profile-header">
             <h2 class="profile-title">자동 멀티 강화</h2>
-            <div style="font-size:0.72rem; color:var(--text-sub);">Lv.25부터 목표 달성 장비 자동 판매 설정 · Lv.50부터 현재 수동 강화 속도 적용 · Lv.175 이상 판매 불가</div>
+            <div style="font-size:0.72rem; color:var(--text-sub);">Lv.25부터 목표 달성 장비 자동 판매 설정 · Lv.50부터 현재 수동 강화 속도 적용 · Lv.160 초과 판매 불가</div>
         </div>
         <div id="multi-slots-container" style="display:flex; flex-direction:column; margin-top:10px;"></div>
     </div>
@@ -1008,9 +1114,11 @@
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openItemInventory()"><span class="game-menu-card-icon" aria-hidden="true">▤</span><span class="game-menu-card-title">인벤토리</span><span class="game-menu-card-desc">장비, 강화석, 소모품을 정리합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openQuestModal()"><span class="game-menu-card-icon" aria-hidden="true">☷</span><span class="game-menu-card-title">일일·주간 임무</span><span class="game-menu-card-desc">진행 상황과 완료 보상을 확인합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openAchievements()"><span class="game-menu-card-icon" aria-hidden="true">✓</span><span class="game-menu-card-title">업적</span><span class="game-menu-card-desc">도전 과제와 보상을 확인합니다.</span></button>
+            <button class="game-menu-card" onclick="window.closeGameMenu();window.openMuseum()"><span class="game-menu-card-icon" aria-hidden="true">▣</span><span class="game-menu-card-title">장비 박물관</span><span class="game-menu-card-desc">티어별 장비와 칭호를 수집하고 영구 보너스를 얻습니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openPrefixCollection()"><span class="game-menu-card-icon" aria-hidden="true">✦</span><span class="game-menu-card-title">아티팩트</span><span class="game-menu-card-desc">강화 중 발견하는 누적 효과를 확인합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openMultiModal()"><span class="game-menu-card-icon" aria-hidden="true">⟳</span><span class="game-menu-card-title">자동 강화</span><span class="game-menu-card-desc">멀티 슬롯을 설정하고 진행합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openChallengeModal()"><span class="game-menu-card-icon" aria-hidden="true">⚔</span><span class="game-menu-card-title">도전의 탑</span><span class="game-menu-card-desc">매번 달라지는 전투 기믹에 도전합니다.</span></button>
+            <button class="game-menu-card" onclick="window.closeGameMenu();window.openDailyChaosModal()"><span class="game-menu-card-icon" aria-hidden="true">✧</span><span class="game-menu-card-title">일일 카오스 던전</span><span class="game-menu-card-desc">오늘의 강화 규칙에 맞춰 최대 5회 직접 도전합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openEnhancementTrial()"><span class="game-menu-card-icon" aria-hidden="true">♜</span><span class="game-menu-card-title">강화 시련</span><span class="game-menu-card-desc">모드를 켠 뒤 강화 화면에서 직접 시도합니다. 버튼을 다시 누르면 종료됩니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.openAttendanceModal()"><span class="game-menu-card-icon" aria-hidden="true">▦</span><span class="game-menu-card-title">출석 보상</span><span class="game-menu-card-desc">연속 출석과 오늘의 보상을 확인합니다.</span></button>
             <button class="game-menu-card" onclick="window.closeGameMenu();window.showRankingModal()"><span class="game-menu-card-icon" aria-hidden="true">↗</span><span class="game-menu-card-title">랭킹</span><span class="game-menu-card-desc">최고 레벨과 보유 평균을 비교합니다.</span></button>
@@ -1190,6 +1298,32 @@
 
     const TIER_NAMES = ['아이언', '브론즈', '실버', '골드', '에픽', '홀로그램', '다크매터', '그랜드마스터', '챌린저', '오메가'];
     const TIER_COLORS = ['#94a3b8', '#d97706', '#c0c0c0', '#eab308', '#a855f7', '#00ffff', '#ff0000', '#f5c451', '#00ffcc', '#f0abfc'];
+    const MUSEUM_TIER_DATA = [
+        { id: 't0', tier: 0, minLevel: 1, maxLevel: 24, range: 'Lv.1–24', title: '첫 망치질' },
+        { id: 't1', tier: 1, minLevel: 25, maxLevel: 49, range: 'Lv.25–49', title: '브론즈 개척자' },
+        { id: 't2', tier: 2, minLevel: 50, maxLevel: 74, range: 'Lv.50–74', title: '실버 장인' },
+        { id: 't3', tier: 3, minLevel: 75, maxLevel: 99, range: 'Lv.75–99', title: '골드 승부사' },
+        { id: 't4', tier: 4, minLevel: 100, maxLevel: 124, range: 'Lv.100–124', title: '에픽 사냥꾼' },
+        { id: 't5', tier: 5, minLevel: 125, maxLevel: 149, range: 'Lv.125–149', title: '홀로그램 탐험가' },
+        { id: 't6', tier: 6, minLevel: 150, maxLevel: 169, range: 'Lv.150–169', title: '다크매터 정복자' },
+        { id: 't7', tier: 7, minLevel: 170, maxLevel: 184, range: 'Lv.170–184', title: '그랜드마스터' },
+        { id: 't8', tier: 8, minLevel: 185, maxLevel: 199, range: 'Lv.185–199', title: '챌린저' },
+        { id: 't9', tier: 9, minLevel: 200, maxLevel: Infinity, range: 'Lv.200+', title: '오메가 초월자' }
+    ];
+    const MUSEUM_TOTAL_ENTRIES = MUSEUM_TIER_DATA.length * 2;
+    const MUSEUM_MAX_LUCK_BONUS = 5;
+    const MUSEUM_MAX_RAID_BONUS = 10;
+    const DAILY_CHAOS_DAILY_RUN_LIMIT = 3;
+    const DAILY_CHAOS_ATTEMPT_LIMIT = 5;
+    const DAILY_CHAOS_RULES = [
+        { id: 'overload', title: '과부하 용광로', description: '파괴 확률 2배 · 성공 시 강화 상승 +2레벨', successGainBonus: 2, destroyMultiplier: 2 },
+        { id: 'stabilized', title: '안정화 기류', description: '실패해도 레벨 하락 없음 · 강화 대기시간 3배', failNoLevelLoss: true, cooldownMultiplier: 3 },
+        { id: 'precision', title: '정밀 제어', description: '성공 확률 +5%p · 파괴 확률 절반 · 성공 시 +1레벨', successRateBonus: 5, destroyMultiplier: 0.5, successGainBonus: 1 },
+        { id: 'fracture', title: '균열 증폭', description: '성공 확률 1.5배 · 파괴 확률 1.5배 · 실패 하락 2배', successRateMultiplier: 1.5, destroyMultiplier: 1.5, failLevelLossMultiplier: 2 },
+        { id: 'slow_burn', title: '정지된 불꽃', description: '실패해도 레벨 하락 없음 · 성공 시 +3레벨 · 대기시간 2배', failNoLevelLoss: true, successGainBonus: 3, cooldownMultiplier: 2 },
+        { id: 'overclock', title: '과속 연소', description: '성공 확률 +2%p · 대기시간 절반 · 파괴 확률 1.5배', successRateBonus: 2, cooldownMultiplier: 0.5, destroyMultiplier: 1.5 },
+        { id: 'volatile', title: '불안정한 균열', description: '성공 확률 1.25배 · 파괴 확률 2배 · 실패 하락 1.5배', successRateMultiplier: 1.25, destroyMultiplier: 2, failLevelLossMultiplier: 1.5 }
+    ];
     const STORAGE_LIMIT = 5;
     const CHALLENGE_MAX_ITEMS = 3;
     const BASE_SUCCESS_RATE_MULTIPLIER = 1.1;
@@ -1736,6 +1870,9 @@
             });
             total.prefixCount++;
         });
+        const museumBonus = getMuseumCollectionBonus(user);
+        total.successRate += museumBonus.successRate;
+        total.raidDamage += museumBonus.raidDamage;
         return total;
     }
 
@@ -2025,6 +2162,8 @@
         data.challenge_best_floor = Math.max(0, toSafeNumber(data.challenge_best_floor, 0));
         data.challenge_clears = Math.max(0, toSafeNumber(data.challenge_clears, 0));
         data.achievements = data.achievements && typeof data.achievements === 'object' && !Array.isArray(data.achievements) ? data.achievements : {};
+        data.museum_codex = normalizeMuseumCodex(data.museum_codex);
+        data.daily_chaos = normalizeDailyChaosState(data.daily_chaos);
         const previousPrefixCodex = data.prefix_codex && typeof data.prefix_codex === 'object' && !Array.isArray(data.prefix_codex) ? data.prefix_codex : {};
         data.prefix_codex = {};
         Object.entries(previousPrefixCodex).forEach(([id, discovered]) => {
@@ -2264,6 +2403,62 @@
         return date.getFullYear() + '-' + (date.getMonth() + 1).toString().padStart(2, '0') + '-' + date.getDate().toString().padStart(2, '0');
     }
 
+    function getKoreaDateKey(date = new Date()) {
+        return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+    }
+
+    function normalizeMuseumCodex(raw) {
+        const source = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
+        const sourceTiers = source.tiers && typeof source.tiers === 'object' && !Array.isArray(source.tiers) ? source.tiers : {};
+        const sourceTitles = source.titles && typeof source.titles === 'object' && !Array.isArray(source.titles) ? source.titles : {};
+        const tiers = {};
+        const titles = {};
+        MUSEUM_TIER_DATA.forEach(entry => {
+            const saved = sourceTiers[entry.id] && typeof sourceTiers[entry.id] === 'object' ? sourceTiers[entry.id] : {};
+            tiers[entry.id] = {
+                unlocked: !!saved.unlocked,
+                best_level: Math.max(0, Math.floor(toSafeNumber(saved.best_level, 0))),
+                discovered_at: Math.max(0, toSafeNumber(saved.discovered_at, 0))
+            };
+            titles[entry.id] = !!sourceTitles[entry.id];
+        });
+        return { tiers, titles };
+    }
+
+    function normalizeDailyChaosState(raw) {
+        const today = getKoreaDateKey();
+        if (!raw || typeof raw !== 'object' || Array.isArray(raw) || raw.date !== today) {
+            return { date: today, runsUsed: 0, active: false, run: null, lastResult: null };
+        }
+        const runsUsed = Math.min(DAILY_CHAOS_DAILY_RUN_LIMIT, Math.max(0, Math.floor(toSafeNumber(raw.runsUsed, 0))));
+        const savedRun = raw.run && typeof raw.run === 'object' && !Array.isArray(raw.run) ? raw.run : null;
+        let run = null;
+        if (savedRun && !!raw.active && runsUsed > 0) {
+            const attempts = Math.min(DAILY_CHAOS_ATTEMPT_LIMIT, Math.max(0, Math.floor(toSafeNumber(savedRun.attempts, 0))));
+            if (attempts < DAILY_CHAOS_ATTEMPT_LIMIT) {
+                run = {
+                    attempts,
+                    successes: Math.min(attempts, Math.max(0, Math.floor(toSafeNumber(savedRun.successes, 0)))),
+                    failures: Math.min(attempts, Math.max(0, Math.floor(toSafeNumber(savedRun.failures, 0)))),
+                    startLevel: Math.max(0, Math.floor(toSafeNumber(savedRun.startLevel, 0))),
+                    bestLevel: Math.max(0, Math.floor(toSafeNumber(savedRun.bestLevel, savedRun.startLevel || 0)))
+                };
+            }
+        }
+        const lastResult = raw.lastResult && typeof raw.lastResult === 'object' && !Array.isArray(raw.lastResult)
+            ? { summary: String(raw.lastResult.summary || '').slice(0, 160), rewards: String(raw.lastResult.rewards || '').slice(0, 200) }
+            : null;
+        return { date: today, runsUsed, active: !!run, run, lastResult };
+    }
+
+    function checkAndResetDailyChaos() {
+        if (!currentUserData) return null;
+        const previousDate = currentUserData.daily_chaos?.date;
+        currentUserData.daily_chaos = normalizeDailyChaosState(currentUserData.daily_chaos);
+        if (previousDate !== currentUserData.daily_chaos.date) syncToFirebase();
+        return currentUserData.daily_chaos;
+    }
+
     function getLocalWeekKey(date = new Date()) {
         const sunday = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay());
         return getLocalDateKey(sunday);
@@ -2287,6 +2482,7 @@
 
     function checkAndResetDailyQuests() {
         if (!currentUserData) return;
+        checkAndResetDailyChaos();
         const todayStr = getLocalDateKey();
         const towerNeedsReset = currentUserData.challenge_floor_date !== todayStr;
         if (towerNeedsReset) {
@@ -2340,9 +2536,10 @@
             const previousDate = currentUserData.daily_quests?.date;
             const previousWeek = currentUserData.weekly_quests?.week;
             const previousTowerDate = currentUserData.challenge_floor_date;
+            const previousChaosDate = currentUserData.daily_chaos?.date;
             checkAndResetDailyQuests();
             checkAndResetWeeklyQuests();
-            if (previousDate !== currentUserData.daily_quests?.date || previousWeek !== currentUserData.weekly_quests?.week) updateUI();
+            if (previousDate !== currentUserData.daily_quests?.date || previousWeek !== currentUserData.weekly_quests?.week || previousChaosDate !== currentUserData.daily_chaos?.date) updateUI();
             if (previousTowerDate !== currentUserData.challenge_floor_date && document.getElementById('challenge-modal').style.display === 'flex') renderChallengeModal();
         }, 60000);
     }
@@ -2553,6 +2750,54 @@
         return { successRate, failRate, destroyRate, accBonus, buffBonus, upgBonus, prefixBonus: prefixApplied.prefixBonus };
     }
 
+    function getMuseumCodex(user = currentUserData) {
+        if (!user) return { tiers: {}, titles: {} };
+        user.museum_codex = normalizeMuseumCodex(user.museum_codex);
+        return user.museum_codex;
+    }
+
+    function getMuseumCollectionStats(user = currentUserData) {
+        const codex = getMuseumCodex(user);
+        const gearCount = MUSEUM_TIER_DATA.filter(entry => !!codex.tiers[entry.id]?.unlocked).length;
+        const titleCount = MUSEUM_TIER_DATA.filter(entry => !!codex.titles[entry.id]).length;
+        const completed = gearCount + titleCount;
+        return { gearCount, titleCount, completed, total: MUSEUM_TOTAL_ENTRIES, percent: MUSEUM_TOTAL_ENTRIES ? completed / MUSEUM_TOTAL_ENTRIES * 100 : 0 };
+    }
+
+    function getMuseumCollectionBonus(user = currentUserData) {
+        const completion = getMuseumCollectionStats(user).completed / Math.max(1, MUSEUM_TOTAL_ENTRIES);
+        return { successRate: MUSEUM_MAX_LUCK_BONUS * completion, raidDamage: MUSEUM_MAX_RAID_BONUS * completion };
+    }
+
+    function recordMuseumProgress(user, notify = false) {
+        if (!user) return [];
+        const codex = getMuseumCodex(user);
+        const levels = [toSafeNumber(user.level, 0)];
+        if (toSafeNumber(user.afk_level, -1) >= 0) levels.push(toSafeNumber(user.afk_level, -1));
+        if (Array.isArray(user.items)) user.items.forEach(item => levels.push(getItemLevel(item)));
+        if (Array.isArray(user.multi_slots)) user.multi_slots.forEach(slot => { if (toSafeNumber(slot?.level, -1) >= 0) levels.push(toSafeNumber(slot.level, 0)); });
+        const highest = Math.max(toSafeNumber(user.max_level_ever, 0), ...levels);
+        const newlyDiscovered = [];
+        MUSEUM_TIER_DATA.forEach(entry => {
+            if (highest < entry.minLevel) return;
+            const record = codex.tiers[entry.id] || (codex.tiers[entry.id] = { unlocked: false, best_level: 0, discovered_at: 0 });
+            const wasUnlocked = !!record.unlocked;
+            const observed = levels.filter(level => level >= entry.minLevel && level <= entry.maxLevel);
+            const historicalFloor = highest <= entry.maxLevel ? highest : entry.minLevel;
+            const best = Math.max(record.best_level, historicalFloor, ...observed);
+            record.unlocked = true;
+            record.best_level = Math.min(entry.maxLevel, best);
+            if (!record.discovered_at) record.discovered_at = Date.now();
+            codex.titles[entry.id] = true;
+            if (!wasUnlocked) newlyDiscovered.push(entry);
+        });
+        if (notify && newlyDiscovered.length && user === currentUserData && currentUser) {
+            const latest = newlyDiscovered[newlyDiscovered.length - 1];
+            showToast('박물관 등록 · T' + latest.tier + ' ' + TIER_NAMES[latest.tier] + ' 장비와 [' + latest.title + '] 칭호', '#eee');
+        }
+        return newlyDiscovered;
+    }
+
     function updateMaxLevelEver(user, notify = true) {
         if (!user) return;
         const previousMaxLevel = toSafeNumber(user.max_level_ever, 0);
@@ -2560,6 +2805,7 @@
         if (Array.isArray(user.items)) user.items.forEach(item => levels.push(getItemLevel(item)));
         if (Array.isArray(user.multi_slots)) user.multi_slots.forEach(s => levels.push(toSafeNumber(s?.level, 0)));
         user.max_level_ever = Math.max(toSafeNumber(user.max_level_ever, 0), ...levels);
+        recordMuseumProgress(user, notify);
         if (notify && user === currentUserData && currentUser && user.max_level_ever > previousMaxLevel) {
             TIER_ARTIFACTS.filter(artifact => previousMaxLevel < artifact.level && user.max_level_ever >= artifact.level).forEach(artifact => {
                 showToast('T' + artifact.tier + ' 아티팩트 구간 개방 · T5부터 순서대로 발견', '#ddd');
@@ -2903,18 +3149,246 @@
     };
     window.closeGameMenu = function() { document.getElementById('game-menu-modal').style.display = 'none'; };
 
+    window.setMuseumTab = function(tab) {
+        const showTiers = tab !== 'titles';
+        document.getElementById('museum-tier-grid').hidden = !showTiers;
+        document.getElementById('museum-title-grid').hidden = showTiers;
+        document.getElementById('museum-tab-tiers').classList.toggle('active', showTiers);
+        document.getElementById('museum-tab-titles').classList.toggle('active', !showTiers);
+    };
+
+    window.renderMuseum = function() {
+        if (!currentUserData) return;
+        recordMuseumProgress(currentUserData, false);
+        const codex = getMuseumCodex(currentUserData);
+        const stats = getMuseumCollectionStats(currentUserData);
+        const bonus = getMuseumCollectionBonus(currentUserData);
+        const highest = Math.max(0, Math.floor(toSafeNumber(currentUserData.max_level_ever, 0)));
+        const overview = document.getElementById('museum-overview');
+        const gearGrid = document.getElementById('museum-tier-grid');
+        const titleGrid = document.getElementById('museum-title-grid');
+        if (!overview || !gearGrid || !titleGrid) return;
+        overview.innerHTML = '<div class="museum-overview"><div><div class="museum-overview-title"><span>박물관 완성도 · 최고 달성 Lv.' + highest.toLocaleString() + '</span><strong>' + stats.completed + ' / ' + stats.total + ' · ' + Math.floor(stats.percent) + '%</strong></div>' + renderFiveSegmentBar(stats.percent, '박물관 도감 완성도', stats.completed, stats.total) + '</div><div class="museum-buff-box"><span>모든 장비에 상시 적용</span><strong>박물관 수집 효과</strong><div class="museum-buff-values">강화 성공 확률 +' + bonus.successRate.toFixed(2) + '%p<br>도전 공격력 +' + bonus.raidDamage.toFixed(2) + '%</div></div></div>';
+        gearGrid.innerHTML = MUSEUM_TIER_DATA.map(entry => {
+            const record = codex.tiers[entry.id] || {};
+            const unlocked = !!record.unlocked;
+            const best = Math.max(0, Math.floor(toSafeNumber(record.best_level, 0)));
+            return '<article class="museum-card ' + (unlocked ? '' : 'locked') + '" style="--museum-accent:' + TIER_COLORS[entry.tier] + '"><div class="museum-card-head"><div><div class="museum-card-tier">T' + entry.tier + ' · ' + escapeHtml(TIER_NAMES[entry.tier]) + '</div><h3>' + (unlocked ? escapeHtml(entry.range) + ' 장비' : '미발견 장비') + '</h3></div><span class="museum-card-state ' + (unlocked ? 'owned' : '') + '">' + (unlocked ? '기록 완료' : 'Lv.' + entry.minLevel + ' 해금') + '</span></div><div class="museum-card-detail">' + (unlocked ? '확인된 최고 기록 <strong>Lv.' + best.toLocaleString() + '</strong>' : '해당 티어 레벨에 처음 도달하면 기록됩니다.') + '</div></article>';
+        }).join('');
+        titleGrid.innerHTML = MUSEUM_TIER_DATA.map(entry => {
+            const unlocked = !!codex.titles[entry.id];
+            return '<article class="museum-card ' + (unlocked ? '' : 'locked') + '" style="--museum-accent:' + TIER_COLORS[entry.tier] + '"><div class="museum-card-head"><div class="museum-title-mark">' + (unlocked ? '✦' : '·') + '</div><div style="flex:1;min-width:0;"><div class="museum-card-tier">T' + entry.tier + ' 칭호</div><h3>' + (unlocked ? escapeHtml(entry.title) : '잠긴 명판') + '</h3></div><span class="museum-card-state ' + (unlocked ? 'owned' : '') + '">' + (unlocked ? '획득' : '미획득') + '</span></div><div class="museum-title-copy">' + (unlocked ? 'T' + entry.tier + ' ' + escapeHtml(TIER_NAMES[entry.tier]) + ' 기록과 함께 박물관에 보존됩니다.' : '장비 Lv.' + entry.minLevel + ' 도달 시 획득') + '</div></article>';
+        }).join('');
+    };
+
+    window.openMuseum = function() {
+        if (!currentUserData) return;
+        window.setMuseumTab('tiers');
+        window.renderMuseum();
+        document.getElementById('museum-modal').style.display = 'flex';
+    };
+    window.closeMuseum = function() { document.getElementById('museum-modal').style.display = 'none'; };
+
     let enhancementTrialSession = null;
     let enhancementTrialSessionSerial = 0;
     const ENHANCEMENT_TRIAL_DESTROY_RATE = 20;
 
+    function getDailyChaosRule(dateKey = getKoreaDateKey()) {
+        const parts = String(dateKey).split('-').map(Number);
+        const seed = parts.length === 3 && parts.every(Number.isFinite)
+            ? Math.floor(Date.UTC(parts[0], parts[1] - 1, parts[2]) / 86400000)
+            : 0;
+        return DAILY_CHAOS_RULES[seed % DAILY_CHAOS_RULES.length];
+    }
+
+    function getDailyChaosProbabilities(level) {
+        const rule = getDailyChaosRule(currentUserData?.daily_chaos?.date || getKoreaDateKey());
+        const base = getProbabilities(level, calculateAccountLevel(currentUserData).level, 0, 0);
+        let successRate = base.successRate * toSafeNumber(rule.successRateMultiplier, 1) + toSafeNumber(rule.successRateBonus, 0);
+        successRate = Math.max(0.0001, Math.min(100, successRate));
+        let destroyRate = Math.max(0, base.destroyRate * toSafeNumber(rule.destroyMultiplier, 1));
+        destroyRate = Math.min(destroyRate, Math.max(0, 100 - successRate));
+        const failRate = Math.max(0, 100 - successRate - destroyRate);
+        return { ...base, successRate, destroyRate, failRate };
+    }
+
+    window.renderDailyChaosModal = function() {
+        if (!currentUserData) return;
+        const state = checkAndResetDailyChaos();
+        const rule = getDailyChaosRule(state.date);
+        const run = state.run;
+        const ruleRoot = document.getElementById('daily-chaos-rule');
+        const status = document.getElementById('daily-chaos-status');
+        const progress = document.getElementById('daily-chaos-progress');
+        const start = document.getElementById('daily-chaos-start');
+        const end = document.getElementById('daily-chaos-end');
+        if (!ruleRoot || !status || !progress || !start || !end) return;
+        const dateNode = document.getElementById('daily-chaos-date');
+        const last = document.getElementById('daily-chaos-last');
+        if (dateNode) dateNode.textContent = '오늘의 규칙 · ' + state.date + ' · 매일 한국 시간 기준 갱신';
+        ruleRoot.innerHTML = '<div class="daily-chaos-rule"><div class="daily-chaos-rule-label">TODAY\'S MODIFIER</div><h3>' + escapeHtml(rule.title) + '</h3><p>' + escapeHtml(rule.description) + '</p></div>';
+        const attempts = run ? run.attempts : 0;
+        const successes = run ? run.successes : 0;
+        const ticketsLeft = Math.max(0, DAILY_CHAOS_DAILY_RUN_LIMIT - state.runsUsed);
+        status.innerHTML = '<div class="daily-chaos-status"><div class="daily-chaos-stat"><span>오늘 남은 입장</span><strong>' + ticketsLeft + ' / ' + DAILY_CHAOS_DAILY_RUN_LIMIT + '</strong></div><div class="daily-chaos-stat"><span>이번 판 강화</span><strong>' + attempts + ' / ' + DAILY_CHAOS_ATTEMPT_LIMIT + '</strong></div><div class="daily-chaos-stat"><span>이번 판 성공</span><strong>' + successes + '회</strong></div></div>';
+        const cells = Array.from({ length: DAILY_CHAOS_ATTEMPT_LIMIT }, (_, index) => '<span class="daily-chaos-step' + (index < attempts ? ' done' : '') + '"></span>').join('');
+        const odds = state.active ? getDailyChaosProbabilities(currentUserData.level) : null;
+        const chanceText = odds ? ' · 성공 ' + odds.successRate.toFixed(2) + '% / 파괴 ' + odds.destroyRate.toFixed(2) + '%' : '';
+        progress.innerHTML = '<div class="daily-chaos-progress"><div class="daily-chaos-progress-head"><strong>' + (state.active ? '던전 진행 중' : '하루 3회 · 판당 최대 5회') + '</strong><span>' + attempts + ' / ' + DAILY_CHAOS_ATTEMPT_LIMIT + ' 강화' + chanceText + '</span></div><div class="daily-chaos-steps" role="progressbar" aria-label="일일 던전 진행도" aria-valuemin="0" aria-valuemax="' + DAILY_CHAOS_ATTEMPT_LIMIT + '" aria-valuenow="' + attempts + '">' + cells + '</div></div>';
+        if (last) last.textContent = state.lastResult ? state.lastResult.summary + (state.lastResult.rewards ? ' · ' + state.lastResult.rewards : '') : '도전 보상은 성공 횟수와 시작 티어에 따라 지급됩니다.';
+        start.textContent = state.active ? '강화 화면으로 돌아가기' : ticketsLeft > 0 ? '던전 입장' : '오늘 도전 완료';
+        start.disabled = !state.active && (ticketsLeft <= 0 || currentUserData.level <= 0 || !!enhancementTrialSession?.active);
+        end.disabled = !state.active;
+    };
+
+    window.openDailyChaosModal = function() {
+        if (!currentUserData) return;
+        checkAndResetDailyChaos();
+        window.renderDailyChaosModal();
+        document.getElementById('daily-chaos-modal').style.display = 'flex';
+    };
+    window.closeDailyChaosModal = function() { document.getElementById('daily-chaos-modal').style.display = 'none'; };
+
+    window.startOrResumeDailyChaos = async function() {
+        if (!currentUserData) return;
+        const state = checkAndResetDailyChaos();
+        if (state.active) {
+            window.closeDailyChaosModal();
+            updateUI();
+            showToast('일일 던전을 이어서 진행합니다.', '#ddd');
+            return;
+        }
+        if (enhancementTrialSession?.active) { showToast('강화 시련을 먼저 종료해주세요.', '#aaa'); return; }
+        if (currentUserData.level <= 0) { showToast('장착 장비가 있어야 입장할 수 있습니다.', '#ef4444'); return; }
+        if (state.runsUsed >= DAILY_CHAOS_DAILY_RUN_LIMIT) { showToast('오늘의 던전 입장 횟수를 모두 사용했습니다.', '#aaa'); return; }
+        state.runsUsed++;
+        state.active = true;
+        state.run = { attempts: 0, successes: 0, failures: 0, startLevel: Math.floor(toSafeNumber(currentUserData.level, 0)), bestLevel: Math.floor(toSafeNumber(currentUserData.level, 0)) };
+        stopSpaceEnhancementHold();
+        window.closeDailyChaosModal();
+        updateUI();
+        showToast('일일 카오스 던전 입장 · 오늘의 규칙이 적용됩니다.', '#eee');
+        await syncToFirebase();
+    };
+
+    function finishDailyChaosRun(reason) {
+        const state = currentUserData?.daily_chaos;
+        if (!state?.active || !state.run) return null;
+        const run = state.run;
+        if (run.attempts <= 0) {
+            state.runsUsed = Math.max(0, state.runsUsed - 1);
+            state.active = false;
+            state.run = null;
+            state.lastResult = { summary: '입장을 취소했습니다. 도전권은 반환됐습니다.', rewards: '' };
+            return state.lastResult;
+        }
+        const cleared = reason === 'clear';
+        const tier = getItemTierObj(run.startLevel).t;
+        const diamonds = Math.floor(run.successes * (250 + tier * 50) + (cleared ? 300 + tier * 75 : 0));
+        const multi = Math.floor(run.successes * (50 + tier * 10) + (cleared ? 100 + tier * 20 : 0));
+        currentUserData.tokens = Math.max(0, toSafeNumber(currentUserData.tokens, 0)) + diamonds;
+        currentUserData.multi_tokens = Math.max(0, toSafeNumber(currentUserData.multi_tokens, 0)) + multi;
+        let stoneText = '';
+        if (run.successes >= 3) {
+            const stoneLevel = Math.max(80, Math.floor(run.startLevel / 10) * 10);
+            const count = Math.floor(run.successes / 3);
+            currentUserData.materials = currentUserData.materials && typeof currentUserData.materials === 'object' ? currentUserData.materials : {};
+            currentUserData.materials[stoneLevel] = Math.max(0, Math.floor(toSafeNumber(currentUserData.materials[stoneLevel], 0))) + count;
+            stoneText = ' · Lv.' + stoneLevel + ' 강화석 ' + count + '개';
+        }
+        const rewardText = (diamonds ? '다이아 ' + diamonds.toLocaleString() : '') + (multi ? (diamonds ? ' · ' : '') + '멀티코인 ' + multi.toLocaleString() : '') + stoneText;
+        const summary = (cleared ? '일일 던전 완주' : reason === 'destroyed' ? '장비 파괴로 판 종료' : '던전 판 종료') + ' · 성공 ' + run.successes + ' / ' + run.attempts + '회';
+        state.active = false;
+        state.run = null;
+        state.lastResult = { summary, rewards: rewardText || '보상 없음' };
+        showToast(summary + (rewardText ? ' · ' + rewardText : ' · 보상 없음'), cleared ? '#eee' : '#bbb');
+        return state.lastResult;
+    }
+
+    window.endDailyChaosRun = async function() {
+        if (!currentUserData?.daily_chaos?.active) return;
+        finishDailyChaosRun('abandoned');
+        updateUI();
+        window.renderDailyChaosModal();
+        await syncToFirebase();
+    };
+
+    async function attemptDailyChaosEnhancement() {
+        const state = currentUserData?.daily_chaos;
+        const run = state?.run;
+        if (!currentUserData || !state?.active || !run || run.busy || isEnhanceCooldown || isAnimating || currentUserData.level <= 0 || currentUserData.ban_until > Date.now()) return;
+        const rule = getDailyChaosRule(state.date);
+        const attemptLevel = Math.floor(toSafeNumber(currentUserData.level, 0));
+        const rates = getDailyChaosProbabilities(attemptLevel);
+        const roll = Math.random() * 100;
+        run.busy = true;
+        lastManualEnhancementAt = Date.now();
+        tryArtifactDrop(currentUserData, attemptLevel);
+        run.attempts++;
+        currentUserData.stats = currentUserData.stats || { total: 0, success: 0, fail: 0, destroy: 0 };
+        currentUserData.stats.total = toSafeNumber(currentUserData.stats.total, 0) + 1;
+        trackDailyEnhancement();
+        updateQuestProgress('try', 1);
+        if (roll < rates.successRate) {
+            run.successes++;
+            const gain = Math.floor(Math.random() * 10) + 1 + Math.max(0, Math.floor(toSafeNumber(rule.successGainBonus, 0)));
+            currentUserData.level = attemptLevel + gain;
+            currentUserData.stats.success = toSafeNumber(currentUserData.stats.success, 0) + 1;
+            applyCurrentPrefixState(currentUserData, true);
+            updateMaxLevelEver(currentUserData);
+            run.bestLevel = Math.max(run.bestLevel, currentUserData.level);
+            recordLowChanceSuccess(currentUserData, rates.successRate);
+            const currencyGains = awardSuccessCurrencies(currentUserData, attemptLevel);
+            updateQuestProgress('success', 1);
+            updateLog('카오스 던전 성공 (Lv.+' + gain + ')' + (currencyGains.length ? ' · ' + currencyGains.join(', ') : ''), '#fff');
+            currentUserData.spectator_last_event = { text: '일일 던전 성공 (+' + gain + ')', at: Date.now() };
+        } else if (roll < rates.successRate + rates.destroyRate) {
+            run.failures++;
+            currentUserData.level = 0;
+            applyCurrentPrefixState(currentUserData, false);
+            currentUserData.ban_until = Date.now() + 15000;
+            currentUserData.stats.destroy = toSafeNumber(currentUserData.stats.destroy, 0) + 1;
+            updateQuestProgress('destroy', 1);
+            currentUserData.spectator_last_event = { text: '일일 던전에서 장비 파괴', at: Date.now() };
+            updateLog('카오스 던전에서 장비 파괴 · 이 판은 종료됩니다.', '#ef4444');
+        } else {
+            run.failures++;
+            const ruleMultiplier = Math.max(0.1, toSafeNumber(rule.failLevelLossMultiplier, 1));
+            const basePenalty = Math.floor(Math.pow(Math.random(), 3) * Math.max(1, Math.floor(attemptLevel / 3))) + 1;
+            const penalty = rule.failNoLevelLoss ? 0 : Math.max(1, Math.floor(basePenalty * ruleMultiplier));
+            currentUserData.level = Math.max(0, attemptLevel - penalty);
+            applyCurrentPrefixState(currentUserData, true);
+            currentUserData.stats.fail = toSafeNumber(currentUserData.stats.fail, 0) + 1;
+            updateQuestProgress('fail', 1);
+            currentUserData.spectator_last_event = { text: penalty ? '일일 던전 실패 (-' + penalty + ')' : '일일 던전 실패 · 레벨 유지', at: Date.now() };
+            updateLog(penalty ? '카오스 던전 실패 (-' + penalty + ')' : '카오스 던전 실패 · 오늘 규칙으로 레벨 유지', '#999');
+        }
+        const cooldown = Math.max(0, Math.floor(getManualEnhancementCooldownMs() * Math.max(0, toSafeNumber(rule.cooldownMultiplier, 1))));
+        if (cooldown > 0) {
+            isEnhanceCooldown = true;
+            const button = document.getElementById('btn-enhance');
+            if (button) button.disabled = true;
+            setTimeout(() => { isEnhanceCooldown = false; updateUI(); }, cooldown);
+        }
+        if (currentUserData.level === 0 && currentUserData.ban_until > Date.now()) finishDailyChaosRun('destroyed');
+        else if (currentUserData.level <= 0) finishDailyChaosRun('failed');
+        else if (run.attempts >= DAILY_CHAOS_ATTEMPT_LIMIT) finishDailyChaosRun('clear');
+        run.busy = false;
+        checkAndClaimAchievements();
+        updateUI();
+        if (document.getElementById('daily-chaos-modal')?.style.display === 'flex') window.renderDailyChaosModal();
+        await syncToFirebase();
+    }
+
     function getEnhancementTrialRates(level) {
-        const levelBonus = Math.max(0, toSafeNumber(level, 175) - 175);
-        const successRate = Math.min(45, 20 + levelBonus * 0.1);
+        const levelBonus = Math.max(0, toSafeNumber(level, 160) - 160);
+        const museumLuck = getMuseumCollectionBonus(currentUserData).successRate;
+        const successRate = Math.min(50, 20 + levelBonus * 0.1 + museumLuck);
         return { successRate, destroyRate: ENHANCEMENT_TRIAL_DESTROY_RATE, failRate: Math.max(0, 100 - successRate - ENHANCEMENT_TRIAL_DESTROY_RATE) };
     }
 
     function getEnhancementTrialRewardStep(level) {
-        return Math.max(0, (toSafeNumber(level, 175) - 175) / 10);
+        return Math.max(0, (toSafeNumber(level, 160) - 160) / 10);
     }
 
     function getEnhancementTrialRewardRates(level) {
@@ -2942,7 +3416,7 @@
             currentUserData.tokens = toSafeNumber(currentUserData.tokens, 0) + amount;
             return { changed: true, text: '다이아 ' + amount.toLocaleString() + '개 획득' };
         }
-        const stoneLevel = Math.max(150, Math.floor(toSafeNumber(level, 175) / 10) * 10);
+        const stoneLevel = Math.max(150, Math.floor(toSafeNumber(level, 160) / 10) * 10);
         const stoneCount = 2 + Math.floor(step / 2);
         currentUserData.materials = currentUserData.materials && typeof currentUserData.materials === 'object' ? currentUserData.materials : {};
         currentUserData.materials[stoneLevel] = Math.max(0, Math.floor(toSafeNumber(currentUserData.materials[stoneLevel], 0))) + stoneCount;
@@ -2956,9 +3430,10 @@
     window.startEnhancementTrial = function() {
         if (!currentUserData || !currentUser) return;
         if (enhancementTrialSession?.active) return true;
+        if (currentUserData.daily_chaos?.active) { showToast('일일 던전을 먼저 종료해주세요.', '#aaa'); return false; }
         const accountLevel = calculateAccountLevel(currentUserData).level;
         const startingLevel = Math.floor(toSafeNumber(currentUserData.level, 0));
-        if (startingLevel < 175) { showToast('장비 Lv.175 이상부터 도전할 수 있습니다.', '#ef4444'); return false; }
+        if (startingLevel < 160) { showToast('장비 Lv.160 이상부터 도전할 수 있습니다.', '#ef4444'); return false; }
         if (accountLevel < 35) { showToast('계정 레벨 35 이상부터 도전할 수 있습니다.', '#ef4444'); return false; }
         stopSpaceEnhancementHold();
         enhancementTrialSession = { id: ++enhancementTrialSessionSerial, active: true, busy: false, startLevel: startingLevel, trialLevel: startingLevel, bestLevel: startingLevel, attempts: 0, successes: 0, failures: 0, destructions: 0, logs: [] };
@@ -3209,6 +3684,7 @@
             processOfflineAFK();
             checkAndClaimAchievements();
             checkAndResetDailyQuests();
+            checkAndResetDailyChaos();
             checkAndResetWeeklyQuests();
             await userRef.set(buildRegularUserSaveData(currentUserData), { merge: true });
             firebaseLastSyncedData = cloneFirebaseValue(currentUserData);
@@ -3346,18 +3822,24 @@
             ? (nextArtifactUnlocked ? '다음 발견 대상 · T' + nextArtifact.tier + ' ' + nextArtifact.name : '다음 발견 구간 · T' + nextArtifact.tier + ' Lv.' + nextArtifact.level + '부터')
             : '아티팩트 모두 획득';
         if (document.getElementById('prefix-collection-modal')?.style.display === 'flex' && window.renderPrefixCollection) window.renderPrefixCollection();
+        if (document.getElementById('museum-modal')?.style.display === 'flex' && window.renderMuseum) window.renderMuseum();
+        if (document.getElementById('daily-chaos-modal')?.style.display === 'flex' && window.renderDailyChaosModal) window.renderDailyChaosModal();
         const trialActive = !!enhancementTrialSession?.active;
+        const chaosActive = !!userData.daily_chaos?.active;
         const trialToggleButton = document.getElementById('btn-enhancement-trial-toggle');
         if (trialToggleButton) {
-            const eligible = userData.level >= 175 && accInfo.level >= 35;
+            const eligible = userData.level >= 160 && accInfo.level >= 35;
             trialToggleButton.innerText = trialActive ? '강화 시련 끄기' : '강화 시련 켜기';
-            trialToggleButton.disabled = !trialActive && !eligible;
-            trialToggleButton.title = eligible || trialActive ? '' : (userData.level < 175 ? '장비 Lv.175 이상부터 도전할 수 있습니다.' : '계정 Lv.35 이상부터 도전할 수 있습니다.');
+            trialToggleButton.disabled = !trialActive && (!eligible || chaosActive);
+            trialToggleButton.title = chaosActive && !trialActive ? '일일 던전을 먼저 종료해주세요.' : eligible || trialActive ? '' : (userData.level < 160 ? '장비 Lv.160 이상부터 도전할 수 있습니다.' : '계정 Lv.35 이상부터 도전할 수 있습니다.');
             trialToggleButton.classList.toggle('btn-main', trialActive);
             trialToggleButton.setAttribute('aria-pressed', trialActive ? 'true' : 'false');
         }
         const enhanceButton = document.getElementById('btn-enhance');
-        if (enhanceButton) enhanceButton.innerText = trialActive ? '시련 강화 (Space)' : '강화 (Space)';
+        if (enhanceButton) {
+            const chaosAttempt = Math.max(0, Math.floor(toSafeNumber(userData.daily_chaos?.run?.attempts, 0)));
+            enhanceButton.innerText = trialActive ? '시련 강화 (Space)' : chaosActive ? '던전 강화 ' + chaosAttempt + '/' + DAILY_CHAOS_ATTEMPT_LIMIT + ' (Space)' : '강화 (Space)';
+        }
         
         let itemTObj = getItemTierObj(userData.level);
         document.getElementById('level-area').className = `level-display-area tier-${itemTObj.t}`;
@@ -3374,8 +3856,8 @@
         
         const sellButton = document.getElementById('btn-sell-top');
         if (sellButton) {
-            const saleLocked = userData.level >= 175;
-            sellButton.disabled = userData.level <= 0 || trialActive || saleLocked;
+            const saleLocked = userData.level > 160;
+            sellButton.disabled = userData.level <= 0 || trialActive || chaosActive || saleLocked;
             sellButton.innerText = saleLocked ? '판매 불가' : '판매';
         }
 
@@ -3385,16 +3867,18 @@
             if(cooldownTimer) clearInterval(cooldownTimer);
             cooldownTimer = setInterval(() => {
                 let timeLeft = Math.ceil((userData.ban_until - Date.now()) / 1000);
-                if (timeLeft <= 0) { clearInterval(cooldownTimer); document.getElementById('btn-enhance').disabled = false; document.getElementById('btn-submit').disabled = !!enhancementTrialSession?.active; updateLog("장비 수습 완료", "#fff"); updateUI(); } 
+                if (timeLeft <= 0) { clearInterval(cooldownTimer); document.getElementById('btn-enhance').disabled = false; document.getElementById('btn-submit').disabled = !!enhancementTrialSession?.active || !!userData.daily_chaos?.active; updateLog("장비 수습 완료", "#fff"); updateUI(); }
                 else updateLog(`파괴됨 (수습 중... ${timeLeft}초)`, "#ef4444");
             }, 1000);
             setProbDisp("-", "-", "-", 0, 0, 0);
         } else {
             if (!isEnhanceCooldown && !isAnimating) document.getElementById('btn-enhance').disabled = false;
-            document.getElementById('btn-submit').disabled = !!enhancementTrialSession?.active;
+            document.getElementById('btn-submit').disabled = !!enhancementTrialSession?.active || chaosActive;
             let probs = trialActive
                 ? { ...getEnhancementTrialRates(userData.level), accBonus: 0, buffBonus: 0, upgBonus: 0 }
-                : getProbabilities(userData.level, accInfo.level, 0, 0);
+                : chaosActive
+                    ? { ...getDailyChaosProbabilities(userData.level), accBonus: 0, buffBonus: 0, upgBonus: 0 }
+                    : getProbabilities(userData.level, accInfo.level, 0, 0);
             setProbDisp(probs.successRate.toFixed(2), probs.failRate.toFixed(1), probs.destroyRate.toFixed(2), probs.accBonus, probs.buffBonus, probs.upgBonus);
         }
 
@@ -3512,7 +3996,8 @@
     window.sellCurrentItem = async function() {
         if (!currentUserData || isAnimating || currentUserData.level <= 0) return;
         const currentLv = Math.floor(toSafeNumber(currentUserData.level, 0));
-        if (currentLv >= 175) { showToast('Lv.175 이상 장비는 판매할 수 없습니다.', '#ef4444'); return; }
+        if (currentUserData.daily_chaos?.active) { showToast('일일 던전 진행 중에는 장비를 판매할 수 없습니다.', '#ef4444'); return; }
+        if (currentLv > 160) { showToast('Lv.160 초과 장비는 판매할 수 없습니다.', '#ef4444'); return; }
         const diamondGain = getItemSaleDiamondReward(currentLv);
         currentUserData.tokens = Math.max(0, toSafeNumber(currentUserData.tokens, 0)) + diamondGain;
         const bonusReward = rollHighLevelSaleReward(currentUserData, currentLv);
@@ -3540,6 +4025,7 @@
 
     window.enhance = async function(event) {
         if (enhancementTrialSession?.active) { await window.attemptEnhancementTrial(); return; }
+        if (currentUserData?.daily_chaos?.active) { await attemptDailyChaosEnhancement(); return; }
         if (isEnhanceCooldown || isAnimating || document.getElementById('btn-enhance').disabled || !currentUserData) return;
         lastManualEnhancementAt = Date.now();
         if (isSpecialActive) { await window.applySpecialGain(); return; }
@@ -3615,6 +4101,10 @@
         }
         e.preventDefault();
         if (document.querySelector('.modal-overlay[style*="flex"]') || isAnimating) return;
+        if (currentUserData?.daily_chaos?.active) {
+            if (!e.repeat) attemptDailyChaosEnhancement();
+            return;
+        }
         const doEnhance = () => {
             const btn = document.getElementById('btn-enhance');
             if (!currentUser || !currentUserData || !btn || btn.disabled || isEnhanceCooldown || isAnimating) return;
@@ -3931,7 +4421,7 @@
 
     function shouldAutoSellMultiItem(slot) {
         const completedLevel = Math.max(0, toSafeNumber(slot?.level, 0));
-        return completedLevel < 175 && !!slot?.auto_sell_completed && Math.max(0, toSafeNumber(slot.max_level_ever, slot.level)) >= 25;
+        return completedLevel <= 160 && !!slot?.auto_sell_completed && Math.max(0, toSafeNumber(slot.max_level_ever, slot.level)) >= 25;
     }
 
     function getMultiSlotStatus(slot) {
