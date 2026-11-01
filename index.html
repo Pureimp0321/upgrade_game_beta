@@ -294,6 +294,8 @@
             background: var(--bg-base); border: 1px solid var(--border-color);
             min-height: 250px; overflow: hidden;
         }
+        .level-action-toolbar { position:absolute; top:10px; right:10px; display:flex; gap:5px; z-index:20; }
+        .level-action-toolbar button { padding:7px 10px; font-size:.76rem; }
 
         .tier-label { font-size: 0.9rem; letter-spacing: 2px; color: var(--text-sub); margin-bottom: 10px; z-index: 5;}
         
@@ -532,6 +534,9 @@
         @media (max-width: 900px) {
             .game-screen-layout { height: auto; display: block; overflow-y: auto; }
             .pc-layout { flex-direction: column; }
+            .panel-right { order: -1; }
+            .panel-left { order: 0; }
+            .panel-quest { order: 1; }
             #level-area { min-height: 200px; }
             .level-text { font-size: 5rem; }
             .panel-left { overflow-y: visible; }
@@ -812,7 +817,7 @@
             background:linear-gradient(135deg,rgba(228,189,118,.035),transparent 28%,transparent 72%,rgba(142,217,208,.025));
         }
         .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after {
-            content:'FORGE  /  ENHANCEMENT CORE'; position:absolute; z-index:3; top:17px; right:22px; pointer-events:none;
+            content:'FORGE  /  ENHANCEMENT CORE'; position:absolute; z-index:3; top:17px; left:22px; right:auto; pointer-events:none;
             color:rgba(229,210,172,.36); font:600 .54rem/1.2 'Noto Sans KR',sans-serif; letter-spacing:.18em;
         }
         .tier-label { color:#c7b992; font-size:.78rem; font-weight:600; letter-spacing:.25em; text-shadow:0 2px 10px #000; }
@@ -931,14 +936,17 @@
         @media(max-width:900px) {
             .game-screen-layout { border-radius:17px; padding:17px; overflow-x:hidden; overflow-y:auto; }
             .game-screen-layout::after { inset:6px; border-radius:12px; }
-            .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after { top:14px; right:16px; font-size:.48rem; }
+            .level-action-toolbar { top:9px; right:9px; }
+            .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after { top:14px; left:16px; right:auto; font-size:.48rem; }
         }
         @media(max-width:600px) {
             .screen:not(.game-screen-layout) { border-radius:15px; }
             .game-screen-layout { padding:13px; }
             .top-bar-container { padding-bottom:10px; }
             .level-display-area { border-radius:14px; }
-            .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after { top:12px; right:13px; letter-spacing:.12em; font-size:.43rem; }
+            .level-action-toolbar { top:7px; right:7px; }
+            .level-action-toolbar button { padding:6px 8px; font-size:.7rem; }
+            .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after { top:12px; left:13px; right:auto; letter-spacing:.12em; font-size:.43rem; }
             .stats-panel { border-radius:10px; }
             .modal-content { border-radius:14px; }
         }
@@ -1039,7 +1047,7 @@
 
             <div class="panel-right">
                 <div id="level-area" class="level-display-area tier-0">
-                    <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px; z-index: 20;">
+                    <div class="level-action-toolbar">
                         <button onclick="window.openSynthesisModal()">합성</button>
                         <button id="btn-sell-top" onclick="window.sellCurrentItem()" title="Lv.160 초과 장비는 판매할 수 없습니다.">판매</button>
                     </div>
@@ -4021,6 +4029,7 @@
         if (document.getElementById('prefix-collection-modal')?.style.display === 'flex' && window.renderPrefixCollection) window.renderPrefixCollection();
         if (document.getElementById('chaos-dungeon-modal')?.style.display === 'flex' && window.renderChaosDungeon) window.renderChaosDungeon();
         const trialActive = !!enhancementTrialSession?.active;
+        const chaosActive = !!userData.chaos_dungeon?.active;
         const trialToggleButton = document.getElementById('btn-enhancement-trial-toggle');
         if (trialToggleButton) {
             const eligible = userData.level >= 160 && accInfo.level >= 35;
