@@ -83,8 +83,21 @@
 
         .pc-layout { display: flex; flex-direction: row; gap: 15px; flex: 1; min-height: 0; margin-top: 15px; }
         
-        .panel-left { flex: 1; display: flex; flex-direction: column; gap: 10px; overflow-y: auto;}
-        .panel-right { flex: 1.2; display: flex; flex-direction: column; gap: 10px; justify-content: space-between; position: relative;}
+        .panel-left { flex: .95; display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow-x: hidden; overflow-y: auto; scrollbar-width: thin;}
+        .panel-right { flex: 1.25; display: flex; flex-direction: column; gap: 10px; justify-content: space-between; min-height: 0; overflow-x: hidden; overflow-y: auto; padding-right: 3px; position: relative; scrollbar-width: thin;}
+        .forge-actions { flex:0 0 auto; }
+        .main-utility-details { width:100%; min-width:0; }
+        .main-utility-details > summary { display:none; }
+        .main-utility-content { display:flex; flex-direction:column; gap:8px; min-width:0; }
+        .forge-side-card { border: 1px solid #3b3d3d; border-radius: 12px; padding: 12px; background: linear-gradient(145deg,rgba(34,36,38,.96),rgba(17,20,25,.98) 62%,rgba(29,26,21,.92)); box-shadow: inset 0 1px rgba(255,255,255,.045),0 8px 20px rgba(0,0,0,.14);}
+        .forge-side-card::before { content:''; display:block; height:2px; margin:-12px -12px 11px; background:linear-gradient(90deg,transparent,rgba(228,189,118,.62),rgba(142,217,208,.26),transparent); }
+        .forge-side-card > :first-child { margin-top:0; }
+        .quick-inv { min-height:62px; align-content:flex-start; }
+        .quick-label { display:flex; flex-direction:column; gap:3px; color:#f1dfb8; }
+        .quick-label strong { color:#f1dfb8; font-size:.82rem; font-weight:600; }
+        .quick-label span { color:#92918b; font-size:.67rem; line-height:1.4; }
+        .quick-inv .quick-label { flex:1 0 100%; }
+        .quick-item { flex:0 0 auto; }
         .panel-quest { flex: 1.1; display: flex; flex-direction: column; gap: 8px; background: var(--panel-bg); border: 1px solid var(--border-color); padding: 10px; overflow-y: auto; scrollbar-width: thin;}
 
         h1, h2, h3 { color: #fff; font-weight: 500; margin: 0; }
@@ -177,8 +190,8 @@
         .quest-modal-content .quest-item { padding:9px 10px; gap:6px; margin-bottom:5px; }
         .quest-meta { display:flex; justify-content:space-between; gap:6px; color:#777; font-size:.65rem; line-height:1.2; }
         .quest-tab-summary { color:#888; font-size:.7rem; line-height:1.35; }
-        .panel-quest > .user-info-bar { padding:9px 10px; gap:5px; }
-        .panel-quest > .user-info-bar > div:first-child { margin-bottom:4px !important; }
+        .panel-quest .user-info-bar { padding:9px 10px; gap:5px; }
+        .panel-quest .user-info-bar > div:first-child { margin-bottom:4px !important; }
         .panel-quest #afk-info-area { margin-bottom:5px !important; }
         .panel-quest #daily-enhance-rewards { padding:5px 6px; margin-top:2px; }
         .auto-login-option { display:flex; align-items:center; justify-content:flex-start; gap:8px; margin-top:10px; color:#aaa; font-size:0.8rem; cursor:pointer; }
@@ -531,15 +544,13 @@
         .rank-item:hover { background: #1a1a1a; }
         .rank-user { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; margin-bottom: 4px; }
 
-        @media (max-width: 900px) {
-            .game-screen-layout { height: auto; display: block; overflow-y: auto; }
+        @media (max-width: 1100px) {
             .pc-layout { flex-direction: column; }
-            .panel-right { order: -1; }
-            .panel-left { order: 0; }
-            .panel-quest { order: 1; }
+            .panel-left { order: 0; overflow-y: visible; }
+            .panel-right { order: 1; overflow: visible; padding-right: 0; }
+            .panel-quest { order: 2; }
             #level-area { min-height: 200px; }
             .level-text { font-size: 5rem; }
-            .panel-left { overflow-y: visible; }
             .challenge-grid { grid-template-columns: 1fr; }
         }
         #achievements-modal { box-sizing: border-box; padding: 16px; }
@@ -768,10 +779,6 @@
             content:''; position:absolute; inset:10px; z-index:1; pointer-events:none; border:1px solid rgba(228,189,118,.13); border-radius:11px;
             background:linear-gradient(135deg,rgba(228,189,118,.035),transparent 28%,transparent 72%,rgba(142,217,208,.025));
         }
-        .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after {
-            content:'FORGE  /  ENHANCEMENT CORE'; position:absolute; z-index:3; top:17px; left:22px; right:auto; pointer-events:none;
-            color:rgba(229,210,172,.36); font:600 .54rem/1.2 'Noto Sans KR',sans-serif; letter-spacing:.18em;
-        }
         .tier-label { color:#c7b992; font-size:.78rem; font-weight:600; letter-spacing:.25em; text-shadow:0 2px 10px #000; }
         .level-text { text-shadow:0 8px 26px rgba(0,0,0,.42); }
         .prefix-badge { border-color:rgba(228,189,118,.34); border-radius:999px; background:linear-gradient(120deg,rgba(48,40,28,.92),rgba(18,20,23,.92)); box-shadow:inset 0 1px rgba(255,255,255,.06),0 5px 18px #0005; }
@@ -785,7 +792,7 @@
         .probability-panel,.probability-panel .stats-panel,.probability-panel .stat-item { min-width:0; box-sizing:border-box; }
         .probability-panel .stats-panel { grid-template-columns:repeat(3,minmax(0,1fr)); }
         .prefix-codex-card-title { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; }
-        @media(max-width:900px) {
+        @media(max-width:1100px) {
             html,body { max-width:100%; overflow-x:hidden; }
             .game-screen-layout { width:100%; max-width:100%; min-width:0; box-sizing:border-box; }
             .pc-layout,.panel-left,.panel-right,.panel-quest { width:100%; min-width:0; }
@@ -812,6 +819,18 @@
         .prefix-codex-card-effect,.prefix-codex-card-state,.artifact-event-effects { min-width:0; max-width:100%; white-space:normal; overflow-wrap:anywhere; word-break:break-word; }
         .artifact-event-content { box-sizing:border-box; min-width:0; }
         .prefix-effect-label { min-width:0; overflow-wrap:anywhere; word-break:break-word; }
+        #prefix-collection-modal > .modal-content { width:min(1080px,calc(100vw - 28px)) !important; max-width:1080px !important; min-width:0 !important; }
+        .prefix-codex-toolbar > div:first-child { min-width:0; overflow-wrap:anywhere; line-height:1.45; }
+        .prefix-codex-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); overflow-x:hidden; overscroll-behavior:contain; }
+        .prefix-codex-card { min-width:0; max-width:100%; box-sizing:border-box; overflow:hidden; gap:6px; padding:10px; border-radius:10px; }
+        .prefix-codex-card-title { grid-template-columns:minmax(0,1fr) auto; gap:6px; }
+        .prefix-codex-card-effect { box-sizing:border-box; width:100%; min-width:0; padding:8px 9px; border:1px solid #ffffff16; border-radius:8px; background:#08090bb8; font-size:.73rem; line-height:1.45; overflow-wrap:anywhere; word-break:break-word; }
+        .prefix-codex-card-effect strong { display:block; margin-bottom:3px; font-size:.7rem; line-height:1.35; overflow-wrap:anywhere; }
+        .prefix-codex-card-state { font-size:.63rem; line-height:1.4; overflow-wrap:anywhere; }
+        .artifact-event-content { width:min(600px,calc(100vw - 32px)); max-width:calc(100vw - 32px); max-height:calc(100dvh - 32px); padding:clamp(16px,3vw,25px); box-sizing:border-box; overflow-x:hidden; overflow-y:auto; }
+        .artifact-event-content > * { min-width:0; max-width:100%; box-sizing:border-box; }
+        #artifact-event-name { font-size:clamp(1.25rem,5vw,1.7rem) !important; overflow-wrap:anywhere; word-break:keep-all; }
+        .artifact-event-effects { width:100%; margin:12px 0; padding:clamp(10px,2.5vw,14px); box-sizing:border-box; font-size:.88rem; line-height:1.5; overflow-wrap:anywhere; word-break:break-word; }
         .probability-panel { display:grid; gap:7px; padding:10px; border:1px solid #41433f; border-radius:14px; background:radial-gradient(ellipse at 0 0,rgba(228,189,118,.09),transparent 48%),linear-gradient(145deg,#191c20,#101317); box-shadow:inset 0 1px #ffffff0b,0 8px 22px #0003; }
         .probability-panel-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; color:#eee9dd; font-size:.8rem; }
         .probability-panel-heading strong { font-weight:600; letter-spacing:.02em; }
@@ -928,22 +947,279 @@
         input:focus,select:focus { border-color:#c9a860; box-shadow:0 0 0 3px rgba(228,189,118,.13),inset 0 1px 3px #0008; }
         ::-webkit-scrollbar-thumb { border-radius:99px; background:linear-gradient(180deg,#756442,#3d4342); }
         ::selection { color:#17130c; background:#e4bd76; }
-        @media(max-width:900px) {
-            .game-screen-layout { border-radius:17px; padding:17px; overflow-x:hidden; overflow-y:auto; }
+        #game-container { position:fixed; inset:0; width:auto !important; height:auto !important; min-height:0; box-sizing:border-box; overflow:hidden; }
+        @media(max-width:1100px) {
+            .game-screen-layout { width:100% !important; max-width:100% !important; height:100vh; height:100dvh; max-height:100vh; max-height:100dvh; min-height:0; margin:0; padding:12px; box-sizing:border-box; border-radius:0; overflow-x:hidden; overflow-y:auto; scrollbar-width:none; }
+            .game-screen-layout::-webkit-scrollbar { display:none; width:0; height:0; }
+            .pc-layout { flex:0 0 auto; min-height:0; overflow:visible; }
+            .panel-left,.panel-right,.panel-quest { flex:0 0 auto; overflow:visible; }
+            .main-utility-details > summary { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:38px; padding:8px 11px; border:1px solid #45443f; border-radius:10px; background:linear-gradient(145deg,#24272a,#181b20); color:#e8e3d8; font-size:.76rem; font-weight:600; list-style:none; cursor:pointer; }
+            .main-utility-details > summary::-webkit-details-marker { display:none; }
+            .main-utility-details > summary::after { content:'＋'; color:#e4bd76; font-size:.9rem; }
+            .main-utility-details[open] > summary::after { content:'−'; }
+            .utility-summary-hint { margin-left:auto; color:#9b9a96; font-size:.66rem; font-weight:400; }
+            .main-utility-content { padding-top:7px; }
             .game-screen-layout::after { inset:6px; border-radius:12px; }
             .level-action-toolbar { top:9px; right:9px; }
-            .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after { top:14px; left:16px; right:auto; font-size:.48rem; }
+        }
+        @media(min-width:761px) and (max-width:1100px) {
+            .game-screen-layout { overflow:hidden; }
+            .pc-layout { display:grid; grid-template-columns:minmax(230px,.78fr) minmax(0,1.35fr); grid-template-rows:minmax(0,1fr) auto; flex:1 1 auto; min-height:0; gap:10px; margin-top:10px; overflow:hidden; }
+            .panel-left { grid-column:1; grid-row:1; order:0; min-height:0; overflow-x:hidden; overflow-y:auto; }
+            .panel-right { grid-column:2; grid-row:1; order:1; min-height:0; overflow-x:hidden; overflow-y:auto; padding-right:0; scrollbar-width:none; }
+            .panel-right::-webkit-scrollbar { display:none; width:0; height:0; }
+            .panel-quest { grid-column:1 / -1; grid-row:2; order:2; }
+        }
+        @media(max-width:760px) {
+            .game-screen-layout { padding:8px; overflow:hidden; }
+            .top-bar-container { flex-wrap:nowrap; gap:5px; padding-bottom:7px; }
+            .top-nav { flex:0 1 auto; flex-wrap:nowrap; gap:4px; }
+            .top-bar-container > div:last-child { flex:0 0 auto; gap:4px !important; }
+            .top-bar-container button { min-height:32px; padding:6px 8px; font-size:.72rem; white-space:nowrap; }
+            #multi-active-overlay { display:none !important; }
+            .pc-layout { display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr) auto; flex:1 1 auto; min-height:0; gap:6px; margin-top:7px; overflow:hidden; }
+            .panel-left { display:flex; flex-direction:column; gap:5px; order:0; min-height:0; overflow-x:hidden; overflow-y:visible; }
+            .panel-left #user-info-bar { padding:7px 9px; gap:3px; }
+            .panel-left .info-top { margin-bottom:3px; }
+            .panel-left .token-badge { padding:4px 7px; font-size:.7rem; }
+            .panel-left .xp-container { height:4px; margin-top:3px; }
+            #xp-info-text { margin-top:3px !important; font-size:.62rem !important; }
+            .panel-left #buff-display { padding:5px 7px; font-size:.66rem; }
+            .probability-panel { gap:4px; padding:6px 7px; border-radius:10px; }
+            .probability-panel-heading { font-size:.7rem; }
+            .probability-panel-heading span { font-size:.58rem; }
+            .probability-panel .stats-panel { border-radius:8px; }
+            .probability-panel .stat-item { min-height:39px; padding:4px 3px; gap:1px; font-size:.62rem; }
+            .probability-panel .stat-item b { font-size:.9rem; }
+            .probability-panel .account-chance-hint { padding:4px 6px; font-size:.57rem; line-height:1.3; }
+            .panel-right { order:1; flex:1 1 auto; min-height:0; gap:6px; justify-content:flex-start; overflow-y:auto; overflow-x:hidden; padding:0; scrollbar-width:none; }
+            .panel-right::-webkit-scrollbar { display:none; width:0; height:0; }
+            #level-area { flex:1 0 148px; min-height:148px; border-radius:12px; }
+            .level-action-toolbar { top:6px; right:6px; gap:3px; }
+            .level-action-toolbar button { padding:5px 7px; font-size:.66rem; }
+            .tier-label { margin-bottom:4px; font-size:.68rem; letter-spacing:.16em; }
+            .level-text { font-size:clamp(3.5rem,10.5vw,4.2rem); }
+            .prefix-label { min-height:0; margin-top:4px; font-size:.82rem; line-height:1.2; }
+            .prefix-effect-label { min-height:0; margin-top:2px; font-size:.65rem; line-height:1.25; }
+            .forge-actions { gap:5px !important; }
+            #btn-enhance { padding:10px !important; font-size:.98rem !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { padding:8px !important; font-size:.79rem !important; }
+            #quick-inventory { width:100%; min-height:0; flex:0 0 auto; align-items:center; gap:4px; padding:6px; border-radius:9px; }
+            #quick-inventory .quick-label { gap:2px; }
+            #quick-inventory .quick-label strong { font-size:.73rem; }
+            #quick-inventory .quick-label span { font-size:.58rem; line-height:1.25; }
+            #quick-inventory .quick-help { display:none; }
+            #quick-inventory .quick-item { padding:4px 7px; font-size:.7rem; line-height:1.2; }
+            #message-log { min-height:32px; height:32px; flex:0 0 32px; padding:5px; border-radius:8px; font-size:.76rem; }
+            .panel-quest { order:2; flex:0 0 auto; min-height:0; overflow:visible; padding:0; border:0; background:transparent; }
+            .main-utility-details > summary { min-height:34px; padding:6px 9px; font-size:.69rem; }
+            .utility-summary-hint { font-size:.6rem; }
+            .main-utility-content { gap:6px; }
+            .forge-side-card { padding:10px; }
+            .forge-side-card::before { margin:-10px -10px 9px; }
         }
         @media(max-width:600px) {
             .screen:not(.game-screen-layout) { border-radius:15px; }
-            .game-screen-layout { padding:13px; }
-            .top-bar-container { padding-bottom:10px; }
-            .level-display-area { border-radius:14px; }
-            .level-action-toolbar { top:7px; right:7px; }
-            .level-action-toolbar button { padding:6px 8px; font-size:.7rem; }
-            .level-display-area:not(.tier-7):not(.tier-8):not(.tier-9)::after { top:12px; left:13px; right:auto; letter-spacing:.12em; font-size:.43rem; }
+            .game-screen-layout { padding:6px; }
+            .top-bar-container { padding-bottom:7px; }
+            .pc-layout { gap:5px; margin-top:5px; }
+            .panel-left { gap:4px; }
+            #level-area { flex-basis:136px; min-height:136px; }
+            .level-display-area { border-radius:12px; }
+            .level-text { font-size:clamp(3.2rem,11vw,3.9rem); }
+            .level-action-toolbar { top:5px; right:5px; }
+            .level-action-toolbar button { padding:4px 6px; font-size:.63rem; }
+            .probability-panel .stat-item { min-height:36px; }
+            .forge-actions { gap:4px !important; }
+            #btn-enhance { padding:8px !important; font-size:.92rem !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { padding:7px !important; font-size:.74rem !important; }
+            #quick-inventory { padding:5px; }
+            #quick-inventory .quick-item { padding:4px 6px; font-size:.66rem; }
+            #message-log { min-height:28px; height:28px; flex-basis:28px; }
             .stats-panel { border-radius:10px; }
             .modal-content { border-radius:14px; }
+        }
+        #quick-inventory { width:100%; min-width:0; box-sizing:border-box; }
+        @media(max-width:760px) {
+            .panel-right { min-width:0; }
+            #quick-inventory { gap:4px; padding:5px; }
+            #quick-inventory .quick-label { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:0 8px; flex:0 1 100%; margin:0; min-width:0; }
+            #quick-inventory .quick-label strong { white-space:nowrap; }
+            #quick-inventory .quick-summary { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:right; }
+            #quick-inventory .quick-item { padding:4px 6px; }
+            #message-log { min-height:32px; height:32px; flex:0 0 32px; }
+            #btn-enhance { min-height:40px; padding:7px !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { min-height:32px; padding:6px !important; }
+        }
+        @media(min-width:601px) and (max-width:760px) and (max-height:680px) {
+            .game-screen-layout { padding:8px; }
+            .top-bar-container { padding-bottom:7px; }
+            .pc-layout { grid-template-columns:minmax(270px,.9fr) minmax(0,1.1fr); grid-template-rows:minmax(0,1fr) auto; gap:7px; margin-top:7px; }
+            .panel-left { grid-column:1; grid-row:1; order:0; gap:6px; min-height:0; overflow-x:hidden; overflow-y:auto; }
+            .panel-left #user-info-bar { padding:6px; }
+            .panel-left .info-top { align-items:flex-start; gap:5px; }
+            .panel-left .info-top > div:last-child { flex-wrap:wrap; justify-content:flex-end; gap:3px !important; }
+            .panel-left .token-badge { padding:3px 5px; font-size:.62rem; }
+            .panel-left .xp-container { margin-top:3px; }
+            #xp-info-text { margin-top:3px !important; font-size:.58rem !important; }
+            .probability-panel { gap:4px; padding:6px; }
+            .probability-panel-heading { font-size:.68rem; }
+            .probability-panel .stat-item { min-height:34px; padding:4px 2px; font-size:.6rem; }
+            .probability-panel .stat-item b { font-size:.84rem; }
+            .probability-panel .account-chance-hint { padding:4px; font-size:.55rem; line-height:1.25; }
+            .panel-right { grid-column:2; grid-row:1; order:1; gap:5px; min-height:0; overflow-x:hidden; overflow-y:auto; }
+            #level-area { flex:0 0 112px; min-height:112px; }
+            .level-text { font-size:clamp(2.9rem,7vw,3.5rem); }
+            .prefix-label { margin-top:2px; font-size:.75rem; }
+            .prefix-effect-label { margin-top:1px; font-size:.61rem; }
+            .forge-actions { gap:4px !important; }
+            #btn-enhance { min-height:36px; padding:5px !important; font-size:.88rem !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { min-height:29px; padding:4px !important; font-size:.7rem !important; }
+            #quick-inventory { gap:3px; padding:4px; }
+            #quick-inventory .quick-label strong { font-size:.67rem; }
+            #quick-inventory .quick-summary { font-size:.52rem; }
+            #quick-inventory .quick-item { padding:3px 5px; font-size:.62rem; }
+            #message-log { min-height:27px; height:27px; flex-basis:27px; padding:4px; font-size:.7rem; }
+            .panel-quest { grid-column:1 / -1; grid-row:2; order:2; }
+            .main-utility-details > summary { min-height:32px; padding:5px 8px; font-size:.66rem; }
+        }
+        @media(max-width:600px) and (max-height:680px) {
+            .game-screen-layout { padding:5px; }
+            .top-bar-container { padding-bottom:5px; }
+            .pc-layout { gap:4px; margin-top:4px; }
+            .panel-left { gap:3px; }
+            .panel-left #user-info-bar { padding:5px 7px; }
+            .panel-left .info-top { margin-bottom:2px; }
+            .panel-left .token-badge { padding:3px 5px; font-size:.62rem; }
+            .panel-left .xp-container { height:3px; margin-top:2px; }
+            #xp-info-text { margin-top:2px !important; font-size:.56rem !important; }
+            .probability-panel { gap:3px; padding:4px 5px; }
+            .probability-panel-heading span { display:none; }
+            .probability-panel .stat-item { min-height:30px; padding:3px 2px; }
+            .probability-panel .stat-item b { font-size:.8rem; }
+            .probability-panel .account-chance-hint { display:block; padding:3px 5px; font-size:.53rem; line-height:1.15; }
+            #level-area { flex:0 0 112px; min-height:112px; }
+            .level-text { font-size:clamp(2.8rem,10vw,3.5rem); }
+            #quick-inventory { gap:3px; padding:4px; }
+            #quick-inventory .quick-label strong { font-size:.67rem; }
+            #quick-inventory .quick-summary { font-size:.53rem; }
+            #quick-inventory .quick-item { padding:3px 5px; font-size:.62rem; }
+            #message-log { min-height:27px; height:27px; flex-basis:27px; padding:4px; }
+            .main-utility-details > summary { min-height:30px; padding:4px 7px; font-size:.64rem; }
+        }
+        @media(min-width:1101px) {
+            .game-screen-layout { width:min(98vw,1400px) !important; height:min(96dvh,calc(100dvh - 16px)); max-height:calc(100dvh - 16px); min-height:0; box-sizing:border-box; padding:16px; }
+            .pc-layout { display:grid; grid-template-columns:minmax(260px,.95fr) minmax(360px,1.2fr) minmax(300px,1.1fr); gap:12px; flex:1 1 auto; min-height:0; margin-top:10px; overflow:hidden; }
+            .panel-left,.panel-right,.panel-quest { min-height:0; overflow:hidden; scrollbar-width:none; }
+            .panel-left::-webkit-scrollbar,.panel-right::-webkit-scrollbar,.panel-quest::-webkit-scrollbar { display:none; width:0; height:0; }
+            .panel-left { gap:8px; }
+            .panel-right { justify-content:flex-start; gap:8px; padding:0; }
+            .panel-quest { gap:6px; padding:8px; }
+            .main-utility-details { height:100%; }
+            .main-utility-content { gap:6px; }
+            .panel-quest .user-info-bar { padding:8px; gap:4px; }
+            .panel-quest .forge-side-card { padding:9px; }
+            .panel-quest .forge-side-card::before { margin:-9px -9px 8px; }
+            #quick-inventory { width:100%; min-width:0; box-sizing:border-box; gap:4px; padding:6px; }
+            #quick-inventory .quick-label { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:0 8px; flex:1 0 100%; margin:0; min-width:0; }
+            #quick-inventory .quick-help { display:none; }
+            #quick-inventory .quick-summary { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:right; font-size:.63rem; }
+            #quick-inventory .quick-item { padding:4px 7px; font-size:.72rem; }
+            #message-log { min-height:34px; height:34px; flex:0 0 34px; }
+        }
+        @media(min-width:1101px) and (max-height:760px) {
+            .game-screen-layout { height:calc(100dvh - 12px); max-height:calc(100dvh - 12px); padding:12px; }
+            .top-bar-container { padding-bottom:8px; }
+            #multi-active-overlay { display:none !important; }
+            .pc-layout { gap:9px; margin-top:8px; }
+            .panel-left { gap:6px; }
+            .panel-left .user-info-bar { padding:8px 9px; }
+            .panel-left .user-info-bar .info-top { margin-bottom:5px !important; }
+            .panel-left #xp-info-text { margin-top:4px !important; }
+            .probability-panel { gap:5px; padding:8px; }
+            .probability-panel .stat-item { min-height:44px; padding:6px 4px; }
+            .probability-panel .account-chance-hint { padding:4px 6px; font-size:.59rem; }
+            .level-text { font-size:clamp(4rem,6vw,5.2rem); }
+            .tier-label { margin-bottom:3px; }
+            .prefix-label { margin-top:3px; }
+            .prefix-effect-label { margin-top:2px; }
+            .forge-actions { gap:5px !important; }
+            #btn-enhance { min-height:42px; padding:8px !important; font-size:1rem !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { min-height:34px; padding:6px !important; font-size:.82rem !important; }
+            #quick-inventory { gap:3px; padding:5px; }
+            #quick-inventory .quick-item { padding:3px 6px; font-size:.68rem; }
+            #message-log { min-height:32px; height:32px; flex-basis:32px; font-size:.82rem; }
+            .panel-quest { gap:5px; padding:7px; }
+            .main-utility-content { gap:5px; }
+            .panel-quest .user-info-bar { padding:7px; gap:3px; }
+            .panel-quest .forge-side-card { padding:8px; }
+            .panel-quest .forge-side-card::before { margin:-8px -8px 7px; }
+            #afk-mode-description { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; }
+        }
+        @media(min-width:761px) and (max-width:1100px) {
+            #multi-active-overlay { display:none !important; }
+            .top-bar-container { padding-bottom:8px; }
+            .pc-layout { grid-template-columns:minmax(250px,.78fr) minmax(0,1.22fr); grid-template-rows:minmax(0,1fr) auto; gap:8px; margin-top:8px; }
+            .panel-left { grid-column:1; grid-row:1; order:0; gap:6px; min-height:0; overflow:hidden; }
+            .panel-left .user-info-bar { padding:8px 9px; }
+            .panel-left .info-top { margin-bottom:5px !important; }
+            .panel-left .info-top > div:first-child { flex:0 0 auto; white-space:nowrap; }
+            .panel-left .info-top > div:last-child { min-width:0; flex-wrap:wrap; justify-content:flex-end; gap:3px !important; }
+            .panel-left .token-badge { padding:4px 6px; font-size:.68rem; }
+            .panel-left #xp-info-text { margin-top:4px !important; }
+            .probability-panel { gap:5px; padding:7px; }
+            .probability-panel .stat-item { min-height:42px; padding:6px 3px; }
+            .probability-panel .account-chance-hint { padding:4px 6px; font-size:.59rem; }
+            .panel-right { grid-column:2; grid-row:1; order:1; gap:6px; min-height:0; overflow:hidden; padding:0; justify-content:flex-start; }
+            #level-area { flex:1 1 125px; min-height:115px; }
+            .level-text { font-size:clamp(3.8rem,7vw,5rem); }
+            .forge-actions { gap:5px !important; }
+            #btn-enhance { min-height:42px; padding:8px !important; font-size:1rem !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { min-height:34px; padding:6px !important; font-size:.82rem !important; }
+            #quick-inventory { gap:4px; padding:6px; }
+            #quick-inventory .quick-label { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:0 8px; flex:1 0 100%; margin:0; min-width:0; }
+            #quick-inventory .quick-help { display:none; }
+            #quick-inventory .quick-summary { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:right; font-size:.62rem; }
+            #quick-inventory .quick-item { padding:4px 7px; font-size:.69rem; }
+            #message-log { min-height:32px; height:32px; flex:0 0 32px; font-size:.82rem; }
+            .panel-quest { grid-column:1 / -1; grid-row:2; order:2; min-height:0; overflow:hidden; padding:7px; }
+            .main-utility-details { height:100%; }
+            .main-utility-details > summary { display:none; }
+            .main-utility-content { display:grid; grid-template-columns:1.12fr 1fr .86fr; align-items:stretch; gap:8px; height:100%; min-height:0; padding:0; }
+            .panel-quest .user-info-bar,.panel-quest .forge-side-card { min-width:0; min-height:0; overflow:hidden; padding:8px; }
+            .panel-quest .user-info-bar { gap:3px; }
+            .panel-quest .forge-side-card::before { margin:-8px -8px 7px; }
+            .panel-quest .forge-side-card > div[style*="margin-bottom:11px"] { margin-bottom:7px !important; }
+            .panel-quest .forge-side-card > div[style*="margin-bottom:13px"] { margin-bottom:8px !important; }
+            #afk-mode-description { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; }
+        }
+        @media(min-width:761px) and (max-width:1100px) and (max-height:680px) {
+            .pc-layout { grid-template-rows:minmax(0,1fr) 150px; }
+            .panel-quest .user-info-bar,.panel-quest .forge-side-card { padding:4px; }
+            .panel-quest .forge-side-card::before { margin:-4px -4px 3px; }
+            .panel-quest .user-info-bar > div:first-child { margin-bottom:3px !important; }
+            .panel-quest .user-info-bar > div:nth-child(3) > div:first-child { display:none; }
+            .panel-quest .user-info-bar > div:nth-child(3) { margin-bottom:3px !important; }
+            .panel-quest .user-info-bar button { box-sizing:border-box; height:24px; min-height:24px; padding:2px !important; font-size:.62rem !important; }
+            .panel-quest .forge-side-card > div:first-child { font-size:.76rem !important; margin-bottom:2px !important; }
+            .panel-quest .forge-side-card > div[style*="display:flex;justify-content:space-between"] { font-size:.62rem !important; margin-bottom:2px !important; }
+            .panel-quest .forge-side-card > div[style*="margin-bottom:11px"] { margin-bottom:3px !important; }
+            .panel-quest .forge-side-card > div[style*="margin-bottom:13px"] { margin-bottom:4px !important; }
+            .panel-quest .forge-side-card > div[style*="margin-bottom:6px"] { margin-bottom:3px !important; }
+            .panel-quest .forge-side-card button { box-sizing:border-box; height:24px; min-height:24px; padding:2px !important; font-size:.62rem !important; }
+            .panel-quest .forge-side-card p { margin-bottom:4px !important; font-size:.64rem !important; line-height:1.25 !important; }
+            #afk-mode-description { display:none !important; }
+            #quick-inventory { min-height:0; flex-wrap:nowrap; gap:4px; padding:4px; }
+            #quick-inventory .quick-label { display:block; flex:0 0 auto; width:auto; white-space:nowrap; }
+            #quick-inventory .quick-summary,#quick-inventory .quick-help { display:none !important; }
+            #quick-inventory .quick-item { padding:3px 5px; font-size:.62rem; }
+            .panel-right { gap:4px; }
+            #level-area { flex:1 1 140px; min-height:136px; }
+            .level-text { font-size:clamp(3.2rem,7vw,4rem); }
+            .forge-actions { gap:4px !important; }
+            #btn-enhance { min-height:34px; padding:4px !important; font-size:.86rem !important; }
+            #btn-enhancement-trial-toggle,#btn-submit { min-height:24px; padding:3px !important; font-size:.68rem !important; }
+            #message-log { box-sizing:border-box; min-height:28px; height:28px; flex-basis:28px; padding:4px; }
         }
         @media(prefers-reduced-motion:reduce) {
             button, .quest-progress-fill, .achievement-progress-fill { transition-duration:.01ms !important; }
@@ -1009,43 +1285,6 @@
 
                 <div id="buff-display" class="buff-status" style="display:none;"></div>
 
-                <div class="user-info-bar">
-                    <div style="font-size: 0.95rem; color: #fff; margin-bottom: 10px;">특성 강화</div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px;">
-                            <span style="color:#aaa;">도전 공격력 증가 <span id="upg-challenge-lv"></span></span>
-                            <span id="upg-challenge-eff"></span>
-                        </div>
-                        <button id="btn-upg-challenge" onclick="window.upgradeChallengeDamage()" style="width: 100%; font-size: 0.8rem; padding: 8px;">업그레이드</button>
-                    </div>
-                    <div>
-                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px;">
-                            <span style="color:#aaa;">강화 대기시간 <span id="upg-cd-lv"></span></span>
-                            <span id="upg-cd-eff"></span>
-                        </div>
-                        <button id="btn-upg-cd" onclick="window.upgradeCooldown()" style="width: 100%; font-size: 0.8rem; padding: 8px;">업그레이드</button>
-                    </div>
-                </div>
-
-                <div class="user-info-bar">
-                    <div style="font-size: 0.95rem; color: #fff; margin-bottom: 10px;">How to Play</div>
-                    <button class="btn-info" onclick="window.openHowToPlayModal()" style="width: 100%; font-size: 0.85rem; padding: 8px;">게임 방식 & 티어표 가이드</button>
-                </div>
-            </div>
-
-            <div class="panel-right">
-                <div id="level-area" class="level-display-area tier-0">
-                    <div class="level-action-toolbar">
-                        <button onclick="window.openSynthesisModal()">합성</button>
-                        <button id="btn-sell-top" onclick="window.sellCurrentItem()" title="Lv.160 초과 장비는 판매할 수 없습니다.">판매</button>
-                    </div>
-                    
-                    <div class="tier-label" id="current-tier-label">T0 아이언</div>
-                    <div class="level-text">Lv.<span id="current-level">0</span></div>
-                    <div id="prefix-label" class="prefix-label"></div>
-                    <div id="prefix-effect-label" class="prefix-effect-label"></div>
-                </div>
-
                 <section class="probability-panel" aria-label="현재 강화 확률">
                     <div class="probability-panel-heading"><strong>현재 강화 확률</strong><span>장비 레벨 기준</span></div>
                     <div class="stats-panel">
@@ -1055,13 +1294,26 @@
                     </div>
                     <div id="account-chance-hint" class="account-chance-hint"></div>
                 </section>
-                
-                <div style="display: flex; flex-direction: column; gap: 8px;">
+            </div>
+
+            <div class="panel-right">
+                <div id="level-area" class="level-display-area tier-0">
+                    <div class="level-action-toolbar">
+                        <button onclick="window.openSynthesisModal()">합성</button>
+                        <button id="btn-sell-top" onclick="window.sellCurrentItem()" title="Lv.160 초과 장비는 판매할 수 없습니다.">판매</button>
+                    </div>
+                    <div class="tier-label" id="current-tier-label">T0 아이언</div>
+                    <div class="level-text">Lv.<span id="current-level">0</span></div>
+                    <div id="prefix-label" class="prefix-label"></div>
+                    <div id="prefix-effect-label" class="prefix-effect-label"></div>
+                </div>
+
+                <div class="forge-actions" style="display: flex; flex-direction: column; gap: 8px;">
                     <button id="btn-enhance" class="btn-main" onclick="window.enhance(event)" style="padding: 16px; font-size: 1.1rem;">
                         강화 (Space)
                     </button>
                     <button id="btn-enhancement-trial-toggle" onclick="window.toggleEnhancementTrial()" style="padding: 10px;">강화 시련 시작</button>
-                    <button id="btn-submit" onclick="window.submitRanking()" style="padding: 12px;">보관하기</button>
+                    <button id="btn-submit" onclick="window.submitRanking()" style="padding: 12px;">보관함에 저장</button>
                 </div>
 
                 <div id="quick-inventory" class="quick-inv"></div>
@@ -1069,6 +1321,9 @@
             </div>
 
             <div class="panel-quest">
+                <details id="main-utility-details" class="main-utility-details" open>
+                    <summary><span>오프라인 강화석 · 특성 강화 · 가이드</span><span class="utility-summary-hint">열기</span></summary>
+                    <div class="main-utility-content">
                 <div class="user-info-bar" style="background: var(--bg-base);">
                     <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:5px;">
                         <span style="font-size:.86rem;">오프라인 강화석</span>
@@ -1096,6 +1351,32 @@
                         <button class="btn-danger" onclick="window.takeOutAFK()" style="flex:1;padding:6px;">회수</button>
                     </div>
                 </div>
+
+                <section class="forge-side-card">
+                    <div style="font-size:.9rem;color:#f1dfb8;font-weight:600;margin-bottom:11px;">특성 강화</div>
+                    <div style="margin-bottom:13px;">
+                        <div style="display:flex;justify-content:space-between;gap:6px;font-size:.77rem;margin-bottom:6px;">
+                            <span style="color:#bbb;">도전 공격력 증가 <span id="upg-challenge-lv"></span></span>
+                            <span id="upg-challenge-eff" style="color:#e4bd76;white-space:nowrap;"></span>
+                        </div>
+                        <button id="btn-upg-challenge" onclick="window.upgradeChallengeDamage()" style="width:100%;font-size:.75rem;padding:8px;">업그레이드</button>
+                    </div>
+                    <div>
+                        <div style="display:flex;justify-content:space-between;gap:6px;font-size:.77rem;margin-bottom:6px;">
+                            <span style="color:#bbb;">강화 대기시간 <span id="upg-cd-lv"></span></span>
+                            <span id="upg-cd-eff" style="color:#9ee1d4;white-space:nowrap;"></span>
+                        </div>
+                        <button id="btn-upg-cd" onclick="window.upgradeCooldown()" style="width:100%;font-size:.75rem;padding:8px;">업그레이드</button>
+                    </div>
+                </section>
+
+                <section class="forge-side-card">
+                    <div style="font-size:.9rem;color:#f1dfb8;font-weight:600;margin-bottom:5px;">플레이 가이드</div>
+                    <p style="font-size:.72rem;line-height:1.5;color:#999;margin:0 0 10px;">강화 규칙과 티어별 정보를 확인하세요.</p>
+                    <button class="btn-info" onclick="window.openHowToPlayModal()" style="width:100%;font-size:.75rem;padding:8px;">가이드 열기</button>
+                </section>
+                    </div>
+                </details>
             </div>
         </div>
     </div>
@@ -1430,7 +1711,6 @@
             <button id="ranking-best-tab" class="btn-main" onclick="window.setRankingMode('best')">최고 레벨</button>
             <button id="ranking-average-tab" class="btn-sub" onclick="window.setRankingMode('average')">보관함 평균</button>
         </div>
-        <div id="ranking-sync-status" role="status" aria-live="polite" style="min-height:16px; margin:-4px 0 7px; color:#777; font-size:.72rem;"></div>
         <div id="ranking-list"></div>
     </div>
 </div>
@@ -3721,11 +4001,9 @@
             if (unsubscribeAllUsers) unsubscribeAllUsers();
             const allUsersValueHandler = (snapshot) => {
                 applyRankingSnapshot(snapshot);
-                setRankingSyncStatus(`계정 ${allUsersData.length}개 · 실시간 동기화 중`, '#67e8a5');
             };
             unsubscribeAllUsers = listenToFirebaseValue(db.ref('users'), allUsersValueHandler, error => {
                 console.error('랭킹 실시간 동기화 실패:', error);
-                setRankingSyncStatus('실시간 연결이 끊겨 서버에서 다시 불러옵니다.', '#fbbf24');
                 loadRankingUsers(true);
             });
             loadRankingUsers(true);
@@ -3932,8 +4210,8 @@
         const average = getOwnedItemsAverage(currentUserData);
         const storedCount = Math.min(STORAGE_LIMIT, Array.isArray(currentUserData.items) ? currentUserData.items.length : 0);
         const dailyCount = Math.max(0, Math.floor(toSafeNumber(currentUserData.daily_quests?.enhancement_count, 0)));
-        const summary = '보관함 ' + storedCount + '/' + STORAGE_LIMIT + ' · 5칸 평균 Lv.' + average.toFixed(1) + ' · 오늘 강화 ' + dailyCount + '/750';
-        let html = '<div class="quick-label">빠른 장착 (클릭 시 교체)<br><span style="color:#aaa;">' + summary + '회</span></div>';
+        const summary = storedCount + '/' + STORAGE_LIMIT + '칸 · 5칸 평균 Lv.' + average.toFixed(1) + ' · 오늘 강화 ' + dailyCount + '/750회';
+        let html = '<div class="quick-label"><strong>강화 보관함</strong><span class="quick-help">빠른 장착 · 장비를 누르면 현재 장비와 교체</span><span class="quick-summary">' + summary + '</span></div>';
         if (!items || items.length === 0) html += '<span style="font-size:0.85rem; color:#666;">보관된 장비 없음</span>';
         else items.forEach((item, index) => { html += '<div class="quick-item" onclick="window.retrieveItem(' + index + ')">' + formatItemName(item) + '</div>'; });
         document.getElementById('quick-inventory').innerHTML = html;
@@ -5996,13 +6274,6 @@
         document.getElementById('ranking-list').innerHTML = html || '<div style="text-align:center; padding:20px; color:#666;">랭커가 없습니다.</div>';
     }
 
-    function setRankingSyncStatus(message, color = '#777') {
-        const status = document.getElementById('ranking-sync-status');
-        if (!status) return;
-        status.textContent = message || '';
-        status.style.color = color;
-    }
-
     function applyRankingSnapshot(snapshot) {
         allUsersData = [];
         const users = decodeRtdbValue(snapshot.val() || {});
@@ -6025,19 +6296,16 @@
             const list = document.getElementById('ranking-list');
             if (list) list.innerHTML = '<div style="text-align:center; padding:20px; color:#888;">랭킹을 불러오는 중입니다…</div>';
         }
-        setRankingSyncStatus('랭킹 데이터를 확인하는 중…', '#9ca3af');
         rankingLoadPromise = (async () => {
             try {
                 const snapshot = await db.ref('users').once('value');
                 applyRankingSnapshot(snapshot);
-                setRankingSyncStatus(`계정 ${allUsersData.length}개 · 서버 동기화 완료`, '#67e8a5');
             } catch (error) {
                 console.error('랭킹 데이터 불러오기 실패:', error);
                 if (!rankingLoaded) {
                     const list = document.getElementById('ranking-list');
                     if (list) list.innerHTML = '<div style="text-align:center; padding:20px; color:#f87171;">랭킹을 불러오지 못했습니다. 잠시 후 다시 열어주세요.</div>';
                 }
-                setRankingSyncStatus(`랭킹 연결 실패${error?.code ? ` · ${error.code}` : ''}`, '#f87171');
             } finally {
                 rankingLoadPromise = null;
             }
@@ -6046,6 +6314,14 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+        const utilityDetails = document.getElementById('main-utility-details');
+        const integratedUtilityLayout = window.matchMedia('(min-width: 761px)');
+        if (utilityDetails) {
+            utilityDetails.open = integratedUtilityLayout.matches;
+            const syncUtilityDisclosure = event => { utilityDetails.open = event.matches; };
+            if (integratedUtilityLayout.addEventListener) integratedUtilityLayout.addEventListener('change', syncUtilityDisclosure);
+            else if (integratedUtilityLayout.addListener) integratedUtilityLayout.addListener(syncUtilityDisclosure);
+        }
         const saved = readRememberedLogin();
         if (!saved) return;
         const remember = document.getElementById('remember-login');
